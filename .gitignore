@@ -1,0 +1,8 @@
+node_modules/
+raw-export/
+test-results/
+MPP-Dashboard-Voiceovers.xlsx
+serve.json
+# JS bundles kept locally but not loaded (5MB each, stripped from HTML)
+static/assets/index-main.js
+static/assets/index-alt.js

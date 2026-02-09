@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="./assets/hero-logo.svg">
+  <title>MPP Portal - Table of Contents</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #0C1F5B;
+      color: white;
+      min-height: 100vh;
+      padding: 40px 60px;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 2px solid #2A3A6F;
+    }
+    .header img { width: 80px; height: 80px; }
+    .header h1 { font-size: 28px; font-weight: 700; }
+    .header p { color: #A4D0F9; font-size: 14px; margin-top: 4px; }
+    .section { margin-bottom: 32px; }
+    .section h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #A4D0F9;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #2A3A6F;
+    }
+    .page-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 8px; }
+    .page-list li a {
+      display: block;
+      padding: 10px 16px;
+      color: white;
+      text-decoration: none;
+      background: #162B6B;
+      border-radius: 6px;
+      font-size: 13px;
+      transition: background 0.2s;
+    }
+    .page-list li a:hover { background: #243D80; }
+    .page-list li a .num { color: #A4D0F9; font-weight: 500; margin-right: 8px; }
+    .stats {
+      display: flex;
+      gap: 32px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .stat {
+      background: #162B6B;
+      border-radius: 8px;
+      padding: 16px 24px;
+      text-align: center;
+    }
+    .stat .value { font-size: 28px; font-weight: 700; color: #A4D0F9; }
+    .stat .label { font-size: 12px; color: #8899BB; margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="./assets/hero-logo.svg" alt="MPP Logo">
+    <div>
+      <h1>MPP Portal — Page Index</h1>
+      <p>Static snapshot of the Eccalon Mentor-Prot&eacute;g&eacute; Program portal</p>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="value">50</div><div class="label">Total Pages</div></div>
+    <div class="stat"><div class="value">11</div><div class="label">Sections</div></div>
+    <div class="stat"><div class="value">0</div><div class="label">Script Tags</div></div>
+  </div>
+  <div class="section">
+    <h2>Dashboard (1 page)</h2>
+    <ul class="page-list">
+      <li><a href="./Mentor-Protege-Program.html"><span class="num">&bull;</span>Mentor Protege Program</a></li>
+    </ul>
+  </div>
+  <div class="section">
+    <h2>Protege Company Info & Wizard (5 pages)</h2>
+    <ul class="page-list">
+      <li><a href="./01-Protege-Company-Info.html"><span class="num">01.</span>01 Protege Company Info</a></li>
+      <li><a href="./02-Company-Info-Wizard.html"><span class="num">02.</span>02 Company Info Wizard</a></li>
+      <li><a href="./03-Company-info-Wizard.html"><span class="num">03.</span>03 Company info Wizard</a></li>
+      <li><a href="./04-Company-Info-Wizard.html"><span class="num">04.</span>04 Company Info Wizard</a></li>
+      <li><a href="./05-Congratulations-Page.html"><span class="num">05.</span>05 Congratulations Page</a></li>
+    </ul>
+  </div>
+  <div class="section">
+    <h2>Agreement Overview (1 page)</h2>
+    <ul class="page-list">
+      <li><a href="./06-Agreement.html"><span class="num">06.</span>06 Agreement</a></li>
+    </ul>
+  </div>
+  <div class="section">
+    <h2>Agreement Team (8 pages)</h2>
+    <ul class="page-list">
+      <li><a href="./07-Agreement-Team.html"><span class="num">07.</span>07 Agreement Team</a></li>
+      <li><a href="./08-Agreement-Team.html"><span class="num">08.</span>08 Agreement Team</a></li>
+      <li><a href="./09-Agreement-Team.html"><span class="num">09.</span>09 Agreement Team</a></li>
+      <li><a href="./10-Agreement-Team.html"><span class="num">10.</span>10 Agreement Team</a></li>
+      <li><a href="./11-Agreement-Team.html"><span class="num">11.</span>11 Agreement Team</a></li>
+      <li><a href="./12-Sponsoring-Agency.html"><span class="num">12.</span>12 Sponsoring Agency</a></li>
+      <li><a href="./13-Agreement-Team.html"><span class="num">13.</span>13 Agreement Team</a></li>
+      <li><a href="./14-Agreement-Team.html"><span class="num">14.</span>14 Agreement Team</a></li>
+    </ul>
+  </div>
+  <div class="section">
+    <h2>Mentor Company Info (5 pages)</h2>
+    <ul class="page-list">
+      <li><a href="./15-Mentor-Company-Info.html"><span class="num">15.</span>15 Mentor Company Info</a></li>
+      <li><a href="./16-Mentor-Company-info.html"><span class="num">16.</span>16 Mentor Company info</a></li>
+      <li><a href="./17-Mentor-Company-Info.html"><span class="num">17.</span>17 Mentor Company Info</a></li>
+      <li><a href="./18-Mentor-Company-Info.html"><span class="num">18.</span>18 Mentor Company Info</a></li>
+      <li><a href="./19-Mentor-Company-Info.html"><span class="num">19.</span>19 Mentor Company Info</a></li>
+    </ul>
+  </div>
+  <div class="section">
+    <h2>Protege Company Info (4 pages)</h2>
+    <ul class="page-list">
+      <li><a href="./20-Protege-Company-Info.html"><span class="num">20.</span>20 Protege Company Info</a></li>
+      <li><a href="./21-Protege-Company-Info.html"><span class="num">21.</span>21 Protege Company Info</a></li>
+      <li><a href="./22-Protege-Company-Info.html"><span class="num">22.</span>22 Protege Company Info</a></li>
+      <li><a href="./23-Protege-Company-Info.html"><span class="num">23.</span>23 Protege Company Info</a></li>
+    </ul>
+  </div>
+  <div class="section">
+    <h2>Protege Needs Assessment (7 pages)</h2>
+    <ul class="page-list">
+      <li><a href="./24-Protege-Needs-Assessment.html"><span class="num">24.</span>24 Protege Needs Assessment</a></li>
+      <li><a href="./25-Protege-Needs-Assessment.html"><span class="num">25.</span>25 Protege Needs Assessment</a></li>
+      <li><a href="./26-Protege-Needs-Assessment.html"><span class="num">26.</span>26 Protege Needs Assessment</a></li>
+      <li><a href="./27-Protege-Needs-Assessment.html"><span class="num">27.</span>27 Protege Needs Assessment</a></li>
+      <li><a href="./28-Protege-Needs-Assessment.html"><span class="num">28.</span>28 Protege Needs Assessment</a></li>
+      <li><a href="./29-Protege-Needs-Assessment.html"><span class="num">29.</span>29 Protege Needs Assessment</a></li>
+      <li><a href="./30-Protege-Needs-Assessment.html"><span class="num">30.</span>30 Protege Needs Assessment</a></li>
+    </ul>
+  </div>
+  <div class="section">
+    <h2>Terms of Agreement (4 pages)</h2>
+    <ul class="page-list">
+      <li><a href="./31-Terms-of-Agreement.html"><span class="num">31.</span>31 Terms of Agreement</a></li>
+      <li><a href="./32-Terms-of-Agreement.html"><span class="num">32.</span>32 Terms of Agreement</a></li>
+      <li><a href="./33-Terms-of-Agreement.html"><span class="num">33.</span>33 Terms of Agreement</a></li>
+      <li><a href="./34-Terms-of-Agreement.html"><span class="num">34.</span>34 Terms of Agreement</a></li>
+    </ul>
+  </div>
+  <div class="section">
+    <h2>Developmental Assistance Plan (DAP) (7 pages)</h2>
+    <ul class="page-list">
+      <li><a href="./35-DAP.html"><span class="num">35.</span>35 DAP</a></li>
+      <li><a href="./36-DAP.html"><span class="num">36.</span>36 DAP</a></li>
+      <li><a href="./37-DAP.html"><span class="num">37.</span>37 DAP</a></li>
+      <li><a href="./38-DAP.html"><span class="num">38.</span>38 DAP</a></li>
+      <li><a href="./39-DAP.html"><span class="num">39.</span>39 DAP</a></li>
+      <li><a href="./40-DAP.html"><span class="num">40.</span>40 DAP</a></li>
+      <li><a href="./41-DAP.html"><span class="num">41.</span>41 DAP</a></li>
+    </ul>
+  </div>
+  <div class="section">
+    <h2>White Paper Wizard (1 page)</h2>
+    <ul class="page-list">
+      <li><a href="./41-White-Paper-Wizard.html"><span class="num">41.</span>41 White Paper Wizard</a></li>
+    </ul>
+  </div>
+  <div class="section">
+    <h2>MPA Proposal (7 pages)</h2>
+    <ul class="page-list">
+      <li><a href="./42-MPA-Proposal.html"><span class="num">42.</span>42 MPA Proposal</a></li>
+      <li><a href="./43-MPA-Proposal.html"><span class="num">43.</span>43 MPA Proposal</a></li>
+      <li><a href="./44-MPA-Proposal.html"><span class="num">44.</span>44 MPA Proposal</a></li>
+      <li><a href="./45-MPA-Proposal.html"><span class="num">45.</span>45 MPA Proposal</a></li>
+      <li><a href="./46-MPA-Proposal.html"><span class="num">46.</span>46 MPA Proposal</a></li>
+      <li><a href="./47-MPA-Proposal.html"><span class="num">47.</span>47 MPA Proposal</a></li>
+      <li><a href="./48-MPA-Proposal.html"><span class="num">48.</span>48 MPA Proposal</a></li>
+    </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,477 @@
+{
+  "id": "04-agreement-team",
+  "title": "Agreement Team",
+  "sheetName": "Agreement Team",
+  "pages": [
+    "07-Agreement-Team.html",
+    "08-Agreement-Team.html",
+    "09-Agreement-Team.html",
+    "10-Agreement-Team.html",
+    "11-Agreement-Team.html",
+    "12-Sponsoring-Agency.html",
+    "13-Agreement-Team.html",
+    "14-Agreement-Team.html"
+  ],
+  "steps": [
+    {
+      "stepId": "01",
+      "type": "sidebar-start",
+      "screenshotFile": "agreement-team/01-sidebar-progress.png",
+      "pageFile": "07-Agreement-Team.html",
+      "selector": ".progress-sidebar, aside.steps-nav, [data-progress-sidebar]",
+      "padding": 10,
+      "modalText": "The progress sidebar tracks your position across seven sub-steps in the Agreement Team section. Each item highlights as you advance through the workflow.",
+      "voiceover": "On the left side of the form area you will see a progress sidebar. This sidebar lists seven sub-steps: Mentor Team, Mentor Agreement Roles, Protege Team, Protege Agreement Roles, Authorized Subcontractors, Sponsoring Agency, and Review Agreement Team. Your current position is highlighted as you move through each step.",
+      "sidebarItems": [
+        "Mentor Team",
+        "Mentor Agreement Roles",
+        "Protege Team",
+        "Protege Agreement Roles",
+        "Authorized Subcontractors",
+        "Sponsoring Agency",
+        "Review Agreement Team"
+      ],
+      "notes": "Progress sidebar showing all 7 sub-steps with Mentor Team highlighted as active"
+    },
+    {
+      "stepId": "02",
+      "type": "overview",
+      "screenshotFile": "agreement-team/02-mentor-team-overview.png",
+      "pageFile": "07-Agreement-Team.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Mentor Team page collects contact and address details for the mentor organization's key personnel. Up to two team members may be entered on this form.",
+      "voiceover": "This is the Mentor Team page. It contains a form with fields for the mentor company's primary point of contact and an additional team member. You will enter names, phone numbers, email addresses, mailing addresses, job titles, and years of experience for each person listed.",
+      "notes": "Full overview of page 07 showing mentor team form with approximately 40 form elements across two team member sections"
+    },
+    {
+      "stepId": "03",
+      "type": "element",
+      "screenshotFile": "agreement-team/03-mentor-primary-name.png",
+      "pageFile": "07-Agreement-Team.html",
+      "selector": "input[name='firstName']",
+      "selectorGroup": [
+        "input[name='firstName']",
+        "input[name='lastName']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='firstName']": "James",
+        "input[name='lastName']": "Calloway"
+      },
+      "modalText": "Enter the first and last name of the mentor organization's primary point of contact. This individual will serve as the main representative on the agreement.",
+      "voiceover": "Begin by entering the first name and last name of the mentor's primary point of contact. In this example, we enter James in the first name field and Calloway in the last name field. This person will appear as the lead representative on all agreement correspondence.",
+      "notes": "First and last name fields for mentor primary POC - James R. Calloway"
+    },
+    {
+      "stepId": "04",
+      "type": "element",
+      "screenshotFile": "agreement-team/04-mentor-primary-contact.png",
+      "pageFile": "07-Agreement-Team.html",
+      "selector": "input[name='phone_0']",
+      "selectorGroup": [
+        "input[name='phone_0']",
+        "input[name='email']",
+        "input[name='fax_0']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='phone_0']": "(703) 555-0142",
+        "input[name='email']": "jcalloway@apexdefense.com",
+        "input[name='fax_0']": ""
+      },
+      "modalText": "Provide the phone number, email address, and fax number for the mentor's primary contact. The fax field is optional and may be left blank.",
+      "voiceover": "Next, enter the contact details. The phone field accepts a number with area code, such as 703-555-0142. Enter the email address in the next field, for example jcalloway@apexdefense.com. The fax field is optional and can be left blank if not applicable to your organization.",
+      "notes": "Phone, email, and fax fields for mentor primary POC"
+    },
+    {
+      "stepId": "05",
+      "type": "element",
+      "screenshotFile": "agreement-team/05-mentor-primary-address.png",
+      "pageFile": "07-Agreement-Team.html",
+      "selector": "input[name='street_address']",
+      "selectorGroup": [
+        "input[name='street_address']",
+        "input[name='city']",
+        "input[name='state']",
+        "input[name='zipCode']",
+        "input[name='title']",
+        "input[name='yearsOfExperience']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='street_address']": "1847 Innovation Pkwy Ste 400",
+        "input[name='city']": "Arlington",
+        "input[name='state']": "VA",
+        "input[name='zipCode']": "22201",
+        "input[name='title']": "VP of Strategic Partnerships",
+        "input[name='yearsOfExperience']": "18"
+      },
+      "modalText": "Complete the mailing address, job title, and years of experience for the mentor's primary contact. All fields in this group are required.",
+      "voiceover": "Fill in the street address, city, state, and zip code for the mentor contact. In this example, the address is 1847 Innovation Pkwy Suite 400, Arlington, Virginia, 22201. Then enter the job title, such as VP of Strategic Partnerships, and the number of years of relevant experience.",
+      "notes": "Address block, title, and years of experience for mentor primary POC"
+    },
+    {
+      "stepId": "06",
+      "type": "overview",
+      "screenshotFile": "agreement-team/06-mentor-roles-overview.png",
+      "pageFile": "08-Agreement-Team.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Mentor Agreement Roles page defines the responsibilities and role assignments for the mentor organization within the agreement.",
+      "voiceover": "This is the Mentor Agreement Roles page. Here you assign specific roles and responsibilities to the mentor team members who were entered on the previous page. Each role defines the scope of that individual's involvement in the mentor-protege agreement.",
+      "notes": "Full overview of page 08 showing mentor agreement roles form"
+    },
+    {
+      "stepId": "07",
+      "type": "element",
+      "screenshotFile": "agreement-team/07-mentor-role-primary.png",
+      "pageFile": "08-Agreement-Team.html",
+      "selector": ".role-selection, select[name='mentorRole'], input[name='mentorRole']",
+      "padding": 100,
+      "modalText": "Select the primary role for the mentor representative. Common roles include Agreement Manager, Technical Lead, and Executive Sponsor.",
+      "voiceover": "Select the primary role for the mentor's point of contact from the available options. Common role designations include Agreement Manager, Technical Lead, and Executive Sponsor. The role selected here will determine the responsibilities assigned to this individual throughout the agreement period.",
+      "notes": "Role selection for mentor primary POC - role dropdown or radio group"
+    },
+    {
+      "stepId": "08",
+      "type": "element",
+      "screenshotFile": "agreement-team/08-mentor-role-secondary.png",
+      "pageFile": "08-Agreement-Team.html",
+      "selector": ".role-secondary, .additional-roles, input[name='mentorRoleSecondary']",
+      "padding": 100,
+      "modalText": "If a second mentor team member was entered, assign their role here. This field may be left empty if only one representative is listed.",
+      "voiceover": "If you entered a second team member on the previous page, assign their role in this section. For example, the second member might serve as the Technical Lead or Agreements Manager. If only one mentor representative is participating, this section can be skipped.",
+      "notes": "Role selection for mentor secondary team member"
+    },
+    {
+      "stepId": "09",
+      "type": "overview",
+      "screenshotFile": "agreement-team/09-protege-team-overview.png",
+      "pageFile": "09-Agreement-Team.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Protege Team page mirrors the Mentor Team form. Enter the protege organization's key personnel, their contact details, and mailing addresses here.",
+      "voiceover": "This is the Protege Team page. It follows the same layout as the Mentor Team form, collecting contact information for the protege organization's primary representative and any additional team members. Complete all required fields for each person listed.",
+      "notes": "Full overview of page 09 showing protege team form, similar structure to page 07"
+    },
+    {
+      "stepId": "10",
+      "type": "element",
+      "screenshotFile": "agreement-team/10-protege-primary-name.png",
+      "pageFile": "09-Agreement-Team.html",
+      "selector": "input[name='firstName']",
+      "selectorGroup": [
+        "input[name='firstName']",
+        "input[name='lastName']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='firstName']": "Maria",
+        "input[name='lastName']": "Nguyen"
+      },
+      "modalText": "Enter the first and last name of the protege organization's primary point of contact. This person will represent the protege on the agreement.",
+      "voiceover": "Enter the protege's primary contact name. In this example, we enter Maria in the first name field and Nguyen in the last name field. Maria S. Nguyen serves as CEO and President of the protege company and will be the lead representative on the agreement.",
+      "notes": "First and last name fields for protege primary POC - Maria S. Nguyen"
+    },
+    {
+      "stepId": "11",
+      "type": "element",
+      "screenshotFile": "agreement-team/11-protege-primary-contact.png",
+      "pageFile": "09-Agreement-Team.html",
+      "selector": "input[name='phone_0']",
+      "selectorGroup": [
+        "input[name='phone_0']",
+        "input[name='email']",
+        "input[name='fax_0']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='phone_0']": "(619) 555-0287",
+        "input[name='email']": "mnguyen@pinnacleeng.com",
+        "input[name='fax_0']": ""
+      },
+      "modalText": "Provide the protege contact's phone number and email address. The fax field is optional and may be left blank if not applicable.",
+      "voiceover": "Enter the phone number for the protege contact, such as 619-555-0287, followed by the email address mnguyen@pinnacleeng.com. As with the mentor form, the fax number is optional and can remain blank if the protege organization does not use fax communication.",
+      "notes": "Phone, email, and fax fields for protege primary POC"
+    },
+    {
+      "stepId": "12",
+      "type": "element",
+      "screenshotFile": "agreement-team/12-protege-primary-address.png",
+      "pageFile": "09-Agreement-Team.html",
+      "selector": "input[name='street_address']",
+      "selectorGroup": [
+        "input[name='street_address']",
+        "input[name='city']",
+        "input[name='state']",
+        "input[name='zipCode']",
+        "input[name='title']",
+        "input[name='yearsOfExperience']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='street_address']": "3290 Pacific Coast Hwy Ste 210",
+        "input[name='city']": "Carlsbad",
+        "input[name='state']": "CA",
+        "input[name='zipCode']": "92009",
+        "input[name='title']": "CEO & President",
+        "input[name='yearsOfExperience']": "12"
+      },
+      "modalText": "Complete the protege contact's address, job title, and years of experience. Ensure the state abbreviation and zip code match the mailing address on file.",
+      "voiceover": "Enter the street address as 3290 Pacific Coast Hwy Suite 210, city as Carlsbad, state as CA, and zip code as 92009. Then provide the job title, CEO and President, and the number of years of relevant experience. Verify all address details match the organization's SAM registration.",
+      "notes": "Address block, title, and years of experience for protege primary POC"
+    },
+    {
+      "stepId": "13",
+      "type": "overview",
+      "screenshotFile": "agreement-team/13-protege-roles-overview.png",
+      "pageFile": "10-Agreement-Team.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Protege Agreement Roles page assigns responsibilities to the protege team members listed on the previous page. Each role clarifies the individual's scope within the agreement.",
+      "voiceover": "This is the Protege Agreement Roles page. Similar to the mentor roles page, this form allows you to assign specific roles and responsibilities to the protege team members. Roles define how each individual will participate in and contribute to the agreement activities.",
+      "notes": "Full overview of page 10 showing protege agreement roles form"
+    },
+    {
+      "stepId": "14",
+      "type": "element",
+      "screenshotFile": "agreement-team/14-protege-role-primary.png",
+      "pageFile": "10-Agreement-Team.html",
+      "selector": ".role-selection, select[name='protegeRole'], input[name='protegeRole']",
+      "padding": 100,
+      "modalText": "Select the primary role for the protege representative. The role chosen should reflect their actual responsibilities within the agreement.",
+      "voiceover": "Choose the primary role for the protege's point of contact. As with the mentor roles, options may include Agreement Manager, Technical Lead, or Executive Sponsor. Select the role that best represents how this individual will engage with the agreement deliverables and reporting.",
+      "notes": "Role selection for protege primary POC"
+    },
+    {
+      "stepId": "15",
+      "type": "element",
+      "screenshotFile": "agreement-team/15-protege-role-secondary.png",
+      "pageFile": "10-Agreement-Team.html",
+      "selector": ".role-secondary, .additional-roles, input[name='protegeRoleSecondary']",
+      "padding": 100,
+      "modalText": "Assign a role to the protege's second team member if one was entered. This section is optional when only one representative participates.",
+      "voiceover": "If a second protege team member was listed, assign their role in this section. The secondary role should complement the primary representative's responsibilities. If only one protege team member is participating in the agreement, this field can be left empty.",
+      "notes": "Role selection for protege secondary team member"
+    },
+    {
+      "stepId": "16",
+      "type": "overview",
+      "screenshotFile": "agreement-team/16-authorized-subs-overview.png",
+      "pageFile": "11-Agreement-Team.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Authorized Subcontractors page asks whether the agreement includes any authorized subcontractors. Select Yes or No to proceed.",
+      "voiceover": "This is the Authorized Subcontractors page. It presents a straightforward question asking whether the mentor-protege agreement will include any authorized subcontractors. Your selection here determines whether additional subcontractor detail fields will appear in later sections.",
+      "notes": "Full overview of page 11 showing authorized subcontractors question with two radio buttons"
+    },
+    {
+      "stepId": "17",
+      "type": "element",
+      "screenshotFile": "agreement-team/17-authorized-subs-radio.png",
+      "pageFile": "11-Agreement-Team.html",
+      "selector": "input[type='radio'][name='authorizedSubcontractor'], .radio-group",
+      "padding": 100,
+      "formFill": {
+        "input[type='radio'][value='yes']": "selected"
+      },
+      "modalText": "Select Yes if authorized subcontractors will participate in the agreement. Select No if the agreement involves only the mentor and protege organizations.",
+      "voiceover": "Choose Yes or No to indicate whether authorized subcontractors are part of this agreement. In this example, we select Yes because an authorized subcontractor, Meridian Tech Solutions, will support specific technical tasks under the agreement. Selecting No would skip the subcontractor details section.",
+      "notes": "Radio button pair for authorized subcontractors yes/no selection"
+    },
+    {
+      "stepId": "18",
+      "type": "overview",
+      "screenshotFile": "agreement-team/18-sponsoring-agency-overview.png",
+      "pageFile": "12-Sponsoring-Agency.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Sponsoring Agency page identifies the DoD component sponsoring the mentor-protege agreement. Provide the agency name and point-of-contact details.",
+      "voiceover": "This is the Sponsoring Agency page. Every mentor-protege agreement requires a sponsoring DoD component. This page collects the agency name and the contact information for the designated program manager or representative at the sponsoring agency.",
+      "notes": "Full overview of page 12 showing sponsoring agency form"
+    },
+    {
+      "stepId": "19",
+      "type": "element",
+      "screenshotFile": "agreement-team/19-sponsoring-agency-selection.png",
+      "pageFile": "12-Sponsoring-Agency.html",
+      "selector": "input[type='radio'][name='sponsoringAgency'], select[name='sponsoringAgency'], .radio-group",
+      "padding": 100,
+      "formFill": {
+        "input[type='radio'][value='dla']": "selected"
+      },
+      "modalText": "Select the DoD component that will sponsor this agreement. Options include agencies such as the Defense Logistics Agency, Army, Navy, and Air Force.",
+      "voiceover": "Select the sponsoring DoD component from the available options. In this example, we select the Defense Logistics Agency, known as DLA. The sponsoring agency oversees the agreement and ensures compliance with DFARS requirements throughout the performance period.",
+      "notes": "Radio buttons or dropdown for selecting the sponsoring DoD agency"
+    },
+    {
+      "stepId": "20",
+      "type": "element",
+      "screenshotFile": "agreement-team/20-sponsoring-agency-poc.png",
+      "pageFile": "12-Sponsoring-Agency.html",
+      "selector": "input[name='agencyPocName'], .agency-poc-fields",
+      "selectorGroup": [
+        "input[name='agencyPocName']",
+        "input[name='agencyPocEmail']",
+        "input[name='agencyPocPhone']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='agencyPocName']": "Robert T. Chen",
+        "input[name='agencyPocEmail']": "robert.t.chen@dla.mil",
+        "input[name='agencyPocPhone']": "(703) 555-0319"
+      },
+      "modalText": "Enter the name, email, and phone number of the sponsoring agency's point of contact. This individual coordinates program oversight for the agreement.",
+      "voiceover": "Enter the sponsoring agency contact details. The point of contact name is Robert T. Chen, the email address is robert.t.chen@dla.mil, and the phone number is 703-555-0319. This individual serves as the agency's designated representative for overseeing the agreement.",
+      "notes": "POC name, email, and phone fields for sponsoring agency contact - Robert T. Chen at DLA"
+    },
+    {
+      "stepId": "21",
+      "type": "overview",
+      "screenshotFile": "agreement-team/21-review-overview.png",
+      "pageFile": "13-Agreement-Team.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Review Agreement Team page displays a read-only summary of all team information entered across the previous pages. Verify the details before proceeding.",
+      "voiceover": "This is the Review Agreement Team page. It presents a consolidated, read-only summary of all the information you entered for the mentor team, protege team, authorized subcontractors, and sponsoring agency. Review each section carefully before moving to the final confirmation step.",
+      "notes": "Full overview of page 13 showing read-only review summary of all agreement team data"
+    },
+    {
+      "stepId": "22",
+      "type": "element",
+      "screenshotFile": "agreement-team/22-review-mentor-summary.png",
+      "pageFile": "13-Agreement-Team.html",
+      "selector": ".review-mentor, .summary-mentor, [data-section='mentor']",
+      "padding": 100,
+      "modalText": "The mentor summary shows the team member names, roles, contact details, and addresses that were entered on the Mentor Team and Mentor Agreement Roles pages.",
+      "voiceover": "The mentor section of the review displays all information previously entered, including the name James R. Calloway, title of VP of Strategic Partnerships, contact details, and the Arlington, Virginia mailing address. Confirm these details match the intended entries.",
+      "notes": "Read-only mentor team summary showing Calloway's details and role assignments"
+    },
+    {
+      "stepId": "23",
+      "type": "element",
+      "screenshotFile": "agreement-team/23-review-protege-summary.png",
+      "pageFile": "13-Agreement-Team.html",
+      "selector": ".review-protege, .summary-protege, [data-section='protege']",
+      "padding": 100,
+      "modalText": "The protege summary displays the team member names, roles, contact details, and addresses entered on the Protege Team and Protege Agreement Roles pages.",
+      "voiceover": "The protege section shows Maria S. Nguyen listed as CEO and President, with her contact information and the Carlsbad, California mailing address. Verify that the protege details and assigned roles are accurate before continuing to the final step.",
+      "notes": "Read-only protege team summary showing Nguyen's details and role assignments"
+    },
+    {
+      "stepId": "24",
+      "type": "element",
+      "screenshotFile": "agreement-team/24-review-agency-summary.png",
+      "pageFile": "13-Agreement-Team.html",
+      "selector": ".review-agency, .summary-agency, [data-section='agency']",
+      "padding": 100,
+      "modalText": "The agency summary confirms the sponsoring DoD component and its point-of-contact information. It also reflects the authorized subcontractor selection made earlier.",
+      "voiceover": "The final review section displays the sponsoring agency, Defense Logistics Agency, with Robert T. Chen listed as the program manager point of contact. It also confirms the authorized subcontractor selection. Ensure all agency details are correct before proceeding.",
+      "notes": "Read-only sponsoring agency and authorized subcontractor summary"
+    },
+    {
+      "stepId": "25",
+      "type": "overview",
+      "screenshotFile": "agreement-team/25-final-review-overview.png",
+      "pageFile": "14-Agreement-Team.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The final review page provides a last opportunity to confirm all agreement team entries. Use the navigation buttons to return to any previous page and make corrections.",
+      "voiceover": "This is the final review and confirmation page for the Agreement Team section. It provides a last opportunity to verify all entries before submitting. If any corrections are needed, use the Back button or the progress sidebar to navigate directly to the page requiring changes.",
+      "notes": "Full overview of page 14 showing final review and confirmation interface"
+    },
+    {
+      "stepId": "26",
+      "type": "element",
+      "screenshotFile": "agreement-team/26-final-confirmation-checkbox.png",
+      "pageFile": "14-Agreement-Team.html",
+      "selector": "input[type='checkbox'][name='confirmTeam'], .confirmation-checkbox",
+      "padding": 100,
+      "modalText": "Check the confirmation box to certify that all agreement team information is accurate and complete. This step is required before you can proceed.",
+      "voiceover": "Before proceeding, you must check the confirmation box to certify that all agreement team information entered is accurate and complete. This certification step is mandatory and ensures that the data submitted on behalf of both organizations has been verified by the user.",
+      "notes": "Confirmation checkbox that must be checked before proceeding"
+    },
+    {
+      "stepId": "27",
+      "type": "element",
+      "screenshotFile": "agreement-team/27-final-nav-buttons.png",
+      "pageFile": "14-Agreement-Team.html",
+      "selector": ".btn-next, .nav-buttons, .form-actions",
+      "padding": 100,
+      "modalText": "Use the Back button to return to previous pages or the Continue button to proceed to the next section of the agreement after confirming your entries.",
+      "voiceover": "At the bottom of the page you will find the navigation buttons. The Back button returns you to the previous review page if corrections are needed. The Continue button advances you to the next section of the agreement once the confirmation checkbox has been selected.",
+      "notes": "Back and Continue navigation buttons at the bottom of the final review page"
+    },
+    {
+      "stepId": "28",
+      "type": "sidebar-end",
+      "screenshotFile": "agreement-team/28-sidebar-complete.png",
+      "pageFile": "14-Agreement-Team.html",
+      "selector": ".progress-sidebar, aside.steps-nav, [data-progress-sidebar]",
+      "padding": 10,
+      "modalText": "All seven sub-steps in the Agreement Team section are now complete. The progress sidebar reflects your completion status before you move to the next section.",
+      "voiceover": "The progress sidebar now shows all seven sub-steps as complete: Mentor Team, Mentor Agreement Roles, Protege Team, Protege Agreement Roles, Authorized Subcontractors, Sponsoring Agency, and Review Agreement Team. You have finished the Agreement Team section and are ready to proceed to the next part of the agreement.",
+      "sidebarItems": [
+        "Mentor Team",
+        "Mentor Agreement Roles",
+        "Protege Team",
+        "Protege Agreement Roles",
+        "Authorized Subcontractors",
+        "Sponsoring Agency",
+        "Review Agreement Team"
+      ],
+      "notes": "Progress sidebar showing all 7 sub-steps marked as complete"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What information is collected on the Mentor Team page?",
+      "options": {
+        "A": "Only the mentor company's CAGE code and UEI number",
+        "B": "Contact details, mailing addresses, job titles, and years of experience for the mentor's key personnel",
+        "C": "The mentor's past performance history and contract references"
+      },
+      "feedback": {
+        "A": "Incorrect. CAGE codes and UEI numbers are collected in the company information sections, not on the Mentor Team page. The Mentor Team page focuses on personnel contact details.",
+        "B": "Correct. The Mentor Team page collects names, phone numbers, email addresses, mailing addresses, job titles, and years of experience for the mentor organization's key personnel involved in the agreement.",
+        "C": "Incorrect. Past performance and contract references are part of the mentor application process, not the Mentor Team page. This page focuses on collecting contact and role information for team members.",
+        "correct": "Correct. The Mentor Team page collects names, phone numbers, email addresses, mailing addresses, job titles, and years of experience for the mentor organization's key personnel involved in the agreement."
+      },
+      "id": "Q1",
+      "correct": "B"
+    },
+    {
+      "question": "What is the purpose of the Sponsoring Agency page in the Agreement Team section?",
+      "options": {
+        "A": "To select the DoD component sponsoring the agreement and provide the agency point-of-contact details",
+        "B": "To upload signed authorization letters from the sponsoring military branch",
+        "C": "To register the agreement with the Federal Procurement Data System"
+      },
+      "feedback": {
+        "A": "Correct. The Sponsoring Agency page identifies which DoD component will sponsor the mentor-protege agreement and collects the name, email, and phone number of the agency's designated point of contact.",
+        "B": "Incorrect. Authorization letter uploads are handled in a different part of the agreement process. The Sponsoring Agency page collects the agency name and point-of-contact information.",
+        "C": "Incorrect. Federal Procurement Data System registration is a separate administrative process. The Sponsoring Agency page identifies the sponsoring DoD component and its representative for the agreement.",
+        "correct": "Correct. The Sponsoring Agency page identifies which DoD component will sponsor the mentor-protege agreement and collects the name, email, and phone number of the agency's designated point of contact."
+      },
+      "id": "Q2",
+      "correct": "A"
+    },
+    {
+      "question": "What must you do on the final review page before proceeding to the next section?",
+      "options": {
+        "A": "Digitally sign the agreement team attestation form",
+        "B": "Check the confirmation box certifying that all agreement team information is accurate and complete",
+        "C": "Email a copy of the review summary to the sponsoring agency for pre-approval"
+      },
+      "feedback": {
+        "A": "Incorrect. A digital signature is not required at this stage. The final review page requires you to check a confirmation box certifying accuracy before you can continue.",
+        "B": "Correct. You must check the confirmation box to certify that all agreement team information is accurate and complete. This mandatory step ensures the data has been verified before submission.",
+        "C": "Incorrect. Pre-approval emails are not part of this workflow step. The final review page requires a confirmation checkbox to certify accuracy before proceeding to the next agreement section.",
+        "correct": "Correct. You must check the confirmation box to certify that all agreement team information is accurate and complete. This mandatory step ensures the data has been verified before submission."
+      },
+      "id": "Q3",
+      "correct": "B"
+    }
+  ]
+}

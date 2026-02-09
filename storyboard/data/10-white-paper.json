@@ -1,0 +1,201 @@
+{
+  "id": "10-white-paper",
+  "title": "White Paper",
+  "sheetName": "White Paper",
+  "pages": [
+    "41-White-Paper-Wizard.html"
+  ],
+  "steps": [
+    {
+      "stepId": "01",
+      "type": "overview",
+      "screenshotFile": "white-paper/01-full-page-overview.png",
+      "pageFile": "41-White-Paper-Wizard.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "This is the White Paper Wizard page. It guides you through submitting the white paper for your mentor-protege agreement, including the PPI question, signature fields, and comments.",
+      "voiceover": "Welcome to the White Paper Wizard. This single-page form collects the final details needed to complete your white paper submission. You will answer a question about PPI intent, provide mentor and protege signatures, and optionally add comments before submitting. The white paper due date for this agreement is April 15,.",
+      "notes": "Full page overview of the White Paper Wizard showing all form sections on page 41"
+    },
+    {
+      "stepId": "02",
+      "type": "element",
+      "screenshotFile": "white-paper/02-page-header-guidance.png",
+      "pageFile": "41-White-Paper-Wizard.html",
+      "selector": ".page-header, h1, .wizard-title",
+      "padding": 100,
+      "modalText": "The page header identifies this as the White Paper submission form. It includes the agreement title and the focus area of Cybersecurity Workforce Development.",
+      "voiceover": "At the top of the page, the header identifies this as the White Paper Wizard. It displays the agreement title between APEX DEFENSE SYSTEMS, INC. and PINNACLE ENGINEERING GROUP, LLC, along with the focus area of Cybersecurity Workforce Development. The due date of April 15, 2026 is also shown prominently.",
+      "notes": "Page header with wizard title, agreement parties, focus area, and due date"
+    },
+    {
+      "stepId": "03",
+      "type": "element",
+      "screenshotFile": "white-paper/03-due-date-banner.png",
+      "pageFile": "41-White-Paper-Wizard.html",
+      "selector": ".due-date-banner, .alert-info, [data-due-date]",
+      "padding": 100,
+      "modalText": "The due date banner displays the submission deadline for the white paper. Ensure all fields are completed and signatures are collected before this date.",
+      "voiceover": "A highlighted banner displays the white paper submission deadline of April 15, 2026. This date is critical for your agreement timeline. All required fields must be completed and both mentor and protege signatures must be obtained before the submission deadline passes.",
+      "notes": "Informational banner showing white paper due date of 04/15/2026"
+    },
+    {
+      "stepId": "04",
+      "type": "element",
+      "screenshotFile": "white-paper/04-ppi-question-label.png",
+      "pageFile": "41-White-Paper-Wizard.html",
+      "selector": "label[for='ppi-question'], .ppi-section-label, .form-group:has(input[name='ppi-question'])",
+      "padding": 100,
+      "modalText": "This section asks whether the protege intends to apply for Post-Program Intent, also known as PPI. This is a required question that must be answered before submission.",
+      "voiceover": "The first form section presents a required question: Does the Protege intend to apply for PPI? PPI stands for Post-Program Intent and indicates whether the protege plans to pursue continued engagement after the current agreement period concludes. This answer affects future program planning.",
+      "notes": "PPI question label and description text explaining the Post-Program Intent question"
+    },
+    {
+      "stepId": "05",
+      "type": "element",
+      "screenshotFile": "white-paper/05-ppi-radio-options.png",
+      "pageFile": "41-White-Paper-Wizard.html",
+      "selector": "input[type='radio'][name='ppi-question'], .radio-group:has(input[name='ppi-question'])",
+      "padding": 100,
+      "formFill": {
+        "input[type='radio'][name='ppi-question'][value='yes']": "selected"
+      },
+      "modalText": "Select Yes or No to indicate the protege's intent to apply for PPI. In this example, Yes is selected because Pinnacle Engineering plans to continue the partnership.",
+      "voiceover": "Choose Yes or No to indicate the protege's PPI intent. In this example, we select Yes because Pinnacle Engineering Group plans to apply for Post-Program Intent to continue building on the cybersecurity workforce development capabilities gained during the agreement period. This selection is required before proceeding.",
+      "notes": "Radio button pair for PPI question - Yes selected for this example"
+    },
+    {
+      "stepId": "06",
+      "type": "element",
+      "screenshotFile": "white-paper/06-mentor-signature-section.png",
+      "pageFile": "41-White-Paper-Wizard.html",
+      "selector": ".mentor-signature, .signature-section:has(input[name='mentorSignature'])",
+      "padding": 100,
+      "modalText": "The mentor signature section requires the mentor's authorized representative to provide their electronic signature, confirming agreement with the white paper contents.",
+      "voiceover": "The mentor signature section requires the authorized representative from APEX DEFENSE SYSTEMS to provide an electronic signature. In this example, James R. Calloway enters his name as the signature. This confirms that the mentor organization has reviewed and agrees with all content in the white paper submission.",
+      "notes": "Mentor signature block with company name APEX DEFENSE SYSTEMS, INC. and signatory James R. Calloway"
+    },
+    {
+      "stepId": "07",
+      "type": "element",
+      "screenshotFile": "white-paper/07-mentor-signature-field.png",
+      "pageFile": "41-White-Paper-Wizard.html",
+      "selector": "input[name='mentorSignature']",
+      "padding": 100,
+      "formFill": {
+        "input[name='mentorSignature']": "James R. Calloway"
+      },
+      "modalText": "Type the mentor representative's full legal name in the signature field. This serves as the electronic signature for the white paper submission.",
+      "voiceover": "Enter the mentor representative's full name in the signature text field. In this example, we type James R. Calloway. The electronic signature field accepts typed text that serves as a legally binding acknowledgment of the white paper contents on behalf of the mentor organization.",
+      "notes": "Text input field for mentor electronic signature - James R. Calloway"
+    },
+    {
+      "stepId": "08",
+      "type": "element",
+      "screenshotFile": "white-paper/08-protege-signature-section.png",
+      "pageFile": "41-White-Paper-Wizard.html",
+      "selector": ".protege-signature, .signature-section:has(input[name='protegeSignature'])",
+      "padding": 100,
+      "modalText": "The protege signature section requires the protege's authorized representative to provide their electronic signature, confirming agreement with the white paper contents.",
+      "voiceover": "The protege signature section requires the authorized representative from PINNACLE ENGINEERING GROUP to provide an electronic signature. Maria S. Nguyen, as CEO and President, enters her name to confirm that the protege organization has reviewed and endorses the white paper submission.",
+      "notes": "Protege signature block with company name PINNACLE ENGINEERING GROUP, LLC and signatory Maria S. Nguyen"
+    },
+    {
+      "stepId": "09",
+      "type": "element",
+      "screenshotFile": "white-paper/09-protege-signature-field.png",
+      "pageFile": "41-White-Paper-Wizard.html",
+      "selector": "input[name='protegeSignature']",
+      "padding": 100,
+      "formFill": {
+        "input[name='protegeSignature']": "Maria S. Nguyen"
+      },
+      "modalText": "Type the protege representative's full legal name in the signature field. Both mentor and protege signatures are required before submission.",
+      "voiceover": "Enter the protege representative's full name in the signature text field. In this example, we type Maria S. Nguyen. Both the mentor and protege electronic signatures must be completed before the white paper can be submitted. Missing either signature will prevent the form from proceeding.",
+      "notes": "Text input field for protege electronic signature - Maria S. Nguyen"
+    },
+    {
+      "stepId": "10",
+      "type": "element",
+      "screenshotFile": "white-paper/10-comments-section.png",
+      "pageFile": "41-White-Paper-Wizard.html",
+      "selector": ".comments-section, textarea[name='comments'], .comment-area",
+      "padding": 100,
+      "modalText": "The comments section allows both parties to add optional notes, clarifications, or supplementary information to the white paper submission.",
+      "voiceover": "The comments section provides a text area where either party can add optional notes, clarifications, or supplementary information. Comments entered here become part of the official white paper record and are visible to program reviewers. While optional, comments are useful for providing context or addressing specific reviewer concerns.",
+      "notes": "Comments text area for optional notes and supplementary information"
+    },
+    {
+      "stepId": "11",
+      "type": "element",
+      "screenshotFile": "white-paper/11-comments-add-button.png",
+      "pageFile": "41-White-Paper-Wizard.html",
+      "selector": ".add-comment-btn, button:has-text('Add Comment'), [data-action='add-comment']",
+      "padding": 100,
+      "modalText": "Click the Add Comment button to submit a new comment to the white paper. Multiple comments may be added by different team members before final submission.",
+      "voiceover": "The Add Comment button saves your comment to the white paper record. Multiple comments can be added by different team members over time. Each comment is timestamped and attributed to the user who entered it. Comments provide an audit trail of communications related to the white paper review process.",
+      "notes": "Add Comment button for submitting comments to the white paper record"
+    },
+    {
+      "stepId": "12",
+      "type": "element",
+      "screenshotFile": "white-paper/12-navigation-buttons.png",
+      "pageFile": "41-White-Paper-Wizard.html",
+      "selector": ".form-actions, .nav-buttons, .btn-group",
+      "padding": 100,
+      "modalText": "The navigation area contains a Back button to return to the previous section and a Submit button to finalize the white paper. Both signatures are required before Submit becomes active.",
+      "voiceover": "At the bottom of the page, the navigation buttons allow you to go back to the previous section or submit the completed white paper. The Submit button will remain inactive until all required fields are completed, including the PPI question and both electronic signatures. Once active, clicking Submit finalizes your.",
+      "notes": "Back and Submit navigation buttons at the bottom of the wizard page"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What does the PPI question on the White Paper Wizard ask the protege to indicate?",
+      "options": {
+        "A": "Whether the protege intends to apply for Post-Program Intent after the current agreement period",
+        "B": "Whether the protege has completed all required pre-program inspections",
+        "C": "Whether the protege wants to receive program performance improvement reports"
+      },
+      "feedback": {
+        "A": "Correct. The PPI question asks whether the protege intends to apply for Post-Program Intent, which indicates their plan to pursue continued engagement after the current mentor-protege agreement period concludes.",
+        "B": "Incorrect. PPI stands for Post-Program Intent, not pre-program inspections. The question asks whether the protege plans to continue engagement after the agreement ends.",
+        "C": "Incorrect. PPI does not refer to performance improvement reports. It stands for Post-Program Intent and asks whether the protege plans to apply for continued participation after the current agreement period.",
+        "correct": "Correct. The PPI question asks whether the protege intends to apply for Post-Program Intent, which indicates their plan to pursue continued engagement after the current mentor-protege agreement period concludes."
+      },
+      "id": "Q1",
+      "correct": "A"
+    },
+    {
+      "question": "Which signatures are required before the white paper can be submitted?",
+      "options": {
+        "A": "Only the protege representative's electronic signature",
+        "B": "Both the mentor representative's and the protege representative's electronic signatures",
+        "C": "The mentor representative's signature and the sponsoring agency program manager's signature"
+      },
+      "feedback": {
+        "A": "Incorrect. The protege signature alone is not sufficient. Both the mentor and protege authorized representatives must provide electronic signatures before the white paper can be submitted.",
+        "B": "Correct. Both the mentor representative and the protege representative must provide electronic signatures. In this example, James R. Calloway signs for the mentor and Maria S. Nguyen signs for the protege. Both signatures are mandatory before submission.",
+        "C": "Incorrect. The sponsoring agency program manager does not sign the white paper at this stage. The two required signatures are from the mentor representative and the protege representative.",
+        "correct": "Correct. Both the mentor representative and the protege representative must provide electronic signatures. In this example, James R. Calloway signs for the mentor and Maria S. Nguyen signs for the protege. Both signatures are mandatory before submission."
+      },
+      "id": "Q2",
+      "correct": "B"
+    },
+    {
+      "question": "What is the purpose of the comments section on the White Paper Wizard?",
+      "options": {
+        "A": "To enter the full text of the white paper proposal narrative",
+        "B": "To upload supporting documents such as technical specifications and cost estimates",
+        "C": "To add optional notes, clarifications, or supplementary information to the white paper submission"
+      },
+      "feedback": {
+        "A": "Incorrect. The comments section is not for the full white paper narrative. It provides a space for optional notes and clarifications that supplement the submission.",
+        "B": "Incorrect. The comments section is a text area for entering notes, not a file upload area. Supporting documents are handled through separate upload functionality elsewhere in the portal.",
+        "C": "Correct. The comments section allows either party to add optional notes, clarifications, or supplementary information. These comments become part of the official record and are visible to program reviewers.",
+        "correct": "Correct. The comments section allows either party to add optional notes, clarifications, or supplementary information. These comments become part of the official record and are visible to program reviewers."
+      },
+      "id": "Q3",
+      "correct": "C"
+    }
+  ]
+}

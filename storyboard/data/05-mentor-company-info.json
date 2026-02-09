@@ -1,0 +1,396 @@
+{
+  "id": "05-mentor-company-info",
+  "title": "Mentor Company Info",
+  "sheetName": "Mentor Company Info",
+  "pages": [
+    "15-Mentor-Company-Info.html",
+    "16-Mentor-Company-info.html",
+    "17-Mentor-Company-Info.html",
+    "18-Mentor-Company-Info.html",
+    "19-Mentor-Company-Info.html"
+  ],
+  "steps": [
+    {
+      "stepId": "01",
+      "type": "sidebar-start",
+      "screenshotFile": "mentor-company-info/01-sidebar-progress.png",
+      "pageFile": "15-Mentor-Company-Info.html",
+      "selector": ".progress-sidebar, aside.steps-nav, [data-progress-sidebar]",
+      "padding": 10,
+      "modalText": "The progress sidebar tracks your position across five sub-steps in the Mentor Company Info section. Each item highlights as you advance through the workflow.",
+      "voiceover": "On the left side of the form area you will see a progress sidebar. This sidebar lists five sub-steps: Company Details, Social Media, Effective Dates, Additional Details, and Review. Your current position is highlighted as you move through each step.",
+      "sidebarItems": [
+        "Company Details",
+        "Social Media",
+        "Effective Dates",
+        "Additional Details",
+        "Review"
+      ],
+      "notes": "Progress sidebar showing all 5 sub-steps with Company Details highlighted as active"
+    },
+    {
+      "stepId": "02",
+      "type": "overview",
+      "screenshotFile": "mentor-company-info/02-company-details-overview.png",
+      "pageFile": "15-Mentor-Company-Info.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Company Details page collects essential information about the mentor organization, including company name, identifiers, address, contact details, and financial data.",
+      "voiceover": "This is the Mentor Company Info page. It contains a form with fields for the mentor company's official name, SAM UEI, CAGE code, website, mailing address, contact information, number of employees, and annual gross revenue. Some fields are pre-populated and disabled based on your SAM registration.",
+      "notes": "Full overview of page 15 showing mentor company details form with approximately 15 form fields across company info and social media sections"
+    },
+    {
+      "stepId": "03",
+      "type": "element",
+      "screenshotFile": "mentor-company-info/03-company-name-uei.png",
+      "pageFile": "15-Mentor-Company-Info.html",
+      "selector": "input[name='company_name']",
+      "selectorGroup": [
+        "input[name='company_name']",
+        "input[name='sam_ueid']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='company_name']": "APEX DEFENSE SYSTEMS, INC.",
+        "input[name='sam_ueid']": "J7K9M2N4P6Q8"
+      },
+      "modalText": "The company name and SAM UEI fields are pre-populated from your SAM registration and cannot be edited. These identifiers are pulled automatically when you log in.",
+      "voiceover": "The company name field displays APEX DEFENSE SYSTEMS, INC. and the SAM UEI field shows J7K9M2N4P6Q8. Both fields are disabled and cannot be modified because they are pulled directly from the System for Award Management registration. If these values are incorrect, update them in SAM.gov first.",
+      "notes": "Company name and SAM UEI fields are disabled/read-only, pre-populated from SAM registration"
+    },
+    {
+      "stepId": "04",
+      "type": "element",
+      "screenshotFile": "mentor-company-info/04-cage-website.png",
+      "pageFile": "15-Mentor-Company-Info.html",
+      "selector": "input[name='cage_code']",
+      "selectorGroup": [
+        "input[name='cage_code']",
+        "input[name='website']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='cage_code']": "7X4K9",
+        "input[name='website']": "www.apexdefensesystems.com"
+      },
+      "modalText": "Enter the mentor company's CAGE code and website URL. The CAGE code is a five-character identifier assigned by the Defense Logistics Agency.",
+      "voiceover": "Enter the CAGE code in the designated field. In this example, the code is 7X4K9. Then provide the company website URL, such as www.apexdefensesystems.com. The CAGE code is a five-character alphanumeric identifier assigned by DLA and is required for all defense contractors.",
+      "notes": "CAGE code and website fields for mentor company - CAGE 7X4K9"
+    },
+    {
+      "stepId": "05",
+      "type": "element",
+      "screenshotFile": "mentor-company-info/05-address-fields.png",
+      "pageFile": "15-Mentor-Company-Info.html",
+      "selector": "input[name='address']",
+      "selectorGroup": [
+        "input[name='address']",
+        "input[name='state']",
+        "input[name='zip_code']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='address']": "1847 Innovation Pkwy, Ste 400",
+        "input[name='state']": "VA",
+        "input[name='zip_code']": "22201"
+      },
+      "modalText": "Complete the mailing address fields including street address, state, and zip code. The address should match the company's SAM registration.",
+      "voiceover": "Enter the company's mailing address. The street address is 1847 Innovation Pkwy, Suite 400. Select VA for the state from the dropdown and enter 22201 as the zip code. Ensure this address matches the information on file with the System for Award Management to avoid discrepancies during review.",
+      "notes": "Address, state, and zip code fields for mentor company - Arlington VA 22201"
+    },
+    {
+      "stepId": "06",
+      "type": "element",
+      "screenshotFile": "mentor-company-info/06-contact-fields.png",
+      "pageFile": "15-Mentor-Company-Info.html",
+      "selector": "input[name='email']",
+      "selectorGroup": [
+        "input[name='email']",
+        "input[name='phone']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='email']": "jcalloway@apexdefense.com",
+        "input[name='phone']": "(703) 555-0142"
+      },
+      "modalText": "Provide the primary email address and phone number for the mentor company's point of contact. These will be used for all official program correspondence.",
+      "voiceover": "Enter the primary contact email address, in this case jcalloway@apexdefense.com, followed by the phone number 703-555-0142. These contact details will be used for all official correspondence related to the mentor-protege agreement, including status updates and review notifications.",
+      "notes": "Email and phone fields for mentor company POC - Calloway contact details"
+    },
+    {
+      "stepId": "07",
+      "type": "element",
+      "screenshotFile": "mentor-company-info/07-employees-revenue.png",
+      "pageFile": "15-Mentor-Company-Info.html",
+      "selector": "input[name='number_of_employees']",
+      "selectorGroup": [
+        "input[name='number_of_employees']",
+        "input[name='annual_gross_revenue']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='number_of_employees']": "2400",
+        "input[name='annual_gross_revenue']": "$380,000,000"
+      },
+      "modalText": "Enter the total number of employees and the annual gross revenue for the mentor company. These figures help determine the company's size classification.",
+      "voiceover": "Enter the number of employees, which is 2400 for Apex Defense Systems, and the annual gross revenue of 380 million dollars. These financial metrics are used to determine the company's size standard classification under SBA guidelines and to verify eligibility as a mentor organization in the program.",
+      "notes": "Employee count and annual gross revenue fields - 2400 employees, $380M revenue confirming large business status"
+    },
+    {
+      "stepId": "08",
+      "type": "element",
+      "screenshotFile": "mentor-company-info/08-social-facebook-instagram.png",
+      "pageFile": "15-Mentor-Company-Info.html",
+      "selector": "input[name='facebook']",
+      "selectorGroup": [
+        "input[name='facebook']",
+        "input[name='instagram']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='facebook']": "facebook.com/apexdefensesystems",
+        "input[name='instagram']": "instagram.com/apexdefense"
+      },
+      "modalText": "The social media section begins with Facebook and Instagram fields. These are optional and provide additional ways for program participants to learn about the mentor company.",
+      "voiceover": "Below the company details you will find optional social media fields. Enter the Facebook page URL, such as facebook.com/apexdefensesystems, and the Instagram handle or URL, such as instagram.com/apexdefense. These fields are not required but help build the company's profile within the program portal.",
+      "notes": "Facebook and Instagram social media fields - optional section on page 15"
+    },
+    {
+      "stepId": "09",
+      "type": "element",
+      "screenshotFile": "mentor-company-info/09-social-linkedin-youtube.png",
+      "pageFile": "15-Mentor-Company-Info.html",
+      "selector": "input[name='linkedIn']",
+      "selectorGroup": [
+        "input[name='linkedIn']",
+        "input[name='youtube']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='linkedIn']": "linkedin.com/company/apex-defense-systems",
+        "input[name='youtube']": ""
+      },
+      "modalText": "Enter the LinkedIn company page URL and YouTube channel if available. The YouTube field may be left blank if the company does not maintain a channel.",
+      "voiceover": "Continue with the LinkedIn field, entering the company page URL such as linkedin.com/company/apex-defense-systems. The YouTube field can accept a channel URL if the company maintains one, or it may be left blank. In this example, Apex Defense does not have a YouTube channel so the field remains empty.",
+      "notes": "LinkedIn and YouTube social media fields - LinkedIn populated, YouTube left blank"
+    },
+    {
+      "stepId": "10",
+      "type": "element",
+      "screenshotFile": "mentor-company-info/10-page15-comments.png",
+      "pageFile": "15-Mentor-Company-Info.html",
+      "selector": ".comments-section, [data-comments], .comment-thread",
+      "padding": 100,
+      "modalText": "The comments section on this page allows reviewers and program staff to add notes or request clarifications about the mentor company information entered.",
+      "voiceover": "At the bottom of the Company Details page you may see a comments section. This area allows MPP reviewers and program staff to leave notes, ask questions, or request clarifications about the information you have entered. Monitor this section for any action items during the review process.",
+      "notes": "Comments section on page 15 where reviewers can add notes or request corrections to company info"
+    },
+    {
+      "stepId": "11",
+      "type": "overview",
+      "screenshotFile": "mentor-company-info/11-effective-dates-overview.png",
+      "pageFile": "16-Mentor-Company-info.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Effective Dates page records the mentor company's agreement start date and most recent renewal date. These dates define the active period of participation.",
+      "voiceover": "This is the Mentor Company Effective Dates page. It collects the agreement start date and the most recent renewal date for the mentor organization. These dates establish the formal timeline of the mentor's participation in the program and are used to track agreement milestones and compliance deadlines.",
+      "notes": "Full overview of page 16 showing effective dates form with start_date and renewed_date fields"
+    },
+    {
+      "stepId": "12",
+      "type": "element",
+      "screenshotFile": "mentor-company-info/12-start-date.png",
+      "pageFile": "16-Mentor-Company-info.html",
+      "selector": "input[name='start_date']",
+      "padding": 100,
+      "formFill": {
+        "input[name='start_date']": "02/01/2026"
+      },
+      "modalText": "Enter the agreement start date for the mentor company. This date marks when the mentor formally begins its participation in the program.",
+      "voiceover": "Enter the agreement start date in the designated field. In this example, the start date is February 1, 2026. This date indicates when the mentor company formally began its participation in the Mentor-Protege Program and serves as the baseline for all agreement milestones.",
+      "notes": "Start date field - 02/01/2026, date picker or manual entry"
+    },
+    {
+      "stepId": "13",
+      "type": "element",
+      "screenshotFile": "mentor-company-info/13-renewed-date.png",
+      "pageFile": "16-Mentor-Company-info.html",
+      "selector": "input[name='renewed_date']",
+      "padding": 100,
+      "formFill": {
+        "input[name='renewed_date']": "02/01/2026"
+      },
+      "modalText": "Enter the most recent renewal date if the agreement has been renewed. For new agreements, this may match the start date.",
+      "voiceover": "Enter the most recent renewal date for the agreement. For a new agreement that has not yet been renewed, this date typically matches the start date. In this example, we enter February 1, 2026. When the agreement is renewed in future years, this field should be updated to reflect the.",
+      "notes": "Renewed date field - 02/01/2026, matches start date for new agreements"
+    },
+    {
+      "stepId": "14",
+      "type": "overview",
+      "screenshotFile": "mentor-company-info/14-review-page-overview.png",
+      "pageFile": "17-Mentor-Company-Info.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Review page provides navigation options to revisit any previous sub-step. Use this page to verify your entries before continuing to the next section.",
+      "voiceover": "This is the Review and Navigation page for the Mentor Company Info section. From here you can navigate back to any previous sub-step to verify or correct the information you entered. Use the links or navigation buttons to review company details, social media entries, and effective dates before proceeding.",
+      "notes": "Full overview of page 17 showing review and navigation interface for mentor company info"
+    },
+    {
+      "stepId": "15",
+      "type": "element",
+      "screenshotFile": "mentor-company-info/15-review-nav-links.png",
+      "pageFile": "17-Mentor-Company-Info.html",
+      "selector": ".review-links, .section-nav, [data-review-navigation]",
+      "padding": 100,
+      "modalText": "Navigation links allow you to jump directly to Company Details, Social Media, or Effective Dates sub-steps for review without losing your progress.",
+      "voiceover": "The review page displays navigation links that allow you to jump directly to any sub-step within the Mentor Company Info section. Click on Company Details, Social Media, or Effective Dates to revisit those pages. Your previously entered data will be preserved when you navigate between sub-steps.",
+      "notes": "Navigation links on review page for jumping to specific sub-steps"
+    },
+    {
+      "stepId": "16",
+      "type": "overview",
+      "screenshotFile": "mentor-company-info/16-additional-details-overview.png",
+      "pageFile": "18-Mentor-Company-Info.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Additional Details page captures supplementary mentor company information such as year founded, business size classification, and any applicable small business certifications.",
+      "voiceover": "This is the Additional Details page. It collects supplementary information about the mentor company including the year the company was founded, its business size classification, and any applicable small business certifications. For Apex Defense Systems, founded in 1998 and classified as a large business, no small business certifications apply.",
+      "notes": "Full overview of page 18 showing additional company details form - year founded, size classification, certifications"
+    },
+    {
+      "stepId": "17",
+      "type": "element",
+      "screenshotFile": "mentor-company-info/17-year-founded-size.png",
+      "pageFile": "18-Mentor-Company-Info.html",
+      "selector": "input[name='year_founded'], select[name='year_founded']",
+      "selectorGroup": [
+        "input[name='year_founded']",
+        "select[name='business_size']",
+        "input[name='business_size']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='year_founded']": "1998",
+        "select[name='business_size']": "Large"
+      },
+      "modalText": "Enter the year the mentor company was founded and select the business size classification. Large businesses are eligible to serve as mentors in the program.",
+      "voiceover": "Enter the year the company was founded, which is 1998 for Apex Defense Systems. Then select the business size classification from the dropdown. In this case, select Large since the company has 2400 employees and 380 million dollars in annual revenue. Large businesses are the typical mentor participants in the.",
+      "notes": "Year founded (1998) and business size classification (Large) fields"
+    },
+    {
+      "stepId": "18",
+      "type": "element",
+      "screenshotFile": "mentor-company-info/18-small-biz-certs.png",
+      "pageFile": "18-Mentor-Company-Info.html",
+      "selector": ".certifications, input[name='small_biz_certs'], [data-certifications]",
+      "padding": 100,
+      "formFill": {
+        "input[name='small_biz_certs']": "None"
+      },
+      "modalText": "Indicate any small business certifications held by the mentor company. Select None if the company is classified as a large business with no applicable certifications.",
+      "voiceover": "The small business certifications field asks whether the mentor company holds any SBA certifications such as SDB, HUBZone, WOSB, or SDVOSB. Since Apex Defense Systems is a large business, select None. This field is important for program tracking but does not affect mentor eligibility.",
+      "notes": "Small business certifications field - None selected for large business mentor"
+    },
+    {
+      "stepId": "19",
+      "type": "overview",
+      "screenshotFile": "mentor-company-info/19-progress-circle-overview.png",
+      "pageFile": "19-Mentor-Company-Info.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The final page displays a progress circle indicating the completion status of the Mentor Company Info section. A fully filled circle confirms all required fields have been completed.",
+      "voiceover": "This is the final page of the Mentor Company Info section. It displays a progress circle that visually indicates how much of the section has been completed. When the circle is fully filled, all required fields across the company details, social media, effective dates, and additional details sub-steps have been.",
+      "notes": "Full overview of page 19 showing completion progress circle indicator for the Mentor Company Info section"
+    },
+    {
+      "stepId": "20",
+      "type": "element",
+      "screenshotFile": "mentor-company-info/20-progress-circle-detail.png",
+      "pageFile": "19-Mentor-Company-Info.html",
+      "selector": ".progress-circle, .completion-indicator, [data-progress-circle]",
+      "padding": 100,
+      "modalText": "The progress circle shows the percentage of completion for this section. A green full circle indicates all fields are complete and you may proceed to the next section.",
+      "voiceover": "The progress circle provides a visual summary of your completion status. A fully green circle indicates one hundred percent completion, confirming that all required mentor company information has been entered. If the circle is partially filled, navigate back to the incomplete sub-steps using the sidebar to finish entering the required.",
+      "notes": "Progress circle element showing 100% completion for Mentor Company Info section"
+    },
+    {
+      "stepId": "21",
+      "type": "element",
+      "screenshotFile": "mentor-company-info/21-nav-buttons.png",
+      "pageFile": "19-Mentor-Company-Info.html",
+      "selector": ".btn-next, .nav-buttons, .form-actions",
+      "padding": 100,
+      "modalText": "Use the Back button to return to previous pages for corrections or the Continue button to proceed to the next section of the agreement.",
+      "voiceover": "At the bottom of the page you will find the navigation buttons. The Back button returns you to the Additional Details page if corrections are needed. The Continue button advances you to the next section of the agreement once all mentor company information has been verified and the progress circle.",
+      "notes": "Back and Continue navigation buttons at the bottom of the progress/completion page"
+    },
+    {
+      "stepId": "22",
+      "type": "sidebar-end",
+      "screenshotFile": "mentor-company-info/22-sidebar-complete.png",
+      "pageFile": "19-Mentor-Company-Info.html",
+      "selector": ".progress-sidebar, aside.steps-nav, [data-progress-sidebar]",
+      "padding": 10,
+      "modalText": "All five sub-steps in the Mentor Company Info section are now complete. The progress sidebar reflects your completion status before you move to the next section.",
+      "voiceover": "The progress sidebar now shows all five sub-steps as complete: Company Details, Social Media, Effective Dates, Additional Details, and Review. You have finished the Mentor Company Info section and are ready to proceed to the next part of the agreement.",
+      "sidebarItems": [
+        "Company Details",
+        "Social Media",
+        "Effective Dates",
+        "Additional Details",
+        "Review"
+      ],
+      "notes": "Progress sidebar showing all 5 sub-steps marked as complete"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Why are the company name and SAM UEI fields disabled on the Mentor Company Info page?",
+      "options": {
+        "A": "Because those fields are only editable by the MPP program administrator after the agreement is submitted",
+        "B": "Because those values are pulled automatically from the company's System for Award Management registration and cannot be modified in the portal",
+        "C": "Because the mentor company name and UEI are locked after the protege submits their application"
+      },
+      "feedback": {
+        "A": "Incorrect. The fields are not locked pending administrator action. They are disabled because the data is sourced directly from the company's SAM registration and must be updated through SAM.gov if changes are needed.",
+        "B": "Correct. The company name and SAM UEI fields are pre-populated from the System for Award Management registration and are disabled to maintain data integrity. Any corrections must be made in SAM.gov first.",
+        "C": "Incorrect. The protege application status does not affect the mentor company name and UEI fields. These fields are disabled because they are automatically populated from the company's SAM.gov registration.",
+        "correct": "Correct. The company name and SAM UEI fields are pre-populated from the System for Award Management registration and are disabled to maintain data integrity. Any corrections must be made in SAM.gov first."
+      },
+      "id": "Q1",
+      "correct": "B"
+    },
+    {
+      "question": "What information is captured on the Effective Dates page of the Mentor Company Info section?",
+      "options": {
+        "A": "The agreement start date and the most recent renewal date for the mentor company's participation",
+        "B": "The contract award date and the period of performance end date",
+        "C": "The SAM registration expiration date and the CAGE code renewal date"
+      },
+      "feedback": {
+        "A": "Correct. The Effective Dates page collects the agreement start date and the most recent renewal date, which together define the active timeline of the mentor's participation in the program.",
+        "B": "Incorrect. Contract award dates and period of performance details are managed separately from the mentor company information. The Effective Dates page captures the agreement start date and renewal date.",
+        "C": "Incorrect. SAM registration and CAGE code renewal dates are managed through their respective government systems. The Effective Dates page records the mentor company's agreement start and renewal dates.",
+        "correct": "Correct. The Effective Dates page collects the agreement start date and the most recent renewal date, which together define the active timeline of the mentor's participation in the program."
+      },
+      "id": "Q2",
+      "correct": "A"
+    },
+    {
+      "question": "What does a fully filled progress circle on the final Mentor Company Info page indicate?",
+      "options": {
+        "A": "The mentor company has been approved by the sponsoring agency to participate in the program",
+        "B": "All required fields across the company details, social media, effective dates, and additional details sub-steps have been completed",
+        "C": "The mentor company's SAM registration and CAGE code have been verified by the system"
+      },
+      "feedback": {
+        "A": "Incorrect. The progress circle does not indicate agency approval. It shows the completion status of the data entry fields within the Mentor Company Info section.",
+        "B": "Correct. A fully filled progress circle confirms that all required fields across every sub-step of the Mentor Company Info section have been successfully completed, and you may proceed to the next section.",
+        "C": "Incorrect. SAM and CAGE verification are separate processes handled outside the portal. The progress circle reflects whether all required form fields in the Mentor Company Info section have been filled in.",
+        "correct": "Correct. A fully filled progress circle confirms that all required fields across every sub-step of the Mentor Company Info section have been successfully completed, and you may proceed to the next section."
+      },
+      "id": "Q3",
+      "correct": "B"
+    }
+  ]
+}

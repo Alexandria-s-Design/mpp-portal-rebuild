@@ -1,0 +1,302 @@
+{
+  "id": "01-dashboard",
+  "title": "Dashboard",
+  "sheetName": "Dashboard",
+  "pages": [
+    "Mentor-Protege-Program.html"
+  ],
+  "steps": [
+    {
+      "stepId": "01",
+      "type": "overview",
+      "screenshotFile": "dashboard/01-full-dashboard.png",
+      "pageFile": "Mentor-Protege-Program.html",
+      "selector": "main",
+      "padding": 20,
+      "modalText": "This is the MPP Dashboard, your central hub for managing all mentor-protege program activities. From here you can access applications, agreements, team information, and program resources.",
+      "voiceover": "Welcome to the Mentor-Protege Program Dashboard. This page serves as your central hub for navigating all program activities. You will find quick-start pathways, navigation options, and important program announcements all accessible from this single page.",
+      "notes": "Full dashboard overview showing sidebar navigation and main content area"
+    },
+    {
+      "stepId": "02",
+      "type": "element",
+      "screenshotFile": "dashboard/02-message-from-mpp.png",
+      "pageFile": "Mentor-Protege-Program.html",
+      "selector": ".bg-white.rounded-\\[4px\\].px-\\[25px\\]",
+      "padding": 100,
+      "modalText": "The Message from MPP banner displays important announcements, program updates, and deadline reminders from the Mentor-Protege Program office.",
+      "voiceover": "At the top of the main content area, you will see the Message from MPP section. This banner provides important announcements, upcoming deadlines, and program updates directly from the Mentor-Protege Program office. Check this area regularly for the latest information.",
+      "notes": "Info banner with program announcements and updates"
+    },
+    {
+      "stepId": "03",
+      "type": "element",
+      "screenshotFile": "dashboard/03-quick-start-section.png",
+      "pageFile": "Mentor-Protege-Program.html",
+      "selector": ".bg-brand-100",
+      "padding": 100,
+      "modalText": "The Quick Start section provides four pathway cards that guide you through the primary steps of the MPP application process. Each card represents a key phase.",
+      "voiceover": "Below the announcements you will find the Quick Start section. This area contains four pathway cards that outline the primary steps in the application process. These cards provide a guided path through the program workflow, helping you understand what actions to take next.",
+      "notes": "Quick Start section container with all four pathway cards"
+    },
+    {
+      "stepId": "04",
+      "type": "element",
+      "screenshotFile": "dashboard/04-card-protege-company-info.png",
+      "pageFile": "Mentor-Protege-Program.html",
+      "selector": ".grid.grid-cols-4 > div:nth-child(1)",
+      "padding": 100,
+      "modalText": "The Protege Company Info card is the first step in the pathway. It collects essential company details for the protege participant in the agreement.",
+      "voiceover": "The first pathway card is Protege Company Info. This step gathers essential details about the protege company, including business classification, CAGE code, DUNS number, and other required identifiers. Completing this card is the first milestone in the application process.",
+      "notes": "First pathway card for protege company information entry"
+    },
+    {
+      "stepId": "05",
+      "type": "element",
+      "screenshotFile": "dashboard/05-card-protege-needs-assessment.png",
+      "pageFile": "Mentor-Protege-Program.html",
+      "selector": ".grid.grid-cols-4 > div:nth-child(2)",
+      "padding": 100,
+      "modalText": "The Protege Needs Assessment card captures the developmental areas where the protege company seeks mentoring support and growth opportunities.",
+      "voiceover": "The second pathway card is the Protege Needs Assessment. This step identifies the specific developmental areas where the protege company is seeking support. Categories may include technical capabilities, business development, financial management, and contract administration.",
+      "notes": "Second pathway card for protege needs assessment"
+    },
+    {
+      "stepId": "06",
+      "type": "element",
+      "screenshotFile": "dashboard/06-card-mentor-company-info.png",
+      "pageFile": "Mentor-Protege-Program.html",
+      "selector": ".grid.grid-cols-4 > div:nth-child(3)",
+      "padding": 100,
+      "modalText": "The Mentor Company Info card collects details about the mentor organization, including capabilities, past performance, and areas of expertise.",
+      "voiceover": "The third pathway card is Mentor Company Info. This step captures details about the mentor company, including its capabilities, areas of expertise, and relevant past performance. This information helps establish the foundation for the mentoring relationship.",
+      "notes": "Third pathway card for mentor company information"
+    },
+    {
+      "stepId": "07",
+      "type": "element",
+      "screenshotFile": "dashboard/07-card-mentor-application.png",
+      "pageFile": "Mentor-Protege-Program.html",
+      "selector": ".grid.grid-cols-4 > div:nth-child(4)",
+      "padding": 100,
+      "modalText": "The Mentor Application card is the final pathway step, where the mentor submits their formal application to participate in the program.",
+      "voiceover": "The fourth and final pathway card is the Mentor Application. This step allows the mentor company to submit a formal application to participate in the Mentor-Protege Program. Once all four pathway steps are complete, the agreement can move forward for review.",
+      "notes": "Fourth pathway card for mentor application submission"
+    },
+    {
+      "stepId": "08",
+      "type": "element",
+      "screenshotFile": "dashboard/08-sidebar-dashboard.png",
+      "pageFile": "Mentor-Protege-Program.html",
+      "selector": "a[title=\"Dashboard\"]",
+      "padding": 100,
+      "modalText": "The Dashboard link in the sidebar returns you to this main page at any time. It is always available as your home base within the portal.",
+      "voiceover": "In the left sidebar, the Dashboard link serves as your home button. Selecting it from any page within the portal will return you to this main Dashboard view. It is always accessible at the top of the navigation menu.",
+      "notes": "Sidebar navigation item for Dashboard (home)"
+    },
+    {
+      "stepId": "09",
+      "type": "element",
+      "screenshotFile": "dashboard/09-sidebar-applications.png",
+      "pageFile": "Mentor-Protege-Program.html",
+      "selector": "a[title=\"Applications\"]",
+      "padding": 100,
+      "modalText": "The Applications section lets you view, create, and manage mentor-protege agreement applications. Track submission status and review history here.",
+      "voiceover": "The Applications link opens the section where you can view, create, and manage all mentor-protege agreement applications. This area tracks the status of each application from draft through submission, review, and approval.",
+      "notes": "Sidebar navigation item for Applications"
+    },
+    {
+      "stepId": "10",
+      "type": "element",
+      "screenshotFile": "dashboard/10-sidebar-agreements-reports.png",
+      "pageFile": "Mentor-Protege-Program.html",
+      "selector": "a[title=\"Agreements & Reports\"]",
+      "padding": 100,
+      "modalText": "Agreements and Reports provides access to approved agreements and required periodic reporting. Monitor milestones, deliverables, and compliance status.",
+      "voiceover": "The Agreements and Reports section gives you access to all approved agreements and their associated periodic reports. Here you can monitor milestones, track deliverables, and ensure compliance with program reporting requirements throughout the agreement period.",
+      "notes": "Sidebar navigation item for Agreements & Reports"
+    },
+    {
+      "stepId": "11",
+      "type": "element",
+      "screenshotFile": "dashboard/11-sidebar-team-information.png",
+      "pageFile": "Mentor-Protege-Program.html",
+      "selector": "a[title=\"Team Information\"]",
+      "padding": 100,
+      "modalText": "Team Information displays the personnel associated with your organization. Manage team member roles, contact details, and access permissions from this section.",
+      "voiceover": "The Team Information section displays all personnel associated with your organization within the program. From here you can manage team member roles, update contact details, and control access permissions for each user on your team.",
+      "notes": "Sidebar navigation item for Team Information"
+    },
+    {
+      "stepId": "12",
+      "type": "element",
+      "screenshotFile": "dashboard/12-sidebar-resources.png",
+      "pageFile": "Mentor-Protege-Program.html",
+      "selector": "a[title=\"Resources\"]",
+      "padding": 100,
+      "modalText": "The Resources section contains program guides, reference documents, templates, and training materials to support your participation in the program.",
+      "voiceover": "The Resources link provides access to program guides, reference documents, downloadable templates, and training materials. These resources are designed to support participants throughout every phase of the mentor-protege agreement lifecycle.",
+      "notes": "Sidebar navigation item for Resources (expandable)"
+    },
+    {
+      "stepId": "13",
+      "type": "element",
+      "screenshotFile": "dashboard/13-sidebar-about-mpp.png",
+      "pageFile": "Mentor-Protege-Program.html",
+      "selector": "a[title=\"About MPP\"]",
+      "padding": 100,
+      "modalText": "About MPP provides background on the Mentor-Protege Program, including its mission, eligibility criteria, program structure, and regulatory references.",
+      "voiceover": "The About MPP section provides comprehensive background information on the Mentor-Protege Program. Here you will find the program mission, eligibility criteria, structural overview, and references to the governing DFARS regulations and policies.",
+      "notes": "Sidebar navigation item for About MPP (expandable)"
+    },
+    {
+      "stepId": "14",
+      "type": "dropdown",
+      "screenshotFile": "dashboard/14-resources-expanded.png",
+      "pageFile": "Mentor-Protege-Program.html",
+      "selector": "a[title=\"Resources\"] + ul, a[title=\"Resources\"] ~ div",
+      "padding": 100,
+      "modalText": "When expanded, the Resources section reveals sub-items such as program guides, FAQs, downloadable forms, and links to external regulatory references.",
+      "voiceover": "Clicking the Resources navigation item expands a dropdown list of sub-items. These may include program guides, frequently asked questions, downloadable forms and templates, and links to external regulatory references that govern the program.",
+      "notes": "Resources dropdown expanded showing sub-navigation items"
+    },
+    {
+      "stepId": "15",
+      "type": "dropdown",
+      "screenshotFile": "dashboard/15-about-mpp-expanded.png",
+      "pageFile": "Mentor-Protege-Program.html",
+      "selector": "a[title=\"About MPP\"] + ul, a[title=\"About MPP\"] ~ div",
+      "padding": 100,
+      "modalText": "When expanded, About MPP reveals sub-items covering program history, eligibility requirements, benefits of participation, and contact information.",
+      "voiceover": "Clicking the About MPP navigation item expands a dropdown with sub-items. These include program history, detailed eligibility requirements, benefits of participation for both mentors and proteges, and contact information for the MPP office.",
+      "notes": "About MPP dropdown expanded showing sub-navigation items"
+    },
+    {
+      "stepId": "16",
+      "type": "element",
+      "screenshotFile": "dashboard/16-account-edit-profile.png",
+      "pageFile": "Mentor-Protege-Program.html",
+      "selector": "a[title=\"Edit Company Profile\"]",
+      "padding": 100,
+      "modalText": "Edit Company Profile allows you to update your organization's details, including company name, address, CAGE code, and point-of-contact information.",
+      "voiceover": "In the account section at the bottom of the sidebar, the Edit Company Profile link allows you to update your organization's details. This includes company name, address, CAGE code, DUNS number, and designated point-of-contact information.",
+      "notes": "Account section item for editing company profile"
+    },
+    {
+      "stepId": "17",
+      "type": "element",
+      "screenshotFile": "dashboard/17-account-feedback.png",
+      "pageFile": "Mentor-Protege-Program.html",
+      "selector": "div[title=\"Feedback\"]",
+      "padding": 100,
+      "modalText": "The Feedback option lets you submit comments, suggestions, or report issues directly to the MPP program administrators.",
+      "voiceover": "The Feedback option allows you to submit comments, suggestions, or report technical issues directly to the program administrators. Your feedback helps improve the portal experience for all participants in the Mentor-Protege Program.",
+      "notes": "Account section item for submitting feedback"
+    },
+    {
+      "stepId": "18",
+      "type": "element",
+      "screenshotFile": "dashboard/18-account-help-faqs.png",
+      "pageFile": "Mentor-Protege-Program.html",
+      "selector": "div[title=\"Help & FAQs\"]",
+      "padding": 100,
+      "modalText": "Help and FAQs provides answers to common questions about using the portal, submitting applications, and navigating program requirements.",
+      "voiceover": "The Help and FAQs section provides answers to frequently asked questions about using the portal, submitting applications, managing agreements, and navigating program requirements. This is a helpful first stop for troubleshooting common issues.",
+      "notes": "Account section item for help documentation and FAQs"
+    },
+    {
+      "stepId": "19",
+      "type": "element",
+      "screenshotFile": "dashboard/19-account-logout.png",
+      "pageFile": "Mentor-Protege-Program.html",
+      "selector": "a[title=\"Log Out\"], button[title=\"Log Out\"]",
+      "padding": 100,
+      "modalText": "Log Out securely ends your session. Always log out when you are finished to protect sensitive program and company information.",
+      "voiceover": "The Log Out option securely ends your current session. It is important to log out when you are finished working in the portal, especially on shared or public devices, to protect sensitive program and company information.",
+      "notes": "Account section item for secure logout"
+    },
+    {
+      "stepId": "20",
+      "type": "element",
+      "screenshotFile": "dashboard/20-main-heading.png",
+      "pageFile": "Mentor-Protege-Program.html",
+      "selector": "h1.font-roboto",
+      "padding": 100,
+      "modalText": "The Agreements and Reports heading identifies the primary content area of the Dashboard. This label reflects the current view within the main panel.",
+      "voiceover": "The main content area is headed by the Agreements and Reports title. This heading identifies what section of the portal you are currently viewing. As you navigate to different areas, this heading will update to reflect the active content.",
+      "notes": "Main content area heading displaying current section title"
+    },
+    {
+      "stepId": "21",
+      "type": "element",
+      "screenshotFile": "dashboard/21-select-dropdowns.png",
+      "pageFile": "Mentor-Protege-Program.html",
+      "selector": "select, .select-wrapper, [role=\"listbox\"]",
+      "padding": 100,
+      "modalText": "Three dropdown selectors allow you to filter agreements and reports by criteria such as agreement type, status, and reporting period.",
+      "voiceover": "Below the heading you will find three dropdown selectors. These filters allow you to narrow the displayed agreements and reports by specific criteria such as agreement type, current status, and reporting period. Use these to quickly locate the records you need.",
+      "notes": "Three anonymous select dropdowns for filtering content"
+    },
+    {
+      "stepId": "22",
+      "type": "element",
+      "screenshotFile": "dashboard/22-sidebar-full.png",
+      "pageFile": "Mentor-Protege-Program.html",
+      "selector": "nav, aside, [role=\"navigation\"]",
+      "padding": 100,
+      "modalText": "The full sidebar navigation provides persistent access to all portal sections. It remains visible on every page, ensuring you can always reach any area of the program.",
+      "voiceover": "The left sidebar navigation panel is always visible throughout the portal. It provides persistent access to every major section including Dashboard, Applications, Agreements and Reports, Team Information, Resources, and About MPP, along with account management options at the bottom.",
+      "notes": "Complete sidebar navigation panel overview"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the purpose of the Quick Start section on the Dashboard?",
+      "options": {
+        "A": "To display a summary of all completed agreements",
+        "B": "To provide pathway cards that guide users through the primary steps of the application process",
+        "C": "To show recent notifications and messages from the MPP office"
+      },
+      "feedback": {
+        "A": "Incorrect. Completed agreements are found in the Agreements & Reports section. The Quick Start area focuses on guiding users through the application steps.",
+        "B": "Correct. The Quick Start section contains four pathway cards that outline the key steps in the application process, helping users understand the workflow from start to finish.",
+        "C": "Incorrect. Program messages appear in the Message from MPP banner, not the Quick Start section. The Quick Start area provides pathway cards for the application process.",
+        "correct": "Correct. The Quick Start section contains four pathway cards that outline the key steps in the application process, helping users understand the workflow from start to finish."
+      },
+      "id": "Q1",
+      "correct": "B"
+    },
+    {
+      "question": "Where can you find program guides, downloadable templates, and training materials in the portal?",
+      "options": {
+        "A": "Under the About MPP section in the sidebar",
+        "B": "In the Quick Start pathway cards on the Dashboard",
+        "C": "Under the Resources section in the sidebar"
+      },
+      "feedback": {
+        "A": "Incorrect. The About MPP section provides background information such as the program mission, eligibility criteria, and regulatory references, not downloadable templates or training materials.",
+        "B": "Incorrect. The Quick Start pathway cards guide you through the application process steps. Program guides and templates are located in the Resources section of the sidebar.",
+        "C": "Correct. The Resources section in the sidebar contains program guides, reference documents, downloadable templates, and training materials to support your participation throughout the program.",
+        "correct": "Correct. The Resources section in the sidebar contains program guides, reference documents, downloadable templates, and training materials to support your participation throughout the program."
+      },
+      "id": "Q2",
+      "correct": "C"
+    },
+    {
+      "question": "How many pathway cards are displayed in the Quick Start section of the Dashboard?",
+      "options": {
+        "A": "Three cards: Protege Info, Mentor Info, and Application",
+        "B": "Four cards: Protege Company Info, Protege Needs Assessment, Mentor Company Info, and Mentor Application",
+        "C": "Five cards: Company Info, Needs Assessment, Mentor Info, Application, and Agreement Review"
+      },
+      "feedback": {
+        "A": "Incorrect. There are four pathway cards, not three. The Quick Start section includes Protege Company Info, Protege Needs Assessment, Mentor Company Info, and Mentor Application.",
+        "B": "Correct. The Quick Start section displays exactly four pathway cards: Protege Company Info, Protege Needs Assessment, Mentor Company Info, and Mentor Application. These represent the primary steps in the application process.",
+        "C": "Incorrect. There are four pathway cards, not five. Agreement Review is not one of the Quick Start pathway cards. The four cards are Protege Company Info, Protege Needs Assessment, Mentor Company Info, and Mentor Application.",
+        "correct": "Correct. The Quick Start section displays exactly four pathway cards: Protege Company Info, Protege Needs Assessment, Mentor Company Info, and Mentor Application. These represent the primary steps in the application process."
+      },
+      "id": "Q3",
+      "correct": "B"
+    }
+  ]
+}

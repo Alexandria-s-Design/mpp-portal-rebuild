@@ -1,0 +1,359 @@
+{
+  "id": "07-needs-assessment",
+  "title": "Needs Assessment",
+  "sheetName": "Needs Assessment",
+  "pages": [
+    "24-Protege-Needs-Assessment.html",
+    "25-Protege-Needs-Assessment.html",
+    "26-Protege-Needs-Assessment.html",
+    "27-Protege-Needs-Assessment.html",
+    "28-Protege-Needs-Assessment.html",
+    "29-Protege-Needs-Assessment.html",
+    "30-Protege-Needs-Assessment.html"
+  ],
+  "steps": [
+    {
+      "stepId": "01",
+      "type": "sidebar-start",
+      "screenshotFile": "needs-assessment/01-sidebar-progress.png",
+      "pageFile": "24-Protege-Needs-Assessment.html",
+      "selector": ".progress-sidebar, aside.steps-nav, [data-progress-sidebar]",
+      "padding": 10,
+      "modalText": "The progress sidebar tracks your position across seven sub-steps in the Needs Assessment section. Each item highlights as you advance through the assessment workflow.",
+      "voiceover": "On the left side of the form area you will see a progress sidebar. This sidebar lists seven sub-steps: Technical Capabilities, Business Development, Financial Management, Contract Administration, Team Members, Professional Experience, and Review Needs Assessment. Your current position is highlighted as you move through each step.",
+      "sidebarItems": [
+        "Technical Capabilities",
+        "Business Development",
+        "Financial Management",
+        "Contract Administration",
+        "Team Members",
+        "Professional Experience",
+        "Review Needs Assessment"
+      ],
+      "notes": "Progress sidebar showing all 7 sub-steps with Technical Capabilities highlighted as active"
+    },
+    {
+      "stepId": "02",
+      "type": "overview",
+      "screenshotFile": "needs-assessment/02-technical-capabilities-overview.png",
+      "pageFile": "24-Protege-Needs-Assessment.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Technical Capabilities page identifies specific technical areas where PINNACLE ENGINEERING GROUP seeks developmental support from mentor APEX DEFENSE SYSTEMS through the agreement.",
+      "voiceover": "This is the Technical Capabilities assessment page. It presents a series of questions that identify the protege company's technical development needs. Each question asks whether the protege requires mentoring in a specific technical domain, such as systems engineering, cybersecurity, or quality assurance processes. Your responses will shape the mentoring plan.",
+      "notes": "Full overview of page 24 showing the technical capabilities assessment form with multiple developmental area questions"
+    },
+    {
+      "stepId": "03",
+      "type": "element",
+      "screenshotFile": "needs-assessment/03-section-header-technical.png",
+      "pageFile": "24-Protege-Needs-Assessment.html",
+      "selector": "h2, .section-heading, .assessment-category-header",
+      "padding": 100,
+      "modalText": "The Technical Capabilities header introduces the first category of the needs assessment. This section focuses on engineering, technology, and systems-related developmental areas.",
+      "voiceover": "At the top of the form you will see the Technical Capabilities heading. This is the first of four developmental categories in the needs assessment. It covers areas such as systems engineering, cybersecurity, software development, and quality assurance that the protege may need support with.",
+      "notes": "Section header for Technical Capabilities assessment category"
+    },
+    {
+      "stepId": "04",
+      "type": "element",
+      "screenshotFile": "needs-assessment/04-technical-radio-systems-engineering.png",
+      "pageFile": "24-Protege-Needs-Assessment.html",
+      "selector": "input[type='radio'][name='systemsEngineering'], .radio-group",
+      "padding": 100,
+      "modalText": "Select Yes or No to indicate whether the protege needs mentoring in systems engineering. Select Yes if this is a developmental area for the protege organization.",
+      "voiceover": "The first question asks whether the protege requires mentoring support in systems engineering. Select Yes if PINNACLE ENGINEERING GROUP needs developmental assistance in this area, or No if the company already has sufficient capabilities. In this example, we select Yes to indicate a need for systems engineering support.",
+      "notes": "Radio button pair for systems engineering developmental need - Yes/No selection"
+    },
+    {
+      "stepId": "05",
+      "type": "element",
+      "screenshotFile": "needs-assessment/05-technical-radio-cybersecurity.png",
+      "pageFile": "24-Protege-Needs-Assessment.html",
+      "selector": "input[type='radio'][name='cybersecurity'], .radio-group:nth-of-type(2)",
+      "padding": 100,
+      "modalText": "Indicate whether the protege needs mentoring in cybersecurity and information assurance. This aligns with the agreement's focus area of Cybersecurity Workforce Development.",
+      "voiceover": "The next question addresses cybersecurity and information assurance capabilities. Since the agreement's primary focus area is Cybersecurity Workforce Development, this is a critical developmental need for PINNACLE ENGINEERING GROUP. Select Yes to indicate that mentoring support is needed in this domain.",
+      "notes": "Radio button pair for cybersecurity developmental need - Yes/No selection, aligns with agreement focus area"
+    },
+    {
+      "stepId": "06",
+      "type": "element",
+      "screenshotFile": "needs-assessment/06-technical-textarea-details.png",
+      "pageFile": "24-Protege-Needs-Assessment.html",
+      "selector": "textarea[name='technicalDetails'], textarea.assessment-details",
+      "padding": 100,
+      "modalText": "Provide additional details about the protege's technical development needs. Describe specific skill gaps, desired certifications, or technology areas requiring support.",
+      "voiceover": "Below the selection questions you will find a text area for providing additional details about the technical development needs. Describe specific skill gaps, desired certifications, or particular technologies where support is needed. For example, you might note that PINNACLE needs training in NIST cybersecurity frameworks and RMF accreditation processes.",
+      "notes": "Free-text area for elaborating on technical capability development needs"
+    },
+    {
+      "stepId": "07",
+      "type": "element",
+      "screenshotFile": "needs-assessment/07-nav-buttons-page24.png",
+      "pageFile": "24-Protege-Needs-Assessment.html",
+      "selector": ".btn-next, .nav-buttons, .form-actions",
+      "padding": 100,
+      "modalText": "Use the Back button to return to the previous section or the Continue button to proceed to the Business Development assessment after completing technical capability selections.",
+      "voiceover": "At the bottom of the page you will find the navigation buttons. The Back button returns you to the previous section of the agreement. The Continue button advances you to the Business Development assessment page once you have completed all technical capability selections and provided any additional details.",
+      "notes": "Back and Continue navigation buttons at the bottom of page 24"
+    },
+    {
+      "stepId": "08",
+      "type": "overview",
+      "screenshotFile": "needs-assessment/08-business-development-overview.png",
+      "pageFile": "25-Protege-Needs-Assessment.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Business Development page assesses the protege's needs in areas such as marketing, proposal writing, strategic planning, and client relationship management.",
+      "voiceover": "This is the Business Development assessment page. It evaluates the protege company's developmental needs in areas critical to growing a defense contracting business. Questions cover marketing and branding, proposal and bid preparation, strategic planning, teaming arrangements, and client relationship management within the federal marketplace.",
+      "notes": "Full overview of page 25 showing the business development assessment form"
+    },
+    {
+      "stepId": "09",
+      "type": "element",
+      "screenshotFile": "needs-assessment/09-business-dev-checkboxes.png",
+      "pageFile": "25-Protege-Needs-Assessment.html",
+      "selector": "input[type='checkbox'][name='proposalWriting'], input[type='checkbox'], .checkbox-group",
+      "padding": 100,
+      "modalText": "Select all business development areas where the protege needs mentoring. Multiple selections are allowed to capture the full scope of developmental needs.",
+      "voiceover": "Unlike the technical section which uses yes-or-no questions, the business development section uses checkboxes allowing you to select multiple areas simultaneously. Check all areas where PINNACLE ENGINEERING GROUP needs developmental support, such as proposal writing, capture management, strategic planning, and market research for federal opportunities.",
+      "notes": "Checkbox group for selecting multiple business development needs - proposal writing, capture management, strategic planning, etc."
+    },
+    {
+      "stepId": "10",
+      "type": "element",
+      "screenshotFile": "needs-assessment/10-business-dev-priority-dropdown.png",
+      "pageFile": "25-Protege-Needs-Assessment.html",
+      "selector": "select[name='businessDevPriority'], select.priority-level",
+      "padding": 100,
+      "modalText": "Select the priority level for business development support. Options range from High to Low and help the mentor focus resources on the most critical developmental areas.",
+      "voiceover": "After selecting the relevant business development areas, assign a priority level using the dropdown selector. Options include High, Medium, and Low priority. Setting this to High priority indicates that business development is a critical area where PINNACLE ENGINEERING GROUP needs immediate and focused support from APEX DEFENSE SYSTEMS.",
+      "notes": "Priority level dropdown for business development category - High/Medium/Low"
+    },
+    {
+      "stepId": "11",
+      "type": "overview",
+      "screenshotFile": "needs-assessment/11-financial-management-overview.png",
+      "pageFile": "26-Protege-Needs-Assessment.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Financial Management page evaluates the protege's needs in accounting systems, cost proposals, DCAA compliance, and financial reporting required for government contracts.",
+      "voiceover": "This is the Financial Management assessment page. It addresses the protege company's developmental needs in financial areas specific to government contracting. Topics include establishing an adequate accounting system, preparing cost proposals, understanding DCAA audit requirements, indirect rate structures, and financial reporting obligations under federal contracts.",
+      "notes": "Full overview of page 26 showing the financial management assessment form"
+    },
+    {
+      "stepId": "12",
+      "type": "element",
+      "screenshotFile": "needs-assessment/12-financial-radio-accounting-system.png",
+      "pageFile": "26-Protege-Needs-Assessment.html",
+      "selector": "input[type='radio'][name='accountingSystem'], .radio-group",
+      "padding": 100,
+      "modalText": "Indicate whether the protege needs support establishing or improving a DCAA-compliant accounting system. This is a foundational requirement for government contract performance.",
+      "voiceover": "The first financial management question asks whether the protege needs support with a DCAA-compliant accounting system. This is a critical capability for any company performing on government contracts. Select Yes if PINNACLE ENGINEERING GROUP needs assistance establishing or improving its accounting system to meet Defense Contract Audit Agency requirements.",
+      "notes": "Radio button pair for DCAA-compliant accounting system developmental need"
+    },
+    {
+      "stepId": "13",
+      "type": "element",
+      "screenshotFile": "needs-assessment/13-financial-radio-cost-proposals.png",
+      "pageFile": "26-Protege-Needs-Assessment.html",
+      "selector": "input[type='radio'][name='costProposals'], .radio-group:nth-of-type(2)",
+      "padding": 100,
+      "modalText": "Select whether the protege requires mentoring in preparing cost proposals and understanding indirect rate structures for government contract pricing.",
+      "voiceover": "The next question addresses cost proposal preparation and indirect rate development. This includes understanding how to structure direct and indirect costs, develop wrap rates, and prepare compliant cost proposals for government solicitations. Indicate whether PINNACLE needs mentoring in these financial management areas.",
+      "notes": "Radio button pair for cost proposal preparation developmental need"
+    },
+    {
+      "stepId": "14",
+      "type": "overview",
+      "screenshotFile": "needs-assessment/14-contract-admin-overview.png",
+      "pageFile": "27-Protege-Needs-Assessment.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Contract Administration page assesses the protege's needs in contract compliance, DFARS regulations, deliverable management, and subcontract administration.",
+      "voiceover": "This is the Contract Administration assessment page. It evaluates the protege company's developmental needs in managing government contracts. Questions cover DFARS compliance, contract modifications, deliverable tracking, subcontract administration, and understanding of Federal Acquisition Regulation clauses that govern contract performance and reporting.",
+      "notes": "Full overview of page 27 showing the contract administration assessment form"
+    },
+    {
+      "stepId": "15",
+      "type": "element",
+      "screenshotFile": "needs-assessment/15-contract-admin-checkboxes.png",
+      "pageFile": "27-Protege-Needs-Assessment.html",
+      "selector": "input[type='checkbox'][name='dfarsCompliance'], input[type='checkbox'], .checkbox-group",
+      "padding": 100,
+      "modalText": "Select all contract administration areas requiring developmental support. Options include DFARS compliance, contract modifications, deliverable management, and subcontract oversight.",
+      "voiceover": "The contract administration section uses checkboxes for selecting multiple developmental areas. Available options include DFARS regulatory compliance, contract modification procedures, deliverable tracking and submission, subcontract administration, and government property management. Select all areas where PINNACLE ENGINEERING GROUP needs mentoring support from APEX DEFENSE SYSTEMS.",
+      "notes": "Checkbox group for selecting multiple contract administration needs"
+    },
+    {
+      "stepId": "16",
+      "type": "element",
+      "screenshotFile": "needs-assessment/16-contract-admin-textarea.png",
+      "pageFile": "27-Protege-Needs-Assessment.html",
+      "selector": "textarea[name='contractAdminDetails'], textarea.assessment-details",
+      "padding": 100,
+      "modalText": "Provide additional context about the protege's contract administration needs. Include specific DFARS clauses, contract types, or compliance areas requiring focused attention.",
+      "voiceover": "Use the text area to provide additional details about specific contract administration needs. For example, you might describe the protege's need for training on DFARS 252.204-7012 cybersecurity requirements, understanding of CAS-covered contracts, or experience with cost-reimbursement contract types that PINNACLE has not previously performed on.",
+      "notes": "Free-text area for elaborating on contract administration developmental needs with DFARS references"
+    },
+    {
+      "stepId": "17",
+      "type": "overview",
+      "screenshotFile": "needs-assessment/17-team-members-overview.png",
+      "pageFile": "28-Protege-Needs-Assessment.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Team Members page identifies personnel from the protege organization who will participate in the mentoring activities. Enter the individuals who will receive developmental support.",
+      "voiceover": "This is the Team Members page for the needs assessment. It collects information about the protege organization's personnel who will directly participate in mentoring activities. Enter the names, titles, and areas of focus for each team member who will receive developmental support under the agreement.",
+      "notes": "Full overview of page 28 showing the team member selection interface for needs assessment participants"
+    },
+    {
+      "stepId": "18",
+      "type": "element",
+      "screenshotFile": "needs-assessment/18-team-member-selection.png",
+      "pageFile": "28-Protege-Needs-Assessment.html",
+      "selector": "select[name='teamMember'], .team-member-select, .member-picker",
+      "padding": 100,
+      "modalText": "Select team members from the protege organization who will participate in mentoring. These individuals should align with the developmental areas identified in the previous pages.",
+      "voiceover": "Use the team member selection interface to identify which personnel from PINNACLE ENGINEERING GROUP will participate in the mentoring activities. Team members previously entered in the Agreement Team section, such as Maria S. Nguyen and Sarah L. Washington, will be available for selection. Match each participant to their relevant developmental.",
+      "notes": "Team member selection dropdown or picker for choosing needs assessment participants from protege team"
+    },
+    {
+      "stepId": "19",
+      "type": "overview",
+      "screenshotFile": "needs-assessment/19-professional-experience-overview.png",
+      "pageFile": "29-Protege-Needs-Assessment.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Professional Experience page captures relevant work history and certifications for the protege team members who will receive mentoring support under the agreement.",
+      "voiceover": "This is the Professional Experience page. It collects work history, relevant certifications, and professional qualifications for each protege team member participating in the mentoring program. This information helps the mentor organization tailor developmental activities to each individual's current skill level and career goals.",
+      "notes": "Full overview of page 29 showing the professional experience entry form for protege team members"
+    },
+    {
+      "stepId": "20",
+      "type": "element",
+      "screenshotFile": "needs-assessment/20-experience-entry-fields.png",
+      "pageFile": "29-Protege-Needs-Assessment.html",
+      "selector": "input[name='yearsExperience'], .experience-fields",
+      "padding": 100,
+      "modalText": "Enter each team member's years of relevant experience, current certifications, and prior government contracting experience to establish a baseline for mentoring activities.",
+      "voiceover": "For each participating team member, enter their years of relevant professional experience, any current certifications such as PMP, CISSP, or CPA, and a summary of their prior government contracting experience. This baseline information helps APEX DEFENSE SYSTEMS design targeted mentoring activities appropriate to each individual's experience level.",
+      "notes": "Experience entry fields including years, certifications, and prior government contracting experience"
+    },
+    {
+      "stepId": "21",
+      "type": "overview",
+      "screenshotFile": "needs-assessment/21-review-overview.png",
+      "pageFile": "30-Protege-Needs-Assessment.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Review Needs Assessment page displays a read-only summary of all developmental areas, priorities, team members, and experience entries. Verify all details before proceeding.",
+      "voiceover": "This is the Review Needs Assessment page. It presents a consolidated, read-only summary of all the information entered across the previous six pages. Review the technical capabilities, business development, financial management, and contract administration selections along with the team member assignments and professional experience entries before continuing.",
+      "notes": "Full overview of page 30 showing read-only review summary of all needs assessment data"
+    },
+    {
+      "stepId": "22",
+      "type": "element",
+      "screenshotFile": "needs-assessment/22-review-developmental-summary.png",
+      "pageFile": "30-Protege-Needs-Assessment.html",
+      "selector": ".review-developmental, .summary-needs, [data-section='needs']",
+      "padding": 100,
+      "modalText": "The developmental areas summary shows all selected needs across the four categories, including priority levels and any additional details provided in the text areas.",
+      "voiceover": "The developmental areas summary consolidates your selections from all four assessment categories. It displays which technical capabilities, business development areas, financial management topics, and contract administration skills were marked as developmental needs. Priority levels and any additional context you provided are also shown for the mentor's reference.",
+      "notes": "Read-only summary of all selected developmental areas across four categories with priorities"
+    },
+    {
+      "stepId": "23",
+      "type": "element",
+      "screenshotFile": "needs-assessment/23-review-team-experience-summary.png",
+      "pageFile": "30-Protege-Needs-Assessment.html",
+      "selector": ".review-team, .summary-team, [data-section='team']",
+      "padding": 100,
+      "modalText": "The team and experience summary lists all protege personnel participating in the mentoring program along with their qualifications and assigned developmental focus areas.",
+      "voiceover": "The team and experience summary section lists each protege team member who will participate in mentoring activities. For each individual, it shows their name, title, years of experience, certifications, and the specific developmental area they are assigned to. Verify that all personnel and experience details are accurate before finalizing.",
+      "notes": "Read-only summary of team members and their professional experience entries"
+    },
+    {
+      "stepId": "24",
+      "type": "element",
+      "screenshotFile": "needs-assessment/24-review-nav-buttons.png",
+      "pageFile": "30-Protege-Needs-Assessment.html",
+      "selector": ".btn-next, .nav-buttons, .form-actions",
+      "padding": 100,
+      "modalText": "Use the Back button to return to previous pages for corrections or the Continue button to finalize the needs assessment and proceed to the next agreement section.",
+      "voiceover": "At the bottom of the review page you will find the navigation buttons. The Back button allows you to return to any previous assessment page to make corrections. The Continue button finalizes the needs assessment section and advances you to the next part of the mentor-protege agreement once you have.",
+      "notes": "Back and Continue navigation buttons at the bottom of the review page"
+    },
+    {
+      "stepId": "25",
+      "type": "sidebar-end",
+      "screenshotFile": "needs-assessment/25-sidebar-complete.png",
+      "pageFile": "30-Protege-Needs-Assessment.html",
+      "selector": ".progress-sidebar, aside.steps-nav, [data-progress-sidebar]",
+      "padding": 10,
+      "modalText": "All seven sub-steps in the Needs Assessment section are now complete. The progress sidebar reflects your completion status before you move to the next section.",
+      "voiceover": "The progress sidebar now shows all seven sub-steps as complete: Technical Capabilities, Business Development, Financial Management, Contract Administration, Team Members, Professional Experience, and Review Needs Assessment. You have finished the Needs Assessment section and are ready to proceed to the next part of the agreement.",
+      "sidebarItems": [
+        "Technical Capabilities",
+        "Business Development",
+        "Financial Management",
+        "Contract Administration",
+        "Team Members",
+        "Professional Experience",
+        "Review Needs Assessment"
+      ],
+      "notes": "Progress sidebar showing all 7 sub-steps marked as complete"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What are the four developmental categories assessed in the Protege Needs Assessment section?",
+      "options": {
+        "A": "Technical Capabilities, Business Development, Financial Management, and Contract Administration",
+        "B": "Engineering Services, Marketing Strategy, Human Resources, and Legal Compliance",
+        "C": "Systems Engineering, Proposal Writing, Accounting Systems, and Subcontract Management"
+      },
+      "feedback": {
+        "A": "Correct. The Needs Assessment evaluates the protege's developmental needs across four categories: Technical Capabilities, Business Development, Financial Management, and Contract Administration. These categories cover the primary areas where mentoring support may be needed.",
+        "B": "Incorrect. While some of these topics may relate to the assessment, the four official categories are Technical Capabilities, Business Development, Financial Management, and Contract Administration. These are the structured categories used in the DoD Mentor-Protege Program assessment.",
+        "C": "Incorrect. These are specific topics that fall within the broader categories, not the categories themselves. The four assessment categories are Technical Capabilities, Business Development, Financial Management, and Contract Administration.",
+        "correct": "Correct. The Needs Assessment evaluates the protege's developmental needs across four categories: Technical Capabilities, Business Development, Financial Management, and Contract Administration. These categories cover the primary areas where mentoring support may be needed."
+      },
+      "id": "Q1",
+      "correct": "A"
+    },
+    {
+      "question": "Why does the Needs Assessment include a Professional Experience page for protege team members?",
+      "options": {
+        "A": "To verify that team members meet the minimum security clearance requirements for the agreement",
+        "B": "To establish a baseline of each participant's skills and qualifications so the mentor can tailor developmental activities appropriately",
+        "C": "To generate a staffing report for the sponsoring agency's human resources department"
+      },
+      "feedback": {
+        "A": "Incorrect. Security clearance verification is handled through separate processes, not the needs assessment. The Professional Experience page captures work history and certifications to help the mentor design targeted mentoring activities.",
+        "B": "Correct. The Professional Experience page collects years of experience, certifications, and prior government contracting experience to establish a baseline for each participant. This information helps the mentor organization design mentoring activities matched to each individual's current skill level and career goals.",
+        "C": "Incorrect. The Professional Experience page is not a staffing report for the agency. Its purpose is to capture each team member's qualifications so the mentor can tailor developmental activities to the appropriate skill level and experience of each participant.",
+        "correct": "Correct. The Professional Experience page collects years of experience, certifications, and prior government contracting experience to establish a baseline for each participant. This information helps the mentor organization design mentoring activities matched to each individual's current skill level and career goals."
+      },
+      "id": "Q2",
+      "correct": "B"
+    },
+    {
+      "question": "What should you do on the Review Needs Assessment page before proceeding to the next section?",
+      "options": {
+        "A": "Submit the assessment to the sponsoring agency for preliminary approval before continuing",
+        "B": "Verify that all developmental area selections, priority levels, team member assignments, and experience entries are accurate and complete",
+        "C": "Print the summary and obtain signatures from both the mentor and protege points of contact"
+      },
+      "feedback": {
+        "A": "Incorrect. Preliminary agency approval is not required at this stage. The Review Needs Assessment page is for verifying that all your entries are accurate before proceeding to the next section of the agreement.",
+        "B": "Correct. The Review Needs Assessment page displays a read-only summary of all information entered across the previous pages. You should carefully verify all developmental area selections, priority levels, team member assignments, and professional experience entries before clicking Continue to proceed.",
+        "C": "Incorrect. Printed signatures are not part of this digital workflow step. The review page is designed for on-screen verification of all needs assessment entries before advancing to the next section of the agreement.",
+        "correct": "Correct. The Review Needs Assessment page displays a read-only summary of all information entered across the previous pages. You should carefully verify all developmental area selections, priority levels, team member assignments, and professional experience entries before clicking Continue to proceed."
+      },
+      "id": "Q3",
+      "correct": "B"
+    }
+  ]
+}

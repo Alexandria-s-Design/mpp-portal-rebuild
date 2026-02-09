@@ -1,0 +1,403 @@
+{
+  "id": "11-mpa-proposal",
+  "title": "MPA Proposal",
+  "sheetName": "MPA Proposal",
+  "pages": [
+    "42-MPA-Proposal.html",
+    "43-MPA-Proposal.html",
+    "44-MPA-Proposal.html",
+    "45-MPA-Proposal.html",
+    "46-MPA-Proposal.html",
+    "47-MPA-Proposal.html",
+    "48-MPA-Proposal.html"
+  ],
+  "steps": [
+    {
+      "stepId": "01",
+      "type": "sidebar-start",
+      "screenshotFile": "mpa-proposal/01-sidebar-progress.png",
+      "pageFile": "42-MPA-Proposal.html",
+      "selector": ".progress-sidebar, aside.steps-nav, [data-progress-sidebar]",
+      "padding": 10,
+      "modalText": "The progress sidebar tracks your position across the MPA Proposal sub-steps. This is the final section of the agreement, consolidating all previously entered data into a formal proposal.",
+      "voiceover": "On the left side you will see the progress sidebar for the MPA Proposal section. This is the final section of the Mentor-Protege Agreement process. It consolidates all information entered in previous sections into a formal proposal document ready for submission to the sponsoring agency.",
+      "sidebarItems": [
+        "Proposal Overview",
+        "Financial Metrics",
+        "Mentor Capabilities",
+        "Protege Development Plan",
+        "Performance Milestones",
+        "Additional Details",
+        "Final Review & Submit"
+      ],
+      "notes": "Progress sidebar showing all 7 sub-steps with Proposal Overview highlighted as active"
+    },
+    {
+      "stepId": "02",
+      "type": "overview",
+      "screenshotFile": "mpa-proposal/02-proposal-overview.png",
+      "pageFile": "42-MPA-Proposal.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Proposal Overview page introduces the MPA Proposal section. It displays the agreement summary including mentor and protege company names, technology area, estimated value, and performance period.",
+      "voiceover": "This is the Proposal Overview page for the Mentor-Protege Agreement Proposal. It displays a consolidated summary of the agreement between APEX DEFENSE SYSTEMS, INC. and PINNACLE ENGINEERING GROUP, LLC. The overview shows the agreement type, technology area of Cybersecurity and Information Assurance, estimated value of two million eight hundred fifty.",
+      "notes": "Full overview of page 42 showing introduction and agreement summary display. No form fields. Has comments section."
+    },
+    {
+      "stepId": "03",
+      "type": "element",
+      "screenshotFile": "mpa-proposal/03-agreement-header.png",
+      "pageFile": "42-MPA-Proposal.html",
+      "selector": ".agreement-header, .proposal-title, h1",
+      "padding": 100,
+      "modalText": "The proposal header displays the formal title of the Mentor-Protege Agreement Proposal, including the agreement reference number and sponsoring agency designation.",
+      "voiceover": "At the top of the page, the proposal header displays the formal title of the MPA Proposal document. It includes the agreement reference number, the names of both participating organizations, and the sponsoring agency designation of the Defense Logistics Agency. This header will appear on the final submitted proposal.",
+      "notes": "Formal proposal title header with agreement reference information"
+    },
+    {
+      "stepId": "04",
+      "type": "element",
+      "screenshotFile": "mpa-proposal/04-mentor-protege-summary.png",
+      "pageFile": "42-MPA-Proposal.html",
+      "selector": ".summary-card, .agreement-summary, [data-section='summary']",
+      "padding": 100,
+      "modalText": "The agreement summary card displays key details: Mentor is APEX DEFENSE SYSTEMS, INC., Protege is PINNACLE ENGINEERING GROUP, LLC, with DLA as the sponsoring agency.",
+      "voiceover": "The agreement summary card consolidates the key participants. The mentor organization is APEX DEFENSE SYSTEMS, INC. located in Arlington, Virginia. The protege organization is PINNACLE ENGINEERING GROUP, LLC based in Carlsbad, California. The sponsoring agency is the Defense Logistics Agency with Robert T. Chen as the designated program manager.",
+      "notes": "Summary card showing mentor, protege, and agency details pulled from previous sections"
+    },
+    {
+      "stepId": "05",
+      "type": "element",
+      "screenshotFile": "mpa-proposal/05-comment-section-42.png",
+      "pageFile": "42-MPA-Proposal.html",
+      "selector": ".comment-section, .comments, [data-comments]",
+      "padding": 100,
+      "modalText": "The comment section allows reviewers and participants to add notes or questions about the proposal overview. Comments are timestamped and attributed to each user.",
+      "voiceover": "Below the summary you will find a comment section where reviewers and participants can add notes, questions, or feedback regarding the proposal overview. Each comment is timestamped and attributed to the user who submitted it. Comments entered here become part of the agreement record.",
+      "notes": "Comment section on page 42 for reviewer feedback on proposal overview"
+    },
+    {
+      "stepId": "06",
+      "type": "overview",
+      "screenshotFile": "mpa-proposal/06-financial-metrics-overview.png",
+      "pageFile": "43-MPA-Proposal.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Financial Metrics page captures the projected financial data for the agreement, including annual cost increases, estimated contract values, and projected cost savings over the performance period.",
+      "voiceover": "This is the Financial Metrics page. It collects projected financial data that supports the business case for the mentor-protege agreement. You will enter annual cost increase projections, duplicate cost estimates, and other numeric values that quantify the expected financial impact of the agreement over its three-year performance period.",
+      "notes": "Full overview of page 43 showing financial metrics form with numeric entry fields. Has comments."
+    },
+    {
+      "stepId": "07",
+      "type": "element",
+      "screenshotFile": "mpa-proposal/07-annual-increase-field.png",
+      "pageFile": "43-MPA-Proposal.html",
+      "selector": "input[name='236-annual-increase'], input[id='236-annual-increase']",
+      "padding": 100,
+      "formFill": {
+        "input[name='236-annual-increase']": "185000"
+      },
+      "modalText": "Enter the projected annual cost increase value. This numeric field captures the estimated year-over-year cost growth associated with the protege's development activities.",
+      "voiceover": "In the first financial field, enter the projected annual cost increase. This represents the estimated year-over-year cost growth tied to the protege development activities under the agreement. In this example, we enter one hundred eighty-five thousand dollars to reflect the projected annual increase for PINNACLE ENGINEERING GROUP.",
+      "notes": "Numeric input field 236-annual-increase for projected annual cost increase"
+    },
+    {
+      "stepId": "08",
+      "type": "element",
+      "screenshotFile": "mpa-proposal/08-duplicate-fields.png",
+      "pageFile": "43-MPA-Proposal.html",
+      "selector": "input[name='236-duplicate'], .duplicate-fields, [data-field-group='236']",
+      "selectorGroup": [
+        "input[name='236-duplicate']",
+        "input[name='236-duplicate-2']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='236-duplicate']": "42500",
+        "input[name='236-duplicate-2']": "67800"
+      },
+      "modalText": "These duplicate numeric fields capture additional financial projections related to the agreement. Enter the estimated values for each category as defined in the DFARS reporting requirements.",
+      "voiceover": "The next two fields capture supplementary financial projections. The first field records estimated subcontracting costs of forty-two thousand five hundred dollars. The second field records projected indirect cost allocations of sixty-seven thousand eight hundred dollars. These values align with DFARS reporting requirements for mentor-protege agreements.",
+      "notes": "Two duplicate numeric fields (236-duplicate) for additional financial data entry"
+    },
+    {
+      "stepId": "09",
+      "type": "element",
+      "screenshotFile": "mpa-proposal/09-comment-section-43.png",
+      "pageFile": "43-MPA-Proposal.html",
+      "selector": ".comment-section, .comments, [data-comments]",
+      "padding": 100,
+      "modalText": "Use the comment section to provide explanatory notes or justifications for the financial metrics entered. Reviewers may request clarification on specific values.",
+      "voiceover": "The comment section on the financial metrics page allows you to provide explanatory notes or justifications for the values you entered. This is particularly useful when reviewers need context for projected costs or when financial assumptions should be documented as part of the agreement record.",
+      "notes": "Comment section on page 43 for financial metrics annotations"
+    },
+    {
+      "stepId": "10",
+      "type": "overview",
+      "screenshotFile": "mpa-proposal/10-mentor-capabilities-overview.png",
+      "pageFile": "44-MPA-Proposal.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Mentor Capabilities page displays a read-only summary of the mentor organization's qualifications, past performance, and technical expertise relevant to the agreement's technology area.",
+      "voiceover": "This is the Mentor Capabilities page. It presents a read-only display of APEX DEFENSE SYSTEMS' qualifications, past contract performance, and technical expertise in Cybersecurity and Information Assurance. This information was compiled from earlier sections of the agreement and demonstrates the mentor's ability to support the protege's development.",
+      "notes": "Full overview of page 44 showing read-only display of mentor capabilities. Has comments."
+    },
+    {
+      "stepId": "11",
+      "type": "element",
+      "screenshotFile": "mpa-proposal/11-mentor-qualifications.png",
+      "pageFile": "44-MPA-Proposal.html",
+      "selector": ".qualifications, .capabilities-list, [data-section='qualifications']",
+      "padding": 100,
+      "modalText": "The qualifications panel lists the mentor's relevant certifications, security clearances, and domain expertise that qualify them to provide mentoring in the designated technology area.",
+      "voiceover": "The qualifications panel lists APEX DEFENSE SYSTEMS' relevant certifications, facility security clearances, and domain expertise in cybersecurity and information assurance. These qualifications demonstrate the mentor's capacity to deliver meaningful developmental assistance to PINNACLE ENGINEERING GROUP throughout the agreement period.",
+      "notes": "Read-only display of mentor qualifications and certifications relevant to cybersecurity technology area"
+    },
+    {
+      "stepId": "12",
+      "type": "element",
+      "screenshotFile": "mpa-proposal/12-comment-section-44.png",
+      "pageFile": "44-MPA-Proposal.html",
+      "selector": ".comment-section, .comments, [data-comments]",
+      "padding": 100,
+      "modalText": "Comments on this page can address the accuracy of the mentor capabilities summary or note additional qualifications not captured in the automated display.",
+      "voiceover": "The comment section on this page allows participants to address the accuracy of the capabilities summary or note additional qualifications that may not have been captured in the automated display. Reviewers from the sponsoring agency may also use this area to request supplementary documentation.",
+      "notes": "Comment section on page 44 for mentor capabilities feedback"
+    },
+    {
+      "stepId": "13",
+      "type": "overview",
+      "screenshotFile": "mpa-proposal/13-protege-development-overview.png",
+      "pageFile": "45-MPA-Proposal.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Protege Development Plan page presents the structured development objectives and training milestones that the protege will pursue during the agreement period.",
+      "voiceover": "This is the Protege Development Plan page. It presents the structured development objectives, training milestones, and capability growth targets for PINNACLE ENGINEERING GROUP over the three-year agreement period. The plan aligns the protege's needs assessment with specific deliverables and measurable outcomes.",
+      "notes": "Full overview of page 45 showing protege development plan display. Has comments."
+    },
+    {
+      "stepId": "14",
+      "type": "element",
+      "screenshotFile": "mpa-proposal/14-development-objectives.png",
+      "pageFile": "45-MPA-Proposal.html",
+      "selector": ".development-objectives, .objectives-list, [data-section='objectives']",
+      "padding": 100,
+      "modalText": "The development objectives panel outlines specific skill areas and capability targets for the protege. Each objective includes a timeline and success criteria.",
+      "voiceover": "The development objectives panel outlines the specific skill areas and capability targets that PINNACLE ENGINEERING GROUP will pursue. Each objective includes a defined timeline and measurable success criteria. The objectives focus on building cybersecurity workforce capacity, achieving relevant certifications, and developing independent contract performance capability.",
+      "notes": "Read-only display of protege development objectives with timelines and success criteria"
+    },
+    {
+      "stepId": "15",
+      "type": "element",
+      "screenshotFile": "mpa-proposal/15-comment-section-45.png",
+      "pageFile": "45-MPA-Proposal.html",
+      "selector": ".comment-section, .comments, [data-comments]",
+      "padding": 100,
+      "modalText": "Comments here can address development plan feasibility, suggest modifications to timelines, or document discussions between mentor and protege leadership.",
+      "voiceover": "Use the comment section to discuss the feasibility of the development plan, suggest timeline adjustments, or document any discussions between mentor and protege leadership regarding the proposed objectives. These comments provide a recorded dialogue that supports the agreement review process.",
+      "notes": "Comment section on page 45 for protege development plan feedback"
+    },
+    {
+      "stepId": "16",
+      "type": "overview",
+      "screenshotFile": "mpa-proposal/16-performance-milestones-overview.png",
+      "pageFile": "46-MPA-Proposal.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Performance Milestones page displays the key deliverables and reporting checkpoints scheduled across the three-year performance period from February 2026 through January 2029.",
+      "voiceover": "This is the Performance Milestones page. It displays the key deliverables, reporting checkpoints, and evaluation criteria scheduled across the three-year performance period from February 2026 through January 2029. Semi-annual reporting milestones are shown alongside major capability transfer events.",
+      "notes": "Full overview of page 46 showing milestone timeline and deliverables display. Has comments."
+    },
+    {
+      "stepId": "17",
+      "type": "element",
+      "screenshotFile": "mpa-proposal/17-milestone-timeline.png",
+      "pageFile": "46-MPA-Proposal.html",
+      "selector": ".milestone-timeline, .timeline, [data-section='milestones']",
+      "padding": 100,
+      "modalText": "The milestone timeline displays scheduled deliverables and evaluation points. Each milestone is tied to a specific date and linked to the corresponding development objective.",
+      "voiceover": "The milestone timeline presents scheduled deliverables and evaluation checkpoints across the agreement period. Each milestone is tied to a specific date and linked to the corresponding protege development objective. The semi-annual reporting schedule aligns with DLA program requirements and allows for ongoing progress assessment.",
+      "notes": "Read-only milestone timeline showing deliverables mapped to dates and development objectives"
+    },
+    {
+      "stepId": "18",
+      "type": "element",
+      "screenshotFile": "mpa-proposal/18-comment-section-46.png",
+      "pageFile": "46-MPA-Proposal.html",
+      "selector": ".comment-section, .comments, [data-comments]",
+      "padding": 100,
+      "modalText": "Comments on milestones can address scheduling concerns, request date adjustments, or note dependencies between deliverables that affect the proposed timeline.",
+      "voiceover": "The comment section for the milestones page provides space to address scheduling concerns, request date adjustments, or note any dependencies between deliverables. Both mentor and protege representatives should review the timeline carefully and document any concerns before the proposal is finalized.",
+      "notes": "Comment section on page 46 for performance milestone feedback"
+    },
+    {
+      "stepId": "19",
+      "type": "overview",
+      "screenshotFile": "mpa-proposal/19-additional-details-overview.png",
+      "pageFile": "47-MPA-Proposal.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Additional Details page captures supplementary information for the proposal, including special conditions, risk mitigation strategies, and any waivers or exceptions requested.",
+      "voiceover": "This is the Additional Details page. It captures supplementary information that supports the proposal, including special conditions, risk mitigation strategies, intellectual property considerations, and any waivers or exceptions being requested. This information complements the core proposal sections reviewed on previous pages.",
+      "notes": "Full overview of page 47 showing additional details display with supplementary information. Has comments."
+    },
+    {
+      "stepId": "20",
+      "type": "element",
+      "screenshotFile": "mpa-proposal/20-special-conditions.png",
+      "pageFile": "47-MPA-Proposal.html",
+      "selector": ".special-conditions, .additional-info, [data-section='conditions']",
+      "padding": 100,
+      "modalText": "The special conditions panel lists any non-standard terms, risk factors, or exception requests that apply to this specific mentor-protege agreement.",
+      "voiceover": "The special conditions panel documents any non-standard terms, identified risk factors, or exception requests specific to this agreement. For this proposal, the conditions address cybersecurity clearance requirements for PINNACLE ENGINEERING GROUP personnel and the phased approach to facility security clearance sponsorship by APEX DEFENSE SYSTEMS.",
+      "notes": "Read-only display of special conditions and non-standard terms for the agreement"
+    },
+    {
+      "stepId": "21",
+      "type": "element",
+      "screenshotFile": "mpa-proposal/21-comment-section-47.png",
+      "pageFile": "47-MPA-Proposal.html",
+      "selector": ".comment-section, .comments, [data-comments]",
+      "padding": 100,
+      "modalText": "Use this comment section to document any negotiations regarding special conditions or to provide context for exception requests included in the proposal.",
+      "voiceover": "The comment section on the additional details page is used to document negotiations regarding special conditions or provide context for exception requests. Both parties should ensure any agreed-upon modifications are reflected in the comments before proceeding to the final review and submission page.",
+      "notes": "Comment section on page 47 for additional details and special conditions feedback"
+    },
+    {
+      "stepId": "22",
+      "type": "overview",
+      "screenshotFile": "mpa-proposal/22-final-review-overview.png",
+      "pageFile": "48-MPA-Proposal.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Final Review page presents the complete MPA Proposal with a progress circle indicator showing overall completion status. All sections must reach one hundred percent before submission.",
+      "voiceover": "This is the Final Review and Submit page for the MPA Proposal. It presents the complete proposal document with a progress circle indicator showing the overall completion percentage. All agreement sections must reach one hundred percent completion before the proposal can be submitted to the Defense Logistics Agency for review.",
+      "notes": "Full overview of page 48 showing final review with progress circle indicator. Has comments."
+    },
+    {
+      "stepId": "23",
+      "type": "element",
+      "screenshotFile": "mpa-proposal/23-progress-circle.png",
+      "pageFile": "48-MPA-Proposal.html",
+      "selector": ".progress-circle, .completion-indicator, [data-progress-circle]",
+      "padding": 100,
+      "modalText": "The progress circle shows the overall completion percentage of the MPA Proposal. It aggregates the status of all agreement sections and highlights any areas requiring attention.",
+      "voiceover": "The progress circle indicator displays the overall completion percentage of the entire Mentor-Protege Agreement Proposal. It aggregates completion status from every section including company information, needs assessment, agreement team, developmental assistance, and this proposal section. All sections must show complete before submission is enabled.",
+      "notes": "Circular progress indicator showing overall proposal completion percentage"
+    },
+    {
+      "stepId": "24",
+      "type": "element",
+      "screenshotFile": "mpa-proposal/24-section-status-summary.png",
+      "pageFile": "48-MPA-Proposal.html",
+      "selector": ".section-status, .status-summary, [data-section='status']",
+      "padding": 100,
+      "modalText": "Below the progress circle, a section-by-section status summary lists each agreement component and its individual completion status with checkmarks or pending indicators.",
+      "voiceover": "Below the progress circle you will find a section-by-section status summary. Each agreement component is listed with its individual completion status, shown as either a checkmark for complete or a pending indicator for sections still requiring attention. This summary provides a quick reference for identifying any remaining items before final.",
+      "notes": "Section status list showing completion state of each agreement component"
+    },
+    {
+      "stepId": "25",
+      "type": "element",
+      "screenshotFile": "mpa-proposal/25-comment-section-48.png",
+      "pageFile": "48-MPA-Proposal.html",
+      "selector": ".comment-section, .comments, [data-comments]",
+      "padding": 100,
+      "modalText": "The final comment section captures any last remarks, approval notes, or submission instructions before the proposal is formally submitted to the sponsoring agency.",
+      "voiceover": "The final comment section provides space for last remarks, approval notes from authorized signatories, or submission instructions. Comments entered here are included in the formal proposal record that is transmitted to the Defense Logistics Agency for review and approval.",
+      "notes": "Comment section on page 48 for final review remarks and approval notes"
+    },
+    {
+      "stepId": "26",
+      "type": "element",
+      "screenshotFile": "mpa-proposal/26-submit-button.png",
+      "pageFile": "48-MPA-Proposal.html",
+      "selector": ".btn-submit, button[type='submit'], .submit-proposal",
+      "padding": 100,
+      "modalText": "The Submit Proposal button transmits the completed MPA Proposal to the sponsoring agency for review. This button is only active when all sections are marked complete.",
+      "voiceover": "The Submit Proposal button at the bottom of the page transmits the completed MPA Proposal to the Defense Logistics Agency for formal review. This button is only active when all agreement sections are marked as complete in the progress circle. Once submitted, the proposal enters the agency review queue and.",
+      "notes": "Submit Proposal action button, enabled only when all sections are 100% complete"
+    },
+    {
+      "stepId": "27",
+      "type": "element",
+      "screenshotFile": "mpa-proposal/27-nav-buttons.png",
+      "pageFile": "48-MPA-Proposal.html",
+      "selector": ".btn-back, .nav-buttons, .form-actions",
+      "padding": 100,
+      "modalText": "Use the Back button to return to previous pages for edits, or the Save Draft button to preserve your current progress without submitting the proposal.",
+      "voiceover": "The navigation buttons at the bottom include a Back button to return to previous sections for edits and a Save Draft button to preserve your current progress without submitting. These options ensure you can revisit any section of the proposal before making the final submission to the sponsoring agency.",
+      "notes": "Back and Save Draft navigation buttons for returning to previous pages or saving progress"
+    },
+    {
+      "stepId": "28",
+      "type": "sidebar-end",
+      "screenshotFile": "mpa-proposal/28-sidebar-complete.png",
+      "pageFile": "48-MPA-Proposal.html",
+      "selector": ".progress-sidebar, aside.steps-nav, [data-progress-sidebar]",
+      "padding": 10,
+      "modalText": "All sub-steps in the MPA Proposal section are now complete. The progress sidebar shows full completion of the final agreement section, indicating readiness for submission.",
+      "voiceover": "The progress sidebar now shows all sub-steps as complete: Proposal Overview, Financial Metrics, Mentor Capabilities, Protege Development Plan, Performance Milestones, Additional Details, and Final Review and Submit. The MPA Proposal section is fully complete, marking the end of the Mentor-Protege Agreement process. The proposal is now ready for submission to.",
+      "sidebarItems": [
+        "Proposal Overview",
+        "Financial Metrics",
+        "Mentor Capabilities",
+        "Protege Development Plan",
+        "Performance Milestones",
+        "Additional Details",
+        "Final Review & Submit"
+      ],
+      "notes": "Progress sidebar showing all 7 sub-steps marked as complete for the final agreement section"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What does the progress circle indicator on the Final Review page represent?",
+      "options": {
+        "A": "The percentage of comments that have been resolved across all proposal pages",
+        "B": "The overall completion percentage of the entire MPA Proposal, aggregated from all agreement sections",
+        "C": "The estimated time remaining before the proposal submission deadline"
+      },
+      "feedback": {
+        "A": "Incorrect. The progress circle does not track comment resolution status. It reflects the overall completion percentage of all agreement sections that make up the MPA Proposal.",
+        "B": "Correct. The progress circle indicator aggregates the completion status from every section of the agreement, including company information, needs assessment, agreement team, developmental assistance, and the proposal section. All must reach one hundred percent before submission is enabled.",
+        "C": "Incorrect. The progress circle does not display deadline information. It shows the overall completion percentage of the MPA Proposal based on the status of all agreement sections.",
+        "correct": "Correct. The progress circle indicator aggregates the completion status from every section of the agreement, including company information, needs assessment, agreement team, developmental assistance, and the proposal section. All must reach one hundred percent before submission is enabled."
+      },
+      "id": "Q1",
+      "correct": "B"
+    },
+    {
+      "question": "What type of information is captured on the Financial Metrics page of the MPA Proposal?",
+      "options": {
+        "A": "The mentor organization's annual revenue and profit margins for the previous three fiscal years",
+        "B": "Projected annual cost increases, estimated contract values, and supplementary financial projections for the agreement period",
+        "C": "The protege company's current accounts receivable and outstanding invoices with federal agencies"
+      },
+      "feedback": {
+        "A": "Incorrect. The mentor's historical revenue and profit margins are not collected on this page. The Financial Metrics page captures forward-looking projections specific to the agreement.",
+        "B": "Correct. The Financial Metrics page collects projected financial data including annual cost increase estimates, contract values, and supplementary projections that support the business case for the mentor-protege agreement over the performance period.",
+        "C": "Incorrect. The protege's current accounts receivable are not relevant to this page. The Financial Metrics page focuses on projected costs and financial projections associated with the agreement.",
+        "correct": "Correct. The Financial Metrics page collects projected financial data including annual cost increase estimates, contract values, and supplementary projections that support the business case for the mentor-protege agreement over the performance period."
+      },
+      "id": "Q2",
+      "correct": "B"
+    },
+    {
+      "question": "When can the Submit Proposal button on the Final Review page be activated?",
+      "options": {
+        "A": "After the sponsoring agency point of contact provides written pre-approval via email",
+        "B": "At any time, regardless of section completion status, to allow partial submissions",
+        "C": "Only when all agreement sections are marked as complete in the progress circle indicator"
+      },
+      "feedback": {
+        "A": "Incorrect. Pre-approval from the sponsoring agency is not required to activate the submit button. The button becomes active when all agreement sections reach one hundred percent completion as shown in the progress circle.",
+        "B": "Incorrect. Partial submissions are not permitted. The Submit Proposal button is only enabled when every agreement section is marked as complete in the progress circle indicator.",
+        "C": "Correct. The Submit Proposal button is only active when all agreement sections are marked as complete in the progress circle. This ensures that no required information is missing before the proposal is transmitted to the Defense Logistics Agency for review.",
+        "correct": "Correct. The Submit Proposal button is only active when all agreement sections are marked as complete in the progress circle. This ensures that no required information is missing before the proposal is transmitted to the Defense Logistics Agency for review."
+      },
+      "id": "Q3",
+      "correct": "C"
+    }
+  ]
+}

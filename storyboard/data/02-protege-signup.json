@@ -1,0 +1,396 @@
+{
+  "id": "02-protege-signup",
+  "title": "Protege Signup",
+  "sheetName": "Protege Signup",
+  "pages": [
+    "01-Protege-Company-Info.html",
+    "02-Company-Info-Wizard.html",
+    "03-Company-info-Wizard.html",
+    "04-Company-Info-Wizard.html",
+    "05-Congratulations-Page.html"
+  ],
+  "steps": [
+    {
+      "stepId": "01",
+      "type": "overview",
+      "screenshotFile": "protege-signup/01-company-info-overview.png",
+      "pageFile": "01-Protege-Company-Info.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "This is the Protege Company Info page. It collects essential details about the protege organization, including company identifiers, address, contact information, and financial data required for program enrollment.",
+      "voiceover": "Welcome to the Protege Company Info page. This is the first step in the protege signup process. You will see a form with fields for your company name, SAM UEI, CAGE code, mailing address, contact details, and financial information. Some fields are pre-populated from your SAM registration and cannot be.",
+      "notes": "Full overview of page 01 showing the company info form with sidebar collapsed to narrow"
+    },
+    {
+      "stepId": "02",
+      "type": "element",
+      "screenshotFile": "protege-signup/02-sidebar-expand-button.png",
+      "pageFile": "01-Protege-Company-Info.html",
+      "selector": ".w-\\[72px\\] button, [data-sidebar-toggle]",
+      "padding": 100,
+      "modalText": "The sidebar is collapsed to a narrow narrow collapsed width on this page. Click the expand button to reveal the full navigation sidebar with links to all portal sections.",
+      "voiceover": "On the left side of the page you will see a narrow collapsed sidebar. This sidebar is set to narrow collapsed width and displays only icon buttons. Click the expand button at the top to open the full navigation sidebar, which provides access to all portal sections including Dashboard, Applications,.",
+      "notes": "Collapsed sidebar () with expand toggle button"
+    },
+    {
+      "stepId": "03",
+      "type": "element",
+      "screenshotFile": "protege-signup/03-company-name-field.png",
+      "pageFile": "01-Protege-Company-Info.html",
+      "selector": "input[name='company_name']",
+      "padding": 100,
+      "formFill": {
+        "input[name='company_name']": "PINNACLE ENGINEERING GROUP, LLC"
+      },
+      "modalText": "The Company Name field is pre-populated from your SAM registration and is disabled. It displays the official legal name of your organization as registered in SAM.gov.",
+      "voiceover": "The Company Name field shows PINNACLE ENGINEERING GROUP, LLC. This field is disabled and cannot be edited because the value is pulled directly from your SAM registration. If the company name is incorrect, you must update it through SAM.gov before it will reflect here.",
+      "notes": "Disabled input field pre-populated with protege company name from SAM"
+    },
+    {
+      "stepId": "04",
+      "type": "element",
+      "screenshotFile": "protege-signup/04-sam-uei-field.png",
+      "pageFile": "01-Protege-Company-Info.html",
+      "selector": "input[name='sam_ueid']",
+      "padding": 100,
+      "formFill": {
+        "input[name='sam_ueid']": "R3T5V7W9X1Y3"
+      },
+      "modalText": "The SAM UEI field is disabled and pre-populated with your Unique Entity Identifier from SAM.gov. This 12-character alphanumeric code uniquely identifies your organization.",
+      "voiceover": "The SAM Unique Entity Identifier field displays R3T5V7W9X1Y3. Like the company name, this field is disabled and sourced from SAM.gov. The UEI replaced the former DUNS number and is required for all federal program participants. Contact SAM.gov if this value needs correction.",
+      "notes": "Disabled input field pre-populated with SAM UEI (R3T5V7W9X1Y3)"
+    },
+    {
+      "stepId": "05",
+      "type": "element",
+      "screenshotFile": "protege-signup/05-cage-website-fields.png",
+      "pageFile": "01-Protege-Company-Info.html",
+      "selector": "input[name='cage_code']",
+      "selectorGroup": [
+        "input[name='cage_code']",
+        "input[name='website']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='cage_code']": "3M8R2",
+        "input[name='website']": "www.pinnacleenggroup.com"
+      },
+      "modalText": "Enter your CAGE code and company website. The CAGE code is a five-character identifier assigned by the Defense Logistics Agency that identifies your facility or location.",
+      "voiceover": "Next, enter your CAGE code and company website. The CAGE code for Pinnacle Engineering Group is 3M8R2. This five-character code is assigned by the Defense Logistics Agency and identifies your business location. In the website field, enter your company URL, such as www.pinnacleenggroup.com.",
+      "notes": "CAGE code (3M8R2) and website (www.pinnacleenggroup.com) input fields"
+    },
+    {
+      "stepId": "06",
+      "type": "element",
+      "screenshotFile": "protege-signup/06-address-fields.png",
+      "pageFile": "01-Protege-Company-Info.html",
+      "selector": "input[name='address']",
+      "selectorGroup": [
+        "input[name='address']",
+        "input[name='state']",
+        "input[name='zip_code']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='address']": "3290 Pacific Coast Hwy, Ste 210",
+        "input[name='state']": "CA",
+        "input[name='zip_code']": "92009"
+      },
+      "modalText": "Provide your company's mailing address, including street address, state abbreviation, and zip code. This should match the address on file with SAM.gov.",
+      "voiceover": "Enter your company's mailing address in the address field. For this example, the street address is 3290 Pacific Coast Hwy Suite 210. Select California as the state and enter 92009 as the zip code. Ensure these details match your SAM.gov registration to avoid discrepancies during application review.",
+      "notes": "Address, state, and zip code fields for protege company location"
+    },
+    {
+      "stepId": "07",
+      "type": "element",
+      "screenshotFile": "protege-signup/07-contact-fields.png",
+      "pageFile": "01-Protege-Company-Info.html",
+      "selector": "input[name='email']",
+      "selectorGroup": [
+        "input[name='email']",
+        "input[name='phone']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='email']": "mnguyen@pinnacleeng.com",
+        "input[name='phone']": "(619) 555-0287"
+      },
+      "modalText": "Enter the primary contact email and phone number for the protege organization. This contact will receive all program correspondence and notifications.",
+      "voiceover": "Provide the primary contact email and phone number. Enter mnguyen@pinnacleeng.com as the email address and 619-555-0287 as the phone number. The phone field accepts telephone format input. This contact information will be used for all official program correspondence and status notifications.",
+      "notes": "Email and phone (tel input type) fields for protege primary contact"
+    },
+    {
+      "stepId": "08",
+      "type": "element",
+      "screenshotFile": "protege-signup/08-financial-fields.png",
+      "pageFile": "01-Protege-Company-Info.html",
+      "selector": "input[name='number_of_employees']",
+      "selectorGroup": [
+        "input[name='number_of_employees']",
+        "input[name='annual_gross_revenue']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='number_of_employees']": "45",
+        "input[name='annual_gross_revenue']": "$4.2M"
+      },
+      "modalText": "Enter the number of employees and annual gross revenue for your company. These figures help determine small business eligibility and program qualification criteria.",
+      "voiceover": "Complete the financial information section. Enter 45 in the number of employees field and $4.2M in the annual gross revenue field. These figures are used to verify your small business size status and determine eligibility under SBA size standards for the Mentor-Protege Program.",
+      "notes": "Number of employees (45) and annual gross revenue ($4.2M) fields"
+    },
+    {
+      "stepId": "09",
+      "type": "element",
+      "screenshotFile": "protege-signup/09-save-continue-button.png",
+      "pageFile": "01-Protege-Company-Info.html",
+      "selector": "button[type='submit'], .btn-next, .btn-continue",
+      "padding": 100,
+      "modalText": "Click Save and Continue to validate your entries and advance to the next step of the signup wizard. All required fields must be completed before proceeding.",
+      "voiceover": "After completing all fields on this page, click the Save and Continue button at the bottom of the form. The system will validate your entries and highlight any missing or incorrect fields. Once validation passes, you will advance to the next step of the company information wizard.",
+      "notes": "Save and Continue button to advance to page 02"
+    },
+    {
+      "stepId": "10",
+      "type": "overview",
+      "screenshotFile": "protege-signup/10-sdb-cert-overview.png",
+      "pageFile": "02-Company-Info-Wizard.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The SDB Certification page collects the start and end dates of your Small Disadvantaged Business certification. This information verifies your current SDB status for program eligibility.",
+      "voiceover": "This is the SDB Certification page, the second step of the signup wizard. A progress sidebar on the left, now expanded to expanded, shows your position in the wizard. This page collects the effective date range of your Small Disadvantaged Business certification to confirm your eligibility as a.",
+      "notes": "Full overview of page 02 with expanded progress sidebar () and SDB certification date fields"
+    },
+    {
+      "stepId": "11",
+      "type": "sidebar-start",
+      "screenshotFile": "protege-signup/11-progress-sidebar.png",
+      "pageFile": "02-Company-Info-Wizard.html",
+      "selector": ".w-\\[286px\\], .progress-sidebar, aside.steps-nav",
+      "padding": 10,
+      "modalText": "The progress sidebar is now expanded to its full expanded width, displaying wizard steps. Each step is listed with its completion status so you can track your progress through the signup process.",
+      "voiceover": "The progress sidebar has expanded from the narrow narrow collapsed view to a full expanded panel. It lists each step in the protege signup wizard, including Company Info, SDB Certification, Agreement Details, Review, and Confirmation. Your current step is highlighted, and completed steps display a checkmark indicator.",
+      "sidebarItems": [
+        "Company Info",
+        "SDB Certification",
+        "Agreement Details",
+        "Review",
+        "Confirmation"
+      ],
+      "notes": "Expanded progress sidebar () showing all wizard steps with current step highlighted"
+    },
+    {
+      "stepId": "12",
+      "type": "element",
+      "screenshotFile": "protege-signup/12-sdb-start-date.png",
+      "pageFile": "02-Company-Info-Wizard.html",
+      "selector": "input[name='sdbCertifiedStartDate']",
+      "padding": 100,
+      "formFill": {
+        "input[name='sdbCertifiedStartDate']": "03/15/2023"
+      },
+      "modalText": "Enter the start date of your SDB certification. This is the date your Small Disadvantaged Business certification became effective, as shown on your SBA certification letter.",
+      "voiceover": "Enter the SDB certification start date. In this example, the certification start date is March 15, 2023. This date should match the effective date on your official SBA certification letter. Use the date picker or type the date in the format shown in the field placeholder.",
+      "notes": "SDB certification start date field (sdbCertifiedStartDate) with date 03/15/2023"
+    },
+    {
+      "stepId": "13",
+      "type": "element",
+      "screenshotFile": "protege-signup/13-sdb-end-date.png",
+      "pageFile": "02-Company-Info-Wizard.html",
+      "selector": "input[name='sdbCertifiedEndDate']",
+      "padding": 100,
+      "formFill": {
+        "input[name='sdbCertifiedEndDate']": "03/14/2028"
+      },
+      "modalText": "Enter the expiration date of your SDB certification. The certification must remain valid for the proposed duration of the mentor-protege agreement.",
+      "voiceover": "Now enter the SDB certification end date. For this example, the expiration date is March 14, 2028. Ensure that your certification will remain active through the full proposed agreement period. If your certification expires before the agreement ends, you may need to provide documentation of renewal plans.",
+      "notes": "SDB certification end date field (sdbCertifiedEndDate) with date 03/14/2028"
+    },
+    {
+      "stepId": "14",
+      "type": "overview",
+      "screenshotFile": "protege-signup/14-agreement-details-overview.png",
+      "pageFile": "03-Company-info-Wizard.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Agreement Details page collects key information about the proposed mentor-protege agreement, including the agreement title, estimated dates, partner name, and sponsoring agency.",
+      "voiceover": "This is the Agreement Details page, the third step in the wizard. Here you will provide the proposed agreement title, estimated start and end dates, the name of your agreement partner, and the name of the sponsoring DoD agency. These details define the scope and timeline of the mentor-protege relationship.",
+      "notes": "Full overview of page 03 showing agreement details form with five input fields"
+    },
+    {
+      "stepId": "15",
+      "type": "element",
+      "screenshotFile": "protege-signup/15-agreement-title.png",
+      "pageFile": "03-Company-info-Wizard.html",
+      "selector": "input[name='agreement_title']",
+      "padding": 100,
+      "formFill": {
+        "input[name='agreement_title']": "Cybersecurity Workforce Development Initiative"
+      },
+      "modalText": "Enter a descriptive title for the mentor-protege agreement. The title should clearly reflect the focus area and purpose of the proposed partnership.",
+      "voiceover": "Enter a title for your proposed agreement. In this example, we use Cybersecurity Workforce Development Initiative. Choose a title that clearly communicates the agreement's focus area. This title will appear on all official agreement documents and correspondence throughout the program lifecycle.",
+      "notes": "Agreement title input field with descriptive name of the proposed agreement"
+    },
+    {
+      "stepId": "16",
+      "type": "element",
+      "screenshotFile": "protege-signup/16-agreement-dates.png",
+      "pageFile": "03-Company-info-Wizard.html",
+      "selector": "input[name='estimated_start_date']",
+      "selectorGroup": [
+        "input[name='estimated_start_date']",
+        "input[name='estimated_end_date']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='estimated_start_date']": "02/01/2026",
+        "input[name='estimated_end_date']": "01/31/2029"
+      },
+      "modalText": "Provide the estimated start and end dates for the agreement. MPP agreements typically span one to three years, with options for extension upon approval.",
+      "voiceover": "Enter the estimated start date of February 1, 2026 and the estimated end date of January 31, 2029. This represents a three-year agreement period. Mentor-protege agreements can range from one to three years in duration, with the possibility of extensions approved by the sponsoring agency.",
+      "notes": "Estimated start date (02/01/2026) and end date (01/31/2029) fields for the agreement"
+    },
+    {
+      "stepId": "17",
+      "type": "element",
+      "screenshotFile": "protege-signup/17-partner-agency-fields.png",
+      "pageFile": "03-Company-info-Wizard.html",
+      "selector": "input[name='agreement_partner']",
+      "selectorGroup": [
+        "input[name='agreement_partner']",
+        "input[name='sponsoring_agency']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='agreement_partner']": "APEX DEFENSE SYSTEMS, INC.",
+        "input[name='sponsoring_agency']": "Defense Logistics Agency (DLA)"
+      },
+      "modalText": "Enter the name of the agreement partner (the mentor company) and the sponsoring DoD agency. The partner name should match the mentor's official SAM registration.",
+      "voiceover": "In the Name of Agreement Partner field, enter APEX DEFENSE SYSTEMS, INC. This is the mentor company with whom you are forming the agreement. For the Name of Sponsoring Agency, enter Defense Logistics Agency or DLA. The sponsoring agency provides oversight and approval for the mentor-protege relationship.",
+      "notes": "Agreement partner name (mentor company) and sponsoring agency fields"
+    },
+    {
+      "stepId": "18",
+      "type": "overview",
+      "screenshotFile": "protege-signup/18-review-overview.png",
+      "pageFile": "04-Company-Info-Wizard.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Review page presents a read-only summary of all information entered during the signup wizard. Verify every detail before proceeding to the final confirmation step.",
+      "voiceover": "This is the Review page, the fourth step in the wizard. It displays a consolidated read-only summary of everything you entered across the previous pages, including company information, SDB certification dates, and agreement details. Carefully review each section to ensure accuracy before moving to the confirmation page.",
+      "notes": "Full overview of page 04 showing read-only review summary of all protege signup data"
+    },
+    {
+      "stepId": "19",
+      "type": "element",
+      "screenshotFile": "protege-signup/19-review-company-section.png",
+      "pageFile": "04-Company-Info-Wizard.html",
+      "selector": ".review-company, .summary-section:first-child, [data-section='company']",
+      "padding": 100,
+      "modalText": "The company information section summarizes your organization's name, identifiers, address, contact details, and financial data. Confirm all values match your official records.",
+      "voiceover": "The company information section displays PINNACLE ENGINEERING GROUP, LLC with UEI R3T5V7W9X1Y3 and CAGE code 3M8R2. The address, email, phone, employee count, and revenue figures are also shown. Verify that every field matches your official SAM registration and current business records.",
+      "notes": "Read-only company info summary showing all fields from page 01"
+    },
+    {
+      "stepId": "20",
+      "type": "element",
+      "screenshotFile": "protege-signup/20-review-agreement-section.png",
+      "pageFile": "04-Company-Info-Wizard.html",
+      "selector": ".review-agreement, .summary-section:last-child, [data-section='agreement']",
+      "padding": 100,
+      "modalText": "The agreement details section shows the proposed title, date range, partner organization, and sponsoring agency. Use the Back button to correct any errors before submitting.",
+      "voiceover": "The agreement details section shows the title Cybersecurity Workforce Development Initiative, with dates from February 2026 through January 2029. The partner is listed as APEX DEFENSE SYSTEMS, INC. and the sponsoring agency as Defense Logistics Agency. If anything needs correction, use the Back button to return to the relevant page.",
+      "notes": "Read-only agreement details summary showing title, dates, partner, and agency from page 03"
+    },
+    {
+      "stepId": "21",
+      "type": "overview",
+      "screenshotFile": "protege-signup/21-congratulations-overview.png",
+      "pageFile": "05-Congratulations-Page.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Congratulations page confirms that your protege company information has been successfully submitted. Action buttons allow you to proceed to the next section or return to the dashboard.",
+      "voiceover": "Congratulations! Your protege company information has been successfully submitted. This confirmation page marks the completion of the protege signup process. You will see action buttons that allow you to continue to the Protege Needs Assessment, return to the main Dashboard, or print a summary of your submission for your records.",
+      "notes": "Full overview of page 05 showing congratulations message and action buttons, no form inputs"
+    },
+    {
+      "stepId": "22",
+      "type": "element",
+      "screenshotFile": "protege-signup/22-action-buttons.png",
+      "pageFile": "05-Congratulations-Page.html",
+      "selector": ".btn-group, .action-buttons, .form-actions",
+      "padding": 100,
+      "modalText": "The action buttons let you navigate to the next section of the application, return to the Dashboard, or print a copy of your submitted information for reference.",
+      "voiceover": "At the bottom of the confirmation page you will find the action buttons. These typically include a Continue to Needs Assessment button to proceed with the next application step, a Return to Dashboard button to go back to the main portal page, and a Print Summary option for your records..",
+      "notes": "Action buttons for next steps after completing protege signup"
+    },
+    {
+      "stepId": "23",
+      "type": "sidebar-end",
+      "screenshotFile": "protege-signup/23-sidebar-complete.png",
+      "pageFile": "05-Congratulations-Page.html",
+      "selector": ".progress-sidebar, aside.steps-nav, [data-progress-sidebar]",
+      "padding": 10,
+      "modalText": "The progress sidebar now shows all wizard steps as complete. The Protege Signup section is finished and you are ready to proceed to the next part of the application.",
+      "voiceover": "The progress sidebar now displays checkmarks next to all five steps: Company Info, SDB Certification, Agreement Details, Review, and Confirmation. This indicates that the entire Protege Signup section is complete. You have successfully registered your protege company information in the MPP portal.",
+      "sidebarItems": [
+        "Company Info",
+        "SDB Certification",
+        "Agreement Details",
+        "Review",
+        "Confirmation"
+      ],
+      "notes": "Progress sidebar showing all 5 wizard steps marked as complete"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Why are the Company Name and SAM UEI fields disabled on the Protege Company Info page?",
+      "options": {
+        "A": "Because those fields are optional and can be filled in later during the agreement review process",
+        "B": "Because they are pre-populated from the organization's SAM.gov registration and must be updated through SAM.gov if corrections are needed",
+        "C": "Because only the mentor organization is allowed to enter the protege company name and UEI on behalf of the protege"
+      },
+      "feedback": {
+        "A": "Incorrect. The Company Name and SAM UEI fields are not optional. They are required identifiers that are automatically pulled from SAM.gov, which is why they appear disabled on the form.",
+        "B": "Correct. The Company Name and SAM UEI fields are disabled because they are sourced directly from the organization's SAM.gov registration. Any corrections to these values must be made through SAM.gov, after which they will update in the portal.",
+        "C": "Incorrect. The mentor does not enter protege company details. These fields are disabled because they are automatically populated from the protege's own SAM.gov registration data.",
+        "correct": "Correct. The Company Name and SAM UEI fields are disabled because they are sourced directly from the organization's SAM.gov registration. Any corrections to these values must be made through SAM.gov, after which they will update in the portal."
+      },
+      "id": "Q1",
+      "correct": "B"
+    },
+    {
+      "question": "What information is collected on the SDB Certification page of the protege signup wizard?",
+      "options": {
+        "A": "The start and end dates of the protege company's Small Disadvantaged Business certification",
+        "B": "A list of all small business certifications the protege holds, including HUBZone and 8(a)",
+        "C": "The protege company's SBA certification number and issuing office location"
+      },
+      "feedback": {
+        "A": "Correct. The SDB Certification page collects the effective start date and expiration date of the protege company's Small Disadvantaged Business certification, which is used to verify program eligibility.",
+        "B": "Incorrect. The SDB Certification page specifically collects the date range for the SDB certification, not a comprehensive list of all small business certifications held by the protege.",
+        "C": "Incorrect. The SDB Certification page does not request a certification number or issuing office. It collects the certification start and end dates to confirm the protege's SDB status is current.",
+        "correct": "Correct. The SDB Certification page collects the effective start date and expiration date of the protege company's Small Disadvantaged Business certification, which is used to verify program eligibility."
+      },
+      "id": "Q2",
+      "correct": "A"
+    },
+    {
+      "question": "What should you do if you notice an error on the Review page before proceeding to the Congratulations page?",
+      "options": {
+        "A": "Submit the form as-is and contact the MPP office by email to request a manual correction",
+        "B": "Use the Back button or the progress sidebar to navigate to the page with the error and make corrections before resubmitting",
+        "C": "Close the browser and restart the signup wizard from the beginning to clear all entered data"
+      },
+      "feedback": {
+        "A": "Incorrect. You should not submit data with known errors. The Review page is designed to give you the opportunity to catch and fix mistakes before final submission by navigating back to the relevant page.",
+        "B": "Correct. If you find an error on the Review page, use the Back button or click the relevant step in the progress sidebar to return to that page and make corrections. Once fixed, proceed forward through the wizard again to resubmit.",
+        "C": "Incorrect. There is no need to restart the entire wizard. The portal provides Back navigation and a progress sidebar that allow you to return to any previous step to make corrections without losing your other entries.",
+        "correct": "Correct. If you find an error on the Review page, use the Back button or click the relevant step in the progress sidebar to return to that page and make corrections. Once fixed, proceed forward through the wizard again to resubmit."
+      },
+      "id": "Q3",
+      "correct": "B"
+    }
+  ]
+}

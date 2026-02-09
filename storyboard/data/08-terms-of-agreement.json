@@ -1,0 +1,304 @@
+{
+  "id": "08-terms-of-agreement",
+  "title": "Terms of Agreement",
+  "sheetName": "Terms of Agreement",
+  "pages": [
+    "31-Terms-of-Agreement.html",
+    "32-Terms-of-Agreement.html",
+    "33-Terms-of-Agreement.html",
+    "34-Terms-of-Agreement.html"
+  ],
+  "steps": [
+    {
+      "stepId": "01",
+      "type": "sidebar-start",
+      "screenshotFile": "terms-of-agreement/01-sidebar-progress.png",
+      "pageFile": "31-Terms-of-Agreement.html",
+      "selector": ".progress-sidebar, aside.steps-nav, [data-progress-sidebar]",
+      "padding": 10,
+      "modalText": "The progress sidebar tracks your position across the Terms of Agreement sub-steps. Each item highlights as you advance through the BAA details, agreement type, additional terms, and review pages.",
+      "voiceover": "On the left side of the form area you will see a progress sidebar. This sidebar lists the sub-steps for the Terms of Agreement section, including BAA Details, Agreement Type, Additional Terms and Conditions, and Review Terms. Your current position is highlighted as you move through each step.",
+      "sidebarItems": [
+        "BAA Details",
+        "Agreement Type",
+        "Additional Terms & Conditions",
+        "Review Terms of Agreement"
+      ],
+      "notes": "Progress sidebar showing all sub-steps with BAA Details highlighted as active"
+    },
+    {
+      "stepId": "02",
+      "type": "overview",
+      "screenshotFile": "terms-of-agreement/02-baa-details-overview.png",
+      "pageFile": "31-Terms-of-Agreement.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The BAA Details page collects the Broad Agency Announcement solicitation number and contract name associated with this mentor-protege agreement. These fields link the agreement to its governing BAA.",
+      "voiceover": "This is the BAA Details page within the Terms of Agreement section. It contains form fields for entering the Broad Agency Announcement solicitation number and the BAA contract name. These entries connect the mentor-protege agreement to the specific federal solicitation under which it is being established.",
+      "notes": "Full overview of page 31 showing BAA solicitation and contract name fields"
+    },
+    {
+      "stepId": "03",
+      "type": "element",
+      "screenshotFile": "terms-of-agreement/03-baa-solicitation-number.png",
+      "pageFile": "31-Terms-of-Agreement.html",
+      "selector": "input[name='baaSolicitationNumber']",
+      "padding": 100,
+      "formFill": {
+        "input[name='baaSolicitationNumber']": "HQ0034-26-S-0042"
+      },
+      "modalText": "Enter the BAA solicitation number that governs this agreement. This alphanumeric identifier links the mentor-protege agreement to the specific Broad Agency Announcement.",
+      "voiceover": "Enter the BAA solicitation number in this text field. In this example, we enter HQ0034-26-S-0042, which corresponds to the Broad Agency Announcement associated with Cybersecurity and Information Assurance development activities under the Defense Logistics Agency.",
+      "notes": "Text input field for BAA solicitation number - HQ0034-26-S-0042"
+    },
+    {
+      "stepId": "04",
+      "type": "element",
+      "screenshotFile": "terms-of-agreement/04-baa-contract-name.png",
+      "pageFile": "31-Terms-of-Agreement.html",
+      "selector": "input[name='baaContractName']",
+      "padding": 100,
+      "formFill": {
+        "input[name='baaContractName']": "Cybersecurity Workforce Development and Capability Enhancement"
+      },
+      "modalText": "Enter the BAA contract name that describes the scope of this agreement. The contract name should match the title listed on the governing BAA solicitation document.",
+      "voiceover": "Next, enter the BAA contract name. In this example, we enter Cybersecurity Workforce Development and Capability Enhancement. This name should match the official title associated with the BAA solicitation and will appear on all agreement documentation and reporting.",
+      "notes": "Text input field for BAA contract name - Cybersecurity Workforce Development and Capability Enhancement"
+    },
+    {
+      "stepId": "05",
+      "type": "element",
+      "screenshotFile": "terms-of-agreement/05-agreement-type-section.png",
+      "pageFile": "31-Terms-of-Agreement.html",
+      "selector": ".agreement-type-group, .radio-group, fieldset",
+      "padding": 100,
+      "modalText": "The Agreement Type section presents three radio options: Credit (DCMA only), Direct Reimbursement, and Hybrid. Select the reimbursement method that applies to this agreement.",
+      "voiceover": "Below the BAA fields you will find the Agreement Type selection. Three options are available: Credit, which is administered through DCMA only; Direct Reimbursement; and Hybrid. The agreement type determines how costs are reimbursed between the mentor and protege organizations throughout the performance period.",
+      "notes": "Agreement type radio button group showing three options with Credit enabled and others disabled"
+    },
+    {
+      "stepId": "06",
+      "type": "element",
+      "screenshotFile": "terms-of-agreement/06-agreement-type-credit.png",
+      "pageFile": "31-Terms-of-Agreement.html",
+      "selector": "input[type='radio'][id='agreement-type-credit'], label[for='agreement-type-credit']",
+      "padding": 100,
+      "formFill": {
+        "input[type='radio'][id='agreement-type-credit']": "selected"
+      },
+      "modalText": "The Credit option, administered through DCMA only, allows the mentor to receive credit toward subcontracting goals. This is the most common agreement type.",
+      "voiceover": "Select the Credit option, labeled as DCMA only. Under a credit agreement, the mentor organization receives credit toward its small business subcontracting plan goals for the developmental assistance provided to the protege. In this example, Credit is selected because APEX DEFENSE SYSTEMS is using the agreement to meet its subcontracting.",
+      "notes": "Credit (DCMA only) radio button selected - enabled and active"
+    },
+    {
+      "stepId": "07",
+      "type": "element",
+      "screenshotFile": "terms-of-agreement/07-agreement-type-reimbursement.png",
+      "pageFile": "31-Terms-of-Agreement.html",
+      "selector": "input[type='radio'][id='agreement-type-direct_reimbursement'], label[for='agreement-type-direct_reimbursement']",
+      "padding": 100,
+      "modalText": "The Direct Reimbursement option is currently disabled. When available, it allows the mentor to be reimbursed for costs through a government contract vehicle.",
+      "voiceover": "The Direct Reimbursement option is shown but currently disabled for this agreement. When available, direct reimbursement allows the mentor to recover costs of developmental assistance directly through a government contract. Availability depends on the sponsoring agency and specific program requirements.",
+      "notes": "Direct Reimbursement radio button - disabled/grayed out"
+    },
+    {
+      "stepId": "08",
+      "type": "element",
+      "screenshotFile": "terms-of-agreement/08-agreement-type-hybrid.png",
+      "pageFile": "31-Terms-of-Agreement.html",
+      "selector": "input[type='radio'][id='agreement-type-hybrid'], label[for='agreement-type-hybrid']",
+      "padding": 100,
+      "modalText": "The Hybrid option is currently disabled. When available, it combines credit and direct reimbursement methods within a single agreement.",
+      "voiceover": "The Hybrid option is also disabled for this agreement. A hybrid arrangement combines elements of both credit and direct reimbursement, allowing the mentor to receive credit for some activities while being directly reimbursed for others. This option requires approval from both DCMA and the sponsoring agency.",
+      "notes": "Hybrid radio button - disabled/grayed out"
+    },
+    {
+      "stepId": "09",
+      "type": "element",
+      "screenshotFile": "terms-of-agreement/09-page31-comments.png",
+      "pageFile": "31-Terms-of-Agreement.html",
+      "selector": ".comments-section, [data-comments], .notes-area",
+      "padding": 100,
+      "modalText": "The comments section allows reviewers and participants to leave notes about the BAA details and agreement type selections on this page.",
+      "voiceover": "At the bottom of this page you will find a comments section. Reviewers and participants can leave notes regarding the BAA solicitation details or the agreement type selection. Comments entered here are visible to all authorized users and become part of the agreement's review history.",
+      "notes": "Comments section on page 31 for BAA details and agreement type"
+    },
+    {
+      "stepId": "10",
+      "type": "overview",
+      "screenshotFile": "terms-of-agreement/10-additional-terms-overview.png",
+      "pageFile": "32-Terms-of-Agreement.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Additional Terms and Conditions page captures supplementary clauses, special conditions, or modifications that apply to this specific mentor-protege agreement beyond the standard terms.",
+      "voiceover": "This is the Additional Terms and Conditions page. It provides space for any supplementary clauses, special conditions, or modifications that apply to this agreement beyond the standard mentor-protege program terms. These might include technology transfer restrictions, intellectual property provisions, or performance-specific requirements.",
+      "notes": "Full overview of page 32 showing additional terms and conditions form with comments"
+    },
+    {
+      "stepId": "11",
+      "type": "element",
+      "screenshotFile": "terms-of-agreement/11-additional-terms-fields.png",
+      "pageFile": "32-Terms-of-Agreement.html",
+      "selector": "textarea[name='additionalTerms'], .terms-input, .additional-terms-fields",
+      "padding": 100,
+      "modalText": "Enter any additional terms, special conditions, or supplemental clauses that govern this agreement. These terms are appended to the standard MPP agreement framework.",
+      "voiceover": "Use the text fields on this page to enter any additional terms and conditions specific to this agreement. For the APEX and PINNACLE agreement, additional terms might address cybersecurity data handling protocols, ITAR compliance requirements, or restrictions on the use of classified systems during the three-year performance period.",
+      "notes": "Text area or form fields for entering additional terms and conditions"
+    },
+    {
+      "stepId": "12",
+      "type": "element",
+      "screenshotFile": "terms-of-agreement/12-page32-comments.png",
+      "pageFile": "32-Terms-of-Agreement.html",
+      "selector": ".comments-section, [data-comments], .notes-area",
+      "padding": 100,
+      "modalText": "The comments section on this page allows reviewers to provide feedback on the additional terms and conditions entered above.",
+      "voiceover": "The comments section on this page allows stakeholders to discuss and provide feedback on the additional terms. Program managers or legal reviewers may use this area to request clarifications, suggest revisions, or confirm acceptance of the supplemental conditions.",
+      "notes": "Comments section on page 32 for additional terms feedback"
+    },
+    {
+      "stepId": "13",
+      "type": "overview",
+      "screenshotFile": "terms-of-agreement/13-review-terms-overview.png",
+      "pageFile": "33-Terms-of-Agreement.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Review Terms page displays a consolidated summary of all terms entered across the previous pages. Verify the BAA details, agreement type, and additional conditions before proceeding.",
+      "voiceover": "This is the Review Terms of Agreement page. It presents a read-only summary of all the information you entered, including the BAA solicitation number, contract name, selected agreement type, and any additional terms and conditions. Review each section label and its contents carefully for accuracy.",
+      "notes": "Full overview of page 33 showing read-only review summary with section labels and comments"
+    },
+    {
+      "stepId": "14",
+      "type": "element",
+      "screenshotFile": "terms-of-agreement/14-review-baa-summary.png",
+      "pageFile": "33-Terms-of-Agreement.html",
+      "selector": ".review-baa, .summary-baa, [data-section='baa']",
+      "padding": 100,
+      "modalText": "The BAA summary confirms the solicitation number HQ0034-26-S-0042 and the contract name Cybersecurity Workforce Development and Capability Enhancement.",
+      "voiceover": "The BAA Details section of the review confirms the solicitation number HQ0034-26-S-0042 and the contract name Cybersecurity Workforce Development and Capability Enhancement. Verify these entries match the official BAA documentation before proceeding to the final confirmation.",
+      "notes": "Read-only BAA details summary showing solicitation number and contract name"
+    },
+    {
+      "stepId": "15",
+      "type": "element",
+      "screenshotFile": "terms-of-agreement/15-review-agreement-type-summary.png",
+      "pageFile": "33-Terms-of-Agreement.html",
+      "selector": ".review-agreement-type, .summary-type, [data-section='agreementType']",
+      "padding": 100,
+      "modalText": "The agreement type summary confirms Credit (DCMA only) as the selected reimbursement method for this mentor-protege agreement between APEX and PINNACLE.",
+      "voiceover": "The Agreement Type section displays the selected option, Credit administered through DCMA only. This confirms that APEX DEFENSE SYSTEMS will receive subcontracting plan credit for developmental assistance provided to PINNACLE ENGINEERING GROUP under this agreement valued at two million eight hundred fifty thousand dollars.",
+      "notes": "Read-only agreement type summary confirming Credit (DCMA only) selection"
+    },
+    {
+      "stepId": "16",
+      "type": "element",
+      "screenshotFile": "terms-of-agreement/16-page33-comments.png",
+      "pageFile": "33-Terms-of-Agreement.html",
+      "selector": ".comments-section, [data-comments], .notes-area",
+      "padding": 100,
+      "modalText": "The comments section on the review page allows final remarks or approval notes before proceeding to the confirmation step.",
+      "voiceover": "The comments section on the review page provides space for final remarks. Reviewers may add approval notes, flag items requiring correction, or document any discussions that took place about the terms. These comments are preserved as part of the agreement audit trail.",
+      "notes": "Comments section on page 33 for review-stage feedback and approval notes"
+    },
+    {
+      "stepId": "17",
+      "type": "overview",
+      "screenshotFile": "terms-of-agreement/17-final-review-overview.png",
+      "pageFile": "34-Terms-of-Agreement.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The final review page provides a progress circle indicator showing completion status for the Terms of Agreement section. Confirm all entries are accurate before advancing.",
+      "voiceover": "This is the final review page for the Terms of Agreement section. It features a progress circle indicator that visually represents your completion status. All entered data including BAA details, agreement type, and additional terms are summarized here for one last verification before you move to the next agreement section.",
+      "notes": "Full overview of page 34 showing final review with progress circle indicator and comments"
+    },
+    {
+      "stepId": "18",
+      "type": "element",
+      "screenshotFile": "terms-of-agreement/18-progress-circle.png",
+      "pageFile": "34-Terms-of-Agreement.html",
+      "selector": ".progress-circle, .completion-indicator, [data-progress-circle]",
+      "padding": 100,
+      "modalText": "The progress circle provides a visual indicator of section completion. A fully filled circle confirms that all required fields in the Terms of Agreement have been completed.",
+      "voiceover": "The progress circle indicator displays the completion status of the Terms of Agreement section. When the circle is fully filled, it confirms that all required fields have been completed, including the BAA solicitation number, contract name, agreement type selection, and any additional terms. This visual cue helps you track readiness.",
+      "notes": "Circular progress indicator showing completion percentage for Terms of Agreement section"
+    },
+    {
+      "stepId": "19",
+      "type": "element",
+      "screenshotFile": "terms-of-agreement/19-page34-comments.png",
+      "pageFile": "34-Terms-of-Agreement.html",
+      "selector": ".comments-section, [data-comments], .notes-area",
+      "padding": 100,
+      "modalText": "Final comments may be entered here before completing the Terms of Agreement section. These notes accompany the agreement through the approval workflow.",
+      "voiceover": "The comments section on the final review page allows you to add any last notes before completing this section. These might include confirmation that legal counsel has reviewed the terms, or notes for the program office regarding specific conditions. All comments are preserved in the agreement record.",
+      "notes": "Comments section on page 34 for final review notes"
+    },
+    {
+      "stepId": "20",
+      "type": "sidebar-end",
+      "screenshotFile": "terms-of-agreement/20-sidebar-complete.png",
+      "pageFile": "34-Terms-of-Agreement.html",
+      "selector": ".progress-sidebar, aside.steps-nav, [data-progress-sidebar]",
+      "padding": 10,
+      "modalText": "All sub-steps in the Terms of Agreement section are now complete. The progress sidebar reflects full completion before you advance to the next section of the agreement.",
+      "voiceover": "The progress sidebar now shows all sub-steps as complete: BAA Details, Agreement Type, Additional Terms and Conditions, and Review Terms of Agreement. You have finished the Terms of Agreement section and are ready to proceed to the next part of the mentor-protege agreement.",
+      "sidebarItems": [
+        "BAA Details",
+        "Agreement Type",
+        "Additional Terms & Conditions",
+        "Review Terms of Agreement"
+      ],
+      "notes": "Progress sidebar showing all sub-steps marked as complete"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What are the three agreement type options available in the Terms of Agreement section?",
+      "options": {
+        "A": "Fixed-Price, Cost-Plus, and Time-and-Materials",
+        "B": "Credit (DCMA only), Direct Reimbursement, and Hybrid",
+        "C": "Sole Source, Competitive, and Negotiated"
+      },
+      "feedback": {
+        "A": "Incorrect. Fixed-Price, Cost-Plus, and Time-and-Materials are contract pricing types, not mentor-protege agreement types. The three agreement type options are Credit, Direct Reimbursement, and Hybrid.",
+        "B": "Correct. The three agreement type options are Credit (administered through DCMA only), Direct Reimbursement, and Hybrid. Credit agreements allow the mentor to receive subcontracting plan credit, while direct reimbursement provides cost recovery through a government contract vehicle.",
+        "C": "Incorrect. Sole Source, Competitive, and Negotiated describe procurement methods, not mentor-protege agreement types. The correct options are Credit (DCMA only), Direct Reimbursement, and Hybrid.",
+        "correct": "Correct. The three agreement type options are Credit (administered through DCMA only), Direct Reimbursement, and Hybrid. Credit agreements allow the mentor to receive subcontracting plan credit, while direct reimbursement provides cost recovery through a government contract vehicle."
+      },
+      "id": "Q1",
+      "correct": "B"
+    },
+    {
+      "question": "What information is collected on the BAA Details page of the Terms of Agreement section?",
+      "options": {
+        "A": "The mentor company's CAGE code and the protege company's UEI number",
+        "B": "The BAA solicitation number and the BAA contract name associated with the agreement",
+        "C": "The estimated agreement value and the performance period start and end dates"
+      },
+      "feedback": {
+        "A": "Incorrect. CAGE codes and UEI numbers are collected in the company information sections of the agreement, not on the BAA Details page. The BAA Details page captures the solicitation number and contract name.",
+        "B": "Correct. The BAA Details page collects the Broad Agency Announcement solicitation number and the BAA contract name. These fields link the mentor-protege agreement to the specific federal solicitation under which it is being established.",
+        "C": "Incorrect. Agreement value and performance period dates are captured in other sections of the agreement. The BAA Details page specifically collects the BAA solicitation number and the BAA contract name.",
+        "correct": "Correct. The BAA Details page collects the Broad Agency Announcement solicitation number and the BAA contract name. These fields link the mentor-protege agreement to the specific federal solicitation under which it is being established."
+      },
+      "id": "Q2",
+      "correct": "B"
+    },
+    {
+      "question": "What does the progress circle indicator on the final Terms of Agreement page represent?",
+      "options": {
+        "A": "The percentage of the overall mentor-protege agreement that has been completed across all sections",
+        "B": "The number of comments and review notes that have been submitted by program reviewers",
+        "C": "The completion status of all required fields within the Terms of Agreement section"
+      },
+      "feedback": {
+        "A": "Incorrect. The progress circle on the final Terms of Agreement page reflects completion within this specific section, not the overall agreement. It shows whether all required fields in the Terms of Agreement have been filled in.",
+        "B": "Incorrect. The progress circle does not track comments or review notes. It provides a visual indicator of whether all required fields in the Terms of Agreement section, including BAA details, agreement type, and additional terms, have been completed.",
+        "C": "Correct. The progress circle indicator shows the completion status of all required fields within the Terms of Agreement section. A fully filled circle confirms that the BAA solicitation number, contract name, agreement type, and any additional terms have been properly entered.",
+        "correct": "Correct. The progress circle indicator shows the completion status of all required fields within the Terms of Agreement section. A fully filled circle confirms that the BAA solicitation number, contract name, agreement type, and any additional terms have been properly entered."
+      },
+      "id": "Q3",
+      "correct": "C"
+    }
+  ]
+}

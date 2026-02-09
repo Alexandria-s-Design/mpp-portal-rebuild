@@ -1,0 +1,225 @@
+{
+  "id": "03-agreement-overview",
+  "title": "Agreement Overview",
+  "sheetName": "Agreement Overview",
+  "pages": [
+    "06-Agreement.html"
+  ],
+  "steps": [
+    {
+      "stepId": "01",
+      "type": "overview",
+      "screenshotFile": "agreement-overview/01-full-page-overview.png",
+      "pageFile": "06-Agreement.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "This is the Agreement Overview page, your central hub for managing all sections of a mentor-protege agreement. From here you can navigate to each agreement component and track overall progress.",
+      "voiceover": "Welcome to the Agreement Overview page. This page serves as the main hub for a specific mentor-protege agreement. It provides links to every section of the agreement, displays the current status of each component, and allows you to navigate directly to any area that requires attention.",
+      "notes": "Full page overview showing sidebar navigation, agreement section cards, and overall layout for page 06"
+    },
+    {
+      "stepId": "02",
+      "type": "element",
+      "screenshotFile": "agreement-overview/02-agreement-status-summary.png",
+      "pageFile": "06-Agreement.html",
+      "selector": ".agreement-status, .status-summary, .bg-white.rounded-\\[4px\\]",
+      "padding": 100,
+      "modalText": "The agreement status summary displays the overall progress of the agreement, including the current phase, submission status, and any pending actions that require your attention.",
+      "voiceover": "At the top of the content area you will see the agreement status summary. This section provides an at-a-glance view of the agreement's current phase, whether it is in draft, under review, or approved. It also highlights any pending actions or items that need to be completed before the agreement.",
+      "notes": "Status summary area at top of main content showing agreement phase and progress indicators"
+    },
+    {
+      "stepId": "03",
+      "type": "element",
+      "screenshotFile": "agreement-overview/03-agreement-team-card.png",
+      "pageFile": "06-Agreement.html",
+      "selector": "a[href*='Agreement-Team'], .section-card:nth-child(1), [data-section='agreement-team']",
+      "padding": 100,
+      "modalText": "The Agreement Team section link takes you to the pages where you define mentor and protege team members, assign agreement roles, identify subcontractors, and designate the sponsoring agency.",
+      "voiceover": "The Agreement Team card links to the section where you enter personnel details for both the mentor and protege organizations. This includes contact information, role assignments, authorized subcontractor designations, and the sponsoring DoD agency. Completion status is shown on the card.",
+      "notes": "Agreement Team section card/link navigating to pages 07-14"
+    },
+    {
+      "stepId": "04",
+      "type": "element",
+      "screenshotFile": "agreement-overview/04-mentor-company-info-card.png",
+      "pageFile": "06-Agreement.html",
+      "selector": "a[href*='Mentor-Company'], .section-card:nth-child(2), [data-section='mentor-company']",
+      "padding": 100,
+      "modalText": "The Mentor Company Info section collects detailed information about the mentor organization, including business classification, capabilities, CAGE code, and relevant past performance history.",
+      "voiceover": "The Mentor Company Info card opens the section where you provide detailed information about the mentor organization. This includes the company's business classification, technical capabilities, CAGE code, DUNS number, and past performance relevant to the mentoring relationship. The card indicates whether this section has been completed.",
+      "notes": "Mentor Company Info section card/link for entering mentor organization details"
+    },
+    {
+      "stepId": "05",
+      "type": "element",
+      "screenshotFile": "agreement-overview/05-protege-company-info-card.png",
+      "pageFile": "06-Agreement.html",
+      "selector": "a[href*='Protege-Company'], .section-card:nth-child(3), [data-section='protege-company']",
+      "padding": 100,
+      "modalText": "The Protege Company Info section gathers details about the protege organization, including its small business certifications, socioeconomic status, and areas where mentoring support is sought.",
+      "voiceover": "The Protege Company Info card links to the section for entering the protege organization's details. This covers the company's small business certifications, socioeconomic designations, CAGE code, and a description of the areas where the protege is seeking developmental support through the mentoring relationship.",
+      "notes": "Protege Company Info section card/link for entering protege organization details"
+    },
+    {
+      "stepId": "06",
+      "type": "element",
+      "screenshotFile": "agreement-overview/06-needs-assessment-card.png",
+      "pageFile": "06-Agreement.html",
+      "selector": "a[href*='Needs-Assessment'], .section-card:nth-child(4), [data-section='needs-assessment']",
+      "padding": 100,
+      "modalText": "The Needs Assessment section identifies the specific developmental areas where the protege seeks mentoring, such as technical skills, business development, financial management, or contract administration.",
+      "voiceover": "The Needs Assessment card opens the section where the protege's specific developmental needs are documented. Categories may include technical capabilities, business development, financial management, and contract administration. The needs assessment forms the foundation for the mentoring plan and deliverables.",
+      "notes": "Needs Assessment section card/link for documenting protege developmental needs"
+    },
+    {
+      "stepId": "07",
+      "type": "element",
+      "screenshotFile": "agreement-overview/07-terms-of-agreement-card.png",
+      "pageFile": "06-Agreement.html",
+      "selector": "a[href*='Terms'], .section-card:nth-child(5), [data-section='terms']",
+      "padding": 100,
+      "modalText": "The Terms of Agreement section defines the duration, milestones, deliverables, and performance metrics that will govern the mentor-protege relationship throughout the agreement period.",
+      "voiceover": "The Terms of Agreement card links to the section where you establish the formal terms governing the mentoring relationship. This includes the agreement duration, key milestones, expected deliverables, performance metrics, and any special conditions. These terms must comply with DFARS requirements.",
+      "notes": "Terms of Agreement section card/link for defining agreement duration and deliverables"
+    },
+    {
+      "stepId": "08",
+      "type": "element",
+      "screenshotFile": "agreement-overview/08-dap-card.png",
+      "pageFile": "06-Agreement.html",
+      "selector": "a[href*='DAP'], .section-card:nth-child(6), [data-section='dap']",
+      "padding": 100,
+      "modalText": "The Developmental Assistance Program section outlines the specific assistance the mentor will provide to the protege, including technical training, business guidance, and resource sharing plans.",
+      "voiceover": "The DAP card opens the Developmental Assistance Program section. Here you document the specific types of assistance the mentor will provide, including technical training, business development guidance, financial management support, and any resource sharing arrangements. The DAP aligns directly with the needs assessment.",
+      "notes": "Developmental Assistance Program section card/link for outlining mentoring activities"
+    },
+    {
+      "stepId": "09",
+      "type": "element",
+      "screenshotFile": "agreement-overview/09-white-paper-card.png",
+      "pageFile": "06-Agreement.html",
+      "selector": "a[href*='White-Paper'], .section-card:nth-child(7), [data-section='white-paper']",
+      "padding": 100,
+      "modalText": "The White Paper section provides space for a narrative document describing the mentor-protege relationship, its objectives, and the anticipated benefits for both organizations and the DoD.",
+      "voiceover": "The White Paper card links to the section where you upload or compose a narrative document. The white paper describes the overall vision of the mentor-protege relationship, the strategic objectives both organizations aim to achieve, and the anticipated benefits to the Department of Defense supply chain.",
+      "notes": "White Paper section card/link for the narrative agreement document"
+    },
+    {
+      "stepId": "10",
+      "type": "element",
+      "screenshotFile": "agreement-overview/10-mpa-proposal-card.png",
+      "pageFile": "06-Agreement.html",
+      "selector": "a[href*='MPA-Proposal'], .section-card:nth-child(8), [data-section='mpa-proposal']",
+      "padding": 100,
+      "modalText": "The MPA Proposal section contains the formal Mentor-Protege Agreement proposal that consolidates all sections into a unified submission for review and approval.",
+      "voiceover": "The MPA Proposal card opens the final section where all agreement components are consolidated into a formal Mentor-Protege Agreement proposal. This unified document is what gets submitted to the sponsoring agency and the MPP office for official review and approval.",
+      "notes": "MPA Proposal section card/link for the consolidated formal agreement submission"
+    },
+    {
+      "stepId": "11",
+      "type": "element",
+      "screenshotFile": "agreement-overview/11-add-comment.png",
+      "pageFile": "06-Agreement.html",
+      "selector": ".comment-section, .add-comment, textarea[name='comment'], [data-comment-area]",
+      "padding": 100,
+      "modalText": "The Add a Comment area allows team members to post notes, questions, or updates related to the agreement. Comments are visible to all authorized users on the agreement.",
+      "voiceover": "At the bottom of the page you will find the Add a Comment area. This feature allows team members to post notes, questions, or updates related to the agreement. All comments are time-stamped and visible to authorized users from both the mentor and protege organizations, supporting collaborative communication.",
+      "notes": "Comment input area for adding notes and discussion to the agreement"
+    },
+    {
+      "stepId": "12",
+      "type": "element",
+      "screenshotFile": "agreement-overview/12-sidebar-navigation.png",
+      "pageFile": "06-Agreement.html",
+      "selector": "nav, aside, [role='navigation']",
+      "padding": 100,
+      "modalText": "The sidebar navigation provides persistent access to all portal sections. The Agreements and Reports item is highlighted as the active section on this page.",
+      "voiceover": "The left sidebar navigation remains accessible on the Agreement Overview page. The Agreements and Reports item is highlighted to indicate your current location within the portal. From here you can navigate to the Dashboard, Applications, Team Information, Resources, or About MPP at any time.",
+      "notes": "Full sidebar navigation with Agreements & Reports highlighted as the active section"
+    },
+    {
+      "stepId": "13",
+      "type": "element",
+      "screenshotFile": "agreement-overview/13-user-context.png",
+      "pageFile": "06-Agreement.html",
+      "selector": ".user-info, .logged-in-user, [data-user-context], .account-info",
+      "padding": 100,
+      "modalText": "The user context area displays the name of the currently logged-in user, in this case Charles Martin. It confirms your identity and provides access to account options.",
+      "voiceover": "In the upper or sidebar area of the portal you will see the logged-in user context displaying the name Charles Martin. This confirms your active session identity and may provide quick access to account settings, profile editing, and session management options.",
+      "notes": "Logged-in user display showing Charles Martin with account access options"
+    },
+    {
+      "stepId": "14",
+      "type": "element",
+      "screenshotFile": "agreement-overview/14-page-heading.png",
+      "pageFile": "06-Agreement.html",
+      "selector": "h1, .page-title, .agreement-heading",
+      "padding": 100,
+      "modalText": "The page heading identifies this as the Agreement Overview. It may also display the agreement number or identifier assigned to this specific mentor-protege agreement.",
+      "voiceover": "The main content heading identifies this page as the Agreement Overview. It may also include the agreement number or reference identifier assigned to this specific mentor-protege agreement. This heading helps you confirm that you are viewing the correct agreement record.",
+      "notes": "Main page heading displaying Agreement Overview title and optional agreement identifier"
+    },
+    {
+      "stepId": "15",
+      "type": "element",
+      "screenshotFile": "agreement-overview/15-section-completion-indicators.png",
+      "pageFile": "06-Agreement.html",
+      "selector": ".completion-status, .progress-indicator, .section-status",
+      "padding": 100,
+      "modalText": "Each agreement section card displays a completion indicator showing whether the section is not started, in progress, or complete. These help you track overall agreement readiness.",
+      "voiceover": "Each agreement section card includes a visual completion indicator. These indicators show whether a section has not been started, is currently in progress, or has been fully completed. Monitoring these status markers helps you understand the overall readiness of the agreement before submission.",
+      "notes": "Completion status indicators across the agreement section cards showing progress tracking"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the primary purpose of the Agreement Overview page?",
+      "options": {
+        "A": "To submit the final mentor-protege agreement for approval",
+        "B": "To serve as a central hub for navigating to all sections of the agreement and tracking progress",
+        "C": "To enter the mentor organization's company information and business classifications"
+      },
+      "feedback": {
+        "A": "Incorrect. Final submission is handled through the MPA Proposal section. The Agreement Overview page provides navigation and progress tracking across all agreement sections.",
+        "B": "Correct. The Agreement Overview page serves as the central hub for a mentor-protege agreement. It provides links to every agreement section, displays completion status for each component, and allows users to navigate directly to any area requiring attention.",
+        "C": "Incorrect. Mentor company information is entered in the dedicated Mentor Company Info section. The Agreement Overview page is a navigation and status tracking hub for the entire agreement.",
+        "correct": "Correct. The Agreement Overview page serves as the central hub for a mentor-protege agreement. It provides links to every agreement section, displays completion status for each component, and allows users to navigate directly to any area requiring attention."
+      },
+      "id": "Q1",
+      "correct": "B"
+    },
+    {
+      "question": "Which section of the agreement consolidates all components into a unified document for submission and review?",
+      "options": {
+        "A": "The Terms of Agreement section",
+        "B": "The White Paper section",
+        "C": "The MPA Proposal section"
+      },
+      "feedback": {
+        "A": "Incorrect. The Terms of Agreement section defines the duration, milestones, and deliverables for the mentoring relationship. The MPA Proposal is the section that consolidates all components for formal submission.",
+        "B": "Incorrect. The White Paper is a narrative document describing the relationship's objectives and anticipated benefits. The MPA Proposal section is where all agreement components are consolidated into a unified submission.",
+        "C": "Correct. The MPA Proposal section consolidates all agreement components, including team information, company details, needs assessment, terms, the Developmental Assistance Program, and the white paper, into a formal Mentor-Protege Agreement proposal for review and approval.",
+        "correct": "Correct. The MPA Proposal section consolidates all agreement components, including team information, company details, needs assessment, terms, the Developmental Assistance Program, and the white paper, into a formal Mentor-Protege Agreement proposal for review and approval."
+      },
+      "id": "Q2",
+      "correct": "C"
+    },
+    {
+      "question": "What does the Add a Comment feature on the Agreement Overview page allow users to do?",
+      "options": {
+        "A": "Submit formal change requests to the MPP office for agreement modifications",
+        "B": "Post notes, questions, or updates visible to all authorized users on the agreement",
+        "C": "Send private messages to the sponsoring agency's point of contact"
+      },
+      "feedback": {
+        "A": "Incorrect. Formal change requests follow a separate process through the MPP office. The comment feature is for posting notes, questions, and updates visible to authorized team members on the agreement.",
+        "B": "Correct. The Add a Comment feature allows team members from both the mentor and protege organizations to post time-stamped notes, questions, or updates. All comments are visible to authorized users, supporting collaborative communication throughout the agreement process.",
+        "C": "Incorrect. Comments are not private messages to the sponsoring agency. They are visible to all authorized users on the agreement and serve as a collaborative communication tool for both mentor and protege team members.",
+        "correct": "Correct. The Add a Comment feature allows team members from both the mentor and protege organizations to post time-stamped notes, questions, or updates. All comments are visible to authorized users, supporting collaborative communication throughout the agreement process."
+      },
+      "id": "Q3",
+      "correct": "B"
+    }
+  ]
+}

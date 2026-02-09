@@ -1,0 +1,461 @@
+{
+  "id": "09-dap",
+  "title": "Developmental Assistance Plan",
+  "sheetName": "DAP",
+  "pages": [
+    "35-DAP.html",
+    "36-DAP.html",
+    "37-DAP.html",
+    "38-DAP.html",
+    "39-DAP.html",
+    "40-DAP.html",
+    "41-DAP.html"
+  ],
+  "steps": [
+    {
+      "stepId": "01",
+      "type": "sidebar-start",
+      "screenshotFile": "dap/01-sidebar-progress.png",
+      "pageFile": "35-DAP.html",
+      "selector": ".progress-sidebar, aside.steps-nav, [data-progress-sidebar]",
+      "padding": 10,
+      "modalText": "The progress sidebar tracks your position across seven sub-steps in the Developmental Assistance Plan section. Each item highlights as you advance through the workflow.",
+      "voiceover": "On the left side of the form you will see a progress sidebar. This sidebar lists seven sub-steps for the Developmental Assistance Plan: Performance Period, Financial Data, Tasks and Milestones, Plan Review, Decision Point, Agency Contact, and Summary. Your current position is highlighted as you move through each step.",
+      "sidebarItems": [
+        "Performance Period",
+        "Financial Data",
+        "Tasks & Milestones",
+        "Plan Review",
+        "Decision Point",
+        "Agency Contact",
+        "Summary"
+      ],
+      "notes": "Progress sidebar showing all 7 sub-steps with Performance Period highlighted as active"
+    },
+    {
+      "stepId": "02",
+      "type": "overview",
+      "screenshotFile": "dap/02-performance-period-overview.png",
+      "pageFile": "35-DAP.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Performance Period page captures the BAA or solicitation number and the start and end dates for the developmental assistance plan. These dates define the agreement timeline.",
+      "voiceover": "This is the Performance Period page of the Developmental Assistance Plan. It collects the BAA or solicitation number tied to this agreement and the start and end dates for the period of performance. These fields establish the official timeline over which all mentoring activities and milestones will occur.",
+      "notes": "Full overview of page 35 showing performance period fields with BAA number and date inputs"
+    },
+    {
+      "stepId": "03",
+      "type": "element",
+      "screenshotFile": "dap/03-baa-solicitation-number.png",
+      "pageFile": "35-DAP.html",
+      "selector": "input[name='baaSolicitationNumber']",
+      "padding": 100,
+      "formFill": {
+        "input[name='baaSolicitationNumber']": "W911NF-26-R-0047"
+      },
+      "modalText": "Enter the BAA or solicitation number associated with this agreement. This identifier links the developmental assistance plan to the originating procurement action.",
+      "voiceover": "Begin by entering the BAA or solicitation number in the text field. In this example, we enter W911NF-26-R-0047. This number ties the Developmental Assistance Plan to the specific procurement action under which the mentor-protege agreement was established.",
+      "notes": "BAA/solicitation number text input field"
+    },
+    {
+      "stepId": "04",
+      "type": "element",
+      "screenshotFile": "dap/04-period-start-date.png",
+      "pageFile": "35-DAP.html",
+      "selector": "input[name='periodOfPerformanceStart']",
+      "padding": 100,
+      "formFill": {
+        "input[name='periodOfPerformanceStart']": "02/01/2026"
+      },
+      "modalText": "Select or enter the start date for the period of performance. This date marks the beginning of all planned developmental assistance activities under the agreement.",
+      "voiceover": "Next, enter the period of performance start date. In this example, we enter February 1, 2026. This date marks the official beginning of the developmental assistance plan, after which all mentoring activities, training, and milestone deliverables may commence.",
+      "notes": "Date input for period of performance start date"
+    },
+    {
+      "stepId": "05",
+      "type": "element",
+      "screenshotFile": "dap/05-period-end-date.png",
+      "pageFile": "35-DAP.html",
+      "selector": "input[name='periodOfPerformanceEnd']",
+      "padding": 100,
+      "formFill": {
+        "input[name='periodOfPerformanceEnd']": "01/31/2029"
+      },
+      "modalText": "Select or enter the end date for the period of performance. The agreement duration typically spans one to three years depending on the approved plan.",
+      "voiceover": "Enter the period of performance end date. For this agreement, we enter January 31, 2029, establishing a three-year performance window. The end date must align with the approved agreement duration and cannot extend beyond the maximum period allowed under DFARS guidelines.",
+      "notes": "Date input for period of performance end date"
+    },
+    {
+      "stepId": "06",
+      "type": "element",
+      "screenshotFile": "dap/06-performance-period-comments.png",
+      "pageFile": "35-DAP.html",
+      "selector": ".comments-section, [data-comments], .comment-thread",
+      "padding": 100,
+      "modalText": "The comments section allows reviewers and participants to add notes or questions about the performance period entries. Comments are timestamped and attributed to each user.",
+      "voiceover": "Below the form fields you will find a comments section. Reviewers and agreement participants can add notes, raise questions, or provide guidance about the performance period data. Each comment is timestamped and attributed to the user who posted it, creating an audit trail for the review process.",
+      "notes": "Comments thread on page 35 for reviewer feedback on performance period"
+    },
+    {
+      "stepId": "07",
+      "type": "element",
+      "screenshotFile": "dap/07-nav-buttons-page35.png",
+      "pageFile": "35-DAP.html",
+      "selector": ".btn-next, .nav-buttons, .form-actions",
+      "padding": 100,
+      "modalText": "Use the Back button to return to the previous section or the Continue button to proceed to the Financial Data page after completing all performance period fields.",
+      "voiceover": "At the bottom of the page you will find the navigation buttons. The Back button returns you to the previous section of the agreement. The Continue button advances you to the Financial Data page once all required performance period fields have been completed.",
+      "notes": "Back and Continue navigation buttons at the bottom of page 35"
+    },
+    {
+      "stepId": "08",
+      "type": "overview",
+      "screenshotFile": "dap/08-financial-data-overview.png",
+      "pageFile": "36-DAP.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Financial Data page captures estimated annual cost increases and identifies any duplicate funding sources. Accurate financial projections are required for agreement approval.",
+      "voiceover": "This is the Financial Data page. It collects estimated annual cost increases for the developmental assistance plan and flags any potential duplicate funding sources. The financial data entered here supports the overall estimated agreement value of two million eight hundred fifty thousand dollars and must be supported by detailed cost.",
+      "notes": "Full overview of page 36 showing financial data entry fields for annual increases and duplicate funding"
+    },
+    {
+      "stepId": "09",
+      "type": "element",
+      "screenshotFile": "dap/09-annual-increase-field.png",
+      "pageFile": "36-DAP.html",
+      "selector": "input[name='236-annual-increase']",
+      "padding": 100,
+      "formFill": {
+        "input[name='236-annual-increase']": "950000"
+      },
+      "modalText": "Enter the estimated annual cost increase associated with the developmental assistance activities. This value is expressed in whole dollars without formatting.",
+      "voiceover": "Enter the estimated annual cost increase in the numeric field. In this example, we enter 950000, representing nine hundred fifty thousand dollars per year. This figure reflects the projected annual expenditure for all developmental assistance activities including training, technical support, and capability development.",
+      "notes": "Numeric input for estimated annual cost increase in dollars"
+    },
+    {
+      "stepId": "10",
+      "type": "element",
+      "screenshotFile": "dap/10-duplicate-funding-field.png",
+      "pageFile": "36-DAP.html",
+      "selector": "input[name='236-duplicate']",
+      "padding": 100,
+      "formFill": {
+        "input[name='236-duplicate']": "0"
+      },
+      "modalText": "Enter the amount of any duplicate funding from other sources. Enter zero if no duplicate funding exists for the activities described in this plan.",
+      "voiceover": "In the duplicate funding field, enter the dollar amount of any overlapping or duplicate funding from other government or commercial sources. In this example, we enter zero because no other funding sources cover the same developmental activities. Accurate reporting here prevents duplicate reimbursement issues.",
+      "notes": "Numeric input for duplicate funding amount - zero indicates no overlap"
+    },
+    {
+      "stepId": "11",
+      "type": "element",
+      "screenshotFile": "dap/11-financial-comments.png",
+      "pageFile": "36-DAP.html",
+      "selector": ".comments-section, [data-comments], .comment-thread",
+      "padding": 100,
+      "modalText": "Reviewers may add comments on the financial data entries to request clarification, flag discrepancies, or approve the projected cost figures.",
+      "voiceover": "The comments section on this page allows reviewers to annotate the financial data. Comments may include requests for supporting documentation, questions about cost assumptions, or notes confirming that the projected figures align with the approved budget. All comments are preserved as part of the agreement record.",
+      "notes": "Comments thread on page 36 for reviewer feedback on financial data"
+    },
+    {
+      "stepId": "12",
+      "type": "overview",
+      "screenshotFile": "dap/12-task-milestone-overview.png",
+      "pageFile": "37-DAP.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Tasks and Milestones page defines the specific developmental activities planned under the agreement. Each task includes a title, date range, and detailed description.",
+      "voiceover": "This is the Tasks and Milestones page. Here you define the specific developmental assistance activities that will be performed during the agreement period. Each task entry includes a title, start and end dates, and a detailed description of the planned work. Multiple tasks can be added to cover all planned.",
+      "notes": "Full overview of page 37 showing task/milestone entry form with title, dates, and description fields"
+    },
+    {
+      "stepId": "13",
+      "type": "element",
+      "screenshotFile": "dap/13-task-title.png",
+      "pageFile": "37-DAP.html",
+      "selector": "input[name='taskTitle']",
+      "padding": 100,
+      "formFill": {
+        "input[name='taskTitle']": "Cybersecurity Certification Training Program"
+      },
+      "modalText": "Enter a concise title for the developmental task or milestone. The title should clearly identify the nature of the planned activity.",
+      "voiceover": "Enter a descriptive title for the task in the text field. In this example, we enter Cybersecurity Certification Training Program. The title should be specific enough to distinguish this task from other planned activities and clearly communicate the nature of the developmental assistance being provided.",
+      "notes": "Text input for task/milestone title"
+    },
+    {
+      "stepId": "14",
+      "type": "element",
+      "screenshotFile": "dap/14-task-start-date.png",
+      "pageFile": "37-DAP.html",
+      "selector": "input[name='start_date']",
+      "padding": 100,
+      "formFill": {
+        "input[name='start_date']": "03/01/2026"
+      },
+      "modalText": "Enter the planned start date for this task. The date must fall within the overall period of performance established on the previous page.",
+      "voiceover": "Enter the planned start date for this task. In this example, we enter March 1, 2026. The task start date must fall within the agreement's period of performance, which runs from February 2026 through January 2029. Tasks may overlap or run sequentially depending on the approved plan structure.",
+      "notes": "Date input for task start date"
+    },
+    {
+      "stepId": "15",
+      "type": "element",
+      "screenshotFile": "dap/15-task-end-date.png",
+      "pageFile": "37-DAP.html",
+      "selector": "input[name='end_date']",
+      "padding": 100,
+      "formFill": {
+        "input[name='end_date']": "02/28/2027"
+      },
+      "modalText": "Enter the planned end date for this task. The end date defines when the deliverables or outcomes for this specific activity are expected to be complete.",
+      "voiceover": "Enter the planned end date for this task. In this example, we enter February 28, 2027, giving this training program a twelve-month duration. The end date must not extend beyond the agreement's period of performance end date and should reflect a realistic timeline for completing the described activities.",
+      "notes": "Date input for task end date"
+    },
+    {
+      "stepId": "16",
+      "type": "element",
+      "screenshotFile": "dap/16-task-description.png",
+      "pageFile": "37-DAP.html",
+      "selector": "textarea[name='description']",
+      "padding": 100,
+      "formFill": {
+        "textarea[name='description']": "APEX Defense Systems will provide comprehensive cybersecurity certification training to Pinnacle Engineering Group personnel, covering CompTIA Security+, CISSP preparation, and hands-on cyber range exercises. The program includes 240 hours of instructor-led training, lab access, and certification exam vouchers for up to 8 protege staff members."
+      },
+      "modalText": "Provide a detailed description of the task, including the specific activities, deliverables, and expected outcomes. Be thorough enough to support reviewer evaluation.",
+      "voiceover": "Enter a detailed description of the task. In this example, the description outlines a comprehensive cybersecurity certification training program including CompTIA Security Plus, CISSP preparation, and hands-on cyber range exercises. The description specifies 240 hours of instructor-led training and certification exam vouchers for up to eight protege staff members.",
+      "notes": "Textarea for detailed task/milestone description"
+    },
+    {
+      "stepId": "17",
+      "type": "element",
+      "screenshotFile": "dap/17-task-comments.png",
+      "pageFile": "37-DAP.html",
+      "selector": ".comments-section, [data-comments], .comment-thread",
+      "padding": 100,
+      "modalText": "Comments on tasks allow reviewers to suggest modifications, request additional detail, or confirm that the described activities meet program requirements.",
+      "voiceover": "The comments section on the Tasks and Milestones page allows reviewers to provide feedback on individual tasks. Reviewers may suggest modifications to the scope, request additional detail on deliverables, or confirm that the described activities align with the protege's identified developmental needs.",
+      "notes": "Comments thread on page 37 for reviewer feedback on tasks and milestones"
+    },
+    {
+      "stepId": "18",
+      "type": "overview",
+      "screenshotFile": "dap/18-plan-review-overview.png",
+      "pageFile": "38-DAP.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Plan Review page displays a read-only summary of all developmental assistance plan entries. Verify the performance period, financial data, and task details before proceeding.",
+      "voiceover": "This is the Plan Review page. It presents a consolidated read-only summary of all information entered across the previous pages, including the performance period dates, financial data, and task details. Review each section carefully to ensure accuracy before moving to the decision point step.",
+      "notes": "Full overview of page 38 showing read-only review of all DAP entries including performance period, financials, and tasks"
+    },
+    {
+      "stepId": "19",
+      "type": "element",
+      "screenshotFile": "dap/19-review-performance-summary.png",
+      "pageFile": "38-DAP.html",
+      "selector": ".review-performance, .summary-performance, [data-section='performance']",
+      "padding": 100,
+      "modalText": "The performance period summary confirms the BAA number, start date, end date, and total agreement duration. Verify these values match the approved agreement terms.",
+      "voiceover": "The performance period summary displays the BAA solicitation number W911NF-26-R-0047, with a start date of February 1, 2026 and end date of January 31, 2029. The three-year duration and estimated agreement value of two million eight hundred fifty thousand dollars are also confirmed in this section.",
+      "notes": "Read-only summary of performance period data including BAA number and dates"
+    },
+    {
+      "stepId": "20",
+      "type": "element",
+      "screenshotFile": "dap/20-review-comments.png",
+      "pageFile": "38-DAP.html",
+      "selector": ".comments-section, [data-comments], .comment-thread",
+      "padding": 100,
+      "modalText": "Comments on the review page allow final observations before the decision point. Reviewers may note any discrepancies or confirm the plan is ready for approval.",
+      "voiceover": "The comments section on the Plan Review page captures final observations from reviewers. This is the last opportunity to flag discrepancies or request corrections before advancing to the decision point. Comments here often confirm that the plan meets all requirements or identify items needing revision.",
+      "notes": "Comments thread on page 38 for final review feedback"
+    },
+    {
+      "stepId": "21",
+      "type": "overview",
+      "screenshotFile": "dap/21-decision-point-overview.png",
+      "pageFile": "39-DAP.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Decision Point page presents a selection for the disposition of the developmental assistance plan. Choose to approve, return for revision, or reject the plan.",
+      "voiceover": "This is the Decision Point page. It presents the available disposition options for the developmental assistance plan. The decision made here determines whether the plan advances to final submission, is returned to the participants for revision, or is rejected. This step is typically completed by an authorized reviewer or program.",
+      "notes": "Full overview of page 39 showing decision radio buttons for plan disposition"
+    },
+    {
+      "stepId": "22",
+      "type": "element",
+      "screenshotFile": "dap/22-decision-radio.png",
+      "pageFile": "39-DAP.html",
+      "selector": "input[type='radio'][name='decision'], .radio-group",
+      "padding": 100,
+      "formFill": {
+        "input[type='radio'][value='approve']": "selected"
+      },
+      "modalText": "Select the appropriate decision for this plan. Options typically include Approve, Return for Revision, or Reject. The selection determines the next workflow action.",
+      "voiceover": "Select the decision for the developmental assistance plan. In this example, we select Approve to advance the plan to the sponsoring agency for final review. Selecting Return for Revision would send the plan back to the mentor and protege for corrections, while Reject would terminate the plan and require a.",
+      "notes": "Radio button group for decision selection - Approve, Return for Revision, or Reject"
+    },
+    {
+      "stepId": "23",
+      "type": "overview",
+      "screenshotFile": "dap/23-agency-contact-overview.png",
+      "pageFile": "40-DAP.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Agency Contact page captures additional contact information for the sponsoring agency, including phone numbers and the agency's decision on the plan.",
+      "voiceover": "This is the Agency Contact page. It collects additional contact details for the sponsoring agency representative and records the agency's formal decision regarding the developmental assistance plan. The information entered here links the plan to the designated agency oversight authority for the duration of the agreement.",
+      "notes": "Full overview of page 40 showing DCMA phone and sponsoring agency decision fields"
+    },
+    {
+      "stepId": "24",
+      "type": "element",
+      "screenshotFile": "dap/24-dcma-phone.png",
+      "pageFile": "40-DAP.html",
+      "selector": "input[name='dcma_phone']",
+      "padding": 100,
+      "formFill": {
+        "input[name='dcma_phone']": "(703) 555-0319"
+      },
+      "modalText": "Enter the DCMA or sponsoring agency representative phone number. This contact is used for direct communication regarding the plan status and any required follow-up actions.",
+      "voiceover": "Enter the DCMA or sponsoring agency representative phone number. In this example, we enter 703-555-0319, which is the phone number for Robert T. Chen at the Defense Logistics Agency. This number serves as the direct line for communications regarding the plan's approval status and any follow-up requirements.",
+      "notes": "Telephone input for DCMA or sponsoring agency phone number"
+    },
+    {
+      "stepId": "25",
+      "type": "element",
+      "screenshotFile": "dap/25-agency-decision.png",
+      "pageFile": "40-DAP.html",
+      "selector": "input[name='sponsoring-agency-decision'], select[name='sponsoring-agency-decision']",
+      "padding": 100,
+      "formFill": {
+        "input[name='sponsoring-agency-decision']": "Approved"
+      },
+      "modalText": "Record the sponsoring agency's formal decision on the developmental assistance plan. This field reflects the agency's official disposition after their review.",
+      "voiceover": "Record the sponsoring agency's decision in this field. In this example, we enter Approved to indicate that the Defense Logistics Agency has formally approved the developmental assistance plan. This decision is recorded as part of the official agreement documentation and triggers the next steps in the agreement workflow.",
+      "notes": "Input or select for recording the sponsoring agency's formal decision on the DAP"
+    },
+    {
+      "stepId": "26",
+      "type": "element",
+      "screenshotFile": "dap/26-agency-comments.png",
+      "pageFile": "40-DAP.html",
+      "selector": ".comments-section, [data-comments], .comment-thread",
+      "padding": 100,
+      "modalText": "Comments on the agency contact page document any communications, conditions, or instructions from the sponsoring agency regarding the plan approval.",
+      "voiceover": "The comments section on this page documents any communications or conditions from the sponsoring agency. Reviewers may note special instructions, approval conditions, or required follow-up actions. These comments become part of the permanent record for the developmental assistance plan.",
+      "notes": "Comments thread on page 40 for agency contact and decision feedback"
+    },
+    {
+      "stepId": "27",
+      "type": "overview",
+      "screenshotFile": "dap/27-summary-overview.png",
+      "pageFile": "41-DAP.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Summary page presents a final confirmation of all developmental assistance plan details. Review the complete plan before submitting for final processing.",
+      "voiceover": "This is the Summary and Confirmation page for the Developmental Assistance Plan. It presents a comprehensive overview of all entries across the section, including performance period, financial data, tasks and milestones, the decision point outcome, and the sponsoring agency contact details. Review everything carefully before final submission.",
+      "notes": "Full overview of page 41 showing final summary and confirmation for the entire DAP section"
+    },
+    {
+      "stepId": "28",
+      "type": "element",
+      "screenshotFile": "dap/28-summary-plan-details.png",
+      "pageFile": "41-DAP.html",
+      "selector": ".summary-details, .plan-summary, [data-section='summary']",
+      "padding": 100,
+      "modalText": "The plan details summary confirms the mentor, protege, technology area, estimated value, and performance period. All key agreement parameters are displayed here.",
+      "voiceover": "The plan details summary confirms APEX Defense Systems as the mentor and Pinnacle Engineering Group as the protege. The technology area is listed as Cybersecurity and Information Assurance with an estimated value of two million eight hundred fifty thousand dollars. The performance period of February 2026 through January 2029 and.",
+      "notes": "Read-only summary of complete DAP details including mentor, protege, technology area, value, and dates"
+    },
+    {
+      "stepId": "29",
+      "type": "element",
+      "screenshotFile": "dap/29-summary-comments.png",
+      "pageFile": "41-DAP.html",
+      "selector": ".comments-section, [data-comments], .comment-thread",
+      "padding": 100,
+      "modalText": "Final comments on the summary page capture any last observations, approvals, or instructions before the developmental assistance plan is formally submitted.",
+      "voiceover": "The comments section on the summary page captures any final observations or instructions before the plan is formally submitted. This is the last opportunity for all parties to add notes to the record. Once submitted, the developmental assistance plan enters the formal review and approval pipeline.",
+      "notes": "Comments thread on page 41 for final summary feedback"
+    },
+    {
+      "stepId": "30",
+      "type": "element",
+      "screenshotFile": "dap/30-summary-nav-buttons.png",
+      "pageFile": "41-DAP.html",
+      "selector": ".btn-next, .nav-buttons, .form-actions",
+      "padding": 100,
+      "modalText": "Use the Back button to revisit any previous page or the Submit button to finalize and submit the developmental assistance plan for processing.",
+      "voiceover": "At the bottom of the summary page you will find the navigation buttons. The Back button allows you to return to any previous page to make corrections. The Submit button finalizes and submits the developmental assistance plan. Once submitted, the plan cannot be edited without initiating a formal amendment process.",
+      "notes": "Back and Submit navigation buttons at the bottom of the summary page"
+    },
+    {
+      "stepId": "31",
+      "type": "sidebar-end",
+      "screenshotFile": "dap/31-sidebar-complete.png",
+      "pageFile": "41-DAP.html",
+      "selector": ".progress-sidebar, aside.steps-nav, [data-progress-sidebar]",
+      "padding": 10,
+      "modalText": "All seven sub-steps in the Developmental Assistance Plan section are now complete. The progress sidebar reflects your completion status before you move to the next section.",
+      "voiceover": "The progress sidebar now shows all seven sub-steps as complete: Performance Period, Financial Data, Tasks and Milestones, Plan Review, Decision Point, Agency Contact, and Summary. You have finished the Developmental Assistance Plan section and are ready to proceed to the next part of the agreement.",
+      "sidebarItems": [
+        "Performance Period",
+        "Financial Data",
+        "Tasks & Milestones",
+        "Plan Review",
+        "Decision Point",
+        "Agency Contact",
+        "Summary"
+      ],
+      "notes": "Progress sidebar showing all 7 sub-steps marked as complete"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What information is captured on the Performance Period page of the Developmental Assistance Plan?",
+      "options": {
+        "A": "The mentor and protege company names, CAGE codes, and UEI numbers",
+        "B": "The BAA or solicitation number along with the start and end dates for the period of performance",
+        "C": "The estimated cost breakdown and annual budget projections for each fiscal year"
+      },
+      "feedback": {
+        "A": "Incorrect. Company names, CAGE codes, and UEI numbers are collected in the company information sections of the agreement, not on the Performance Period page. This page focuses on the solicitation number and agreement timeline.",
+        "B": "Correct. The Performance Period page captures the BAA or solicitation number that links the plan to the originating procurement action, along with the start and end dates that define the official timeline for all developmental assistance activities.",
+        "C": "Incorrect. Budget projections and cost breakdowns are entered on the Financial Data page, not the Performance Period page. The Performance Period page collects the solicitation number and the agreement start and end dates.",
+        "correct": "Correct. The Performance Period page captures the BAA or solicitation number that links the plan to the originating procurement action, along with the start and end dates that define the official timeline for all developmental assistance activities."
+      },
+      "id": "Q1",
+      "correct": "B"
+    },
+    {
+      "question": "What is the purpose of the Decision Point page in the Developmental Assistance Plan section?",
+      "options": {
+        "A": "To allow the protege to select which developmental areas they want to focus on during the agreement",
+        "B": "To present disposition options for the plan, such as approve, return for revision, or reject",
+        "C": "To assign roles and responsibilities to the mentor and protege team members"
+      },
+      "feedback": {
+        "A": "Incorrect. Developmental focus areas are identified during the Protege Needs Assessment, not at the Decision Point. The Decision Point page is used to record the formal disposition of the plan.",
+        "B": "Correct. The Decision Point page presents the available disposition options for the developmental assistance plan. An authorized reviewer can approve the plan, return it to participants for revision, or reject it, and the selection determines the next workflow action.",
+        "C": "Incorrect. Role assignments are handled in the Agreement Team section. The Decision Point page is where an authorized reviewer selects the formal disposition of the developmental assistance plan.",
+        "correct": "Correct. The Decision Point page presents the available disposition options for the developmental assistance plan. An authorized reviewer can approve the plan, return it to participants for revision, or reject it, and the selection determines the next workflow action."
+      },
+      "id": "Q2",
+      "correct": "B"
+    },
+    {
+      "question": "What details are required when entering a task on the Tasks and Milestones page?",
+      "options": {
+        "A": "A task title, start date, end date, and a detailed description of the planned developmental activity",
+        "B": "Only a task title and the name of the responsible team member",
+        "C": "The task budget amount, funding source, and invoice schedule"
+      },
+      "feedback": {
+        "A": "Correct. Each task entry on the Tasks and Milestones page requires a title that identifies the activity, start and end dates that fall within the period of performance, and a detailed description of the planned work including specific activities, deliverables, and expected outcomes.",
+        "B": "Incorrect. While a task title is required, the Tasks and Milestones page also requires start and end dates and a detailed description. Team member assignments are handled in the Agreement Team section, not on this page.",
+        "C": "Incorrect. Budget amounts and funding sources are captured on the Financial Data page. The Tasks and Milestones page focuses on the task title, date range, and a detailed description of the developmental activity.",
+        "correct": "Correct. Each task entry on the Tasks and Milestones page requires a title that identifies the activity, start and end dates that fall within the period of performance, and a detailed description of the planned work including specific activities, deliverables, and expected outcomes."
+      },
+      "id": "Q3",
+      "correct": "A"
+    }
+  ]
+}

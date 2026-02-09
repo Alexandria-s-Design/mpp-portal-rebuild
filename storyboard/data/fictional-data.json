@@ -1,0 +1,116 @@
+{
+  "mentor": {
+    "company": "APEX DEFENSE SYSTEMS, INC.",
+    "companyShort": "APEX",
+    "poc": {
+      "name": "James R. Calloway",
+      "firstName": "James",
+      "lastName": "Calloway",
+      "title": "VP of Strategic Partnerships",
+      "email": "jcalloway@apexdefense.com",
+      "phone": "(703) 555-0142"
+    },
+    "teamMember": {
+      "name": "David M. Torres",
+      "firstName": "David",
+      "lastName": "Torres",
+      "title": "Agreements Manager",
+      "email": "dtorres@apexdefense.com",
+      "phone": "(703) 555-0158"
+    },
+    "cage": "7X4K9",
+    "uei": "J7K9M2N4P6Q8",
+    "naicsPrimary": "541330 - Engineering Services",
+    "naicsSecondary": "541715 - R&D Physical Sciences",
+    "samRegistration": "Active (exp. 03/15/2027)",
+    "address": {
+      "street": "1847 Innovation Pkwy, Ste 400",
+      "city": "Arlington",
+      "state": "VA",
+      "zip": "22201"
+    },
+    "addressFull": "1847 Innovation Pkwy, Ste 400, Arlington, VA 22201",
+    "website": "www.apexdefensesystems.com",
+    "phoneMain": "(703) 555-0100",
+    "employees": 2400,
+    "annualRevenue": "$380M",
+    "smallBusinessCerts": "None (Large)",
+    "yearFounded": 1998
+  },
+  "protege": {
+    "company": "PINNACLE ENGINEERING GROUP, LLC",
+    "companyShort": "PINNACLE",
+    "poc": {
+      "name": "Maria S. Nguyen",
+      "firstName": "Maria",
+      "lastName": "Nguyen",
+      "title": "CEO & President",
+      "email": "mnguyen@pinnacleeng.com",
+      "phone": "(619) 555-0287"
+    },
+    "teamMember": {
+      "name": "Sarah L. Washington",
+      "firstName": "Sarah",
+      "lastName": "Washington",
+      "title": "Contracts Lead",
+      "email": "swashington@pinnacleeng.com",
+      "phone": "(619) 555-0293"
+    },
+    "cage": "3M8R2",
+    "uei": "R3T5V7W9X1Y3",
+    "naicsPrimary": "541512 - Computer Systems Design",
+    "naicsSecondary": "541611 - Admin Mgmt Consulting",
+    "samRegistration": "Active (exp. 11/22/2026)",
+    "address": {
+      "street": "3290 Pacific Coast Hwy, Ste 210",
+      "city": "Carlsbad",
+      "state": "CA",
+      "zip": "92009"
+    },
+    "addressFull": "3290 Pacific Coast Hwy, Ste 210, Carlsbad, CA 92009",
+    "website": "www.pinnacleenggroup.com",
+    "phoneMain": "(619) 555-0200",
+    "employees": 45,
+    "annualRevenue": "$4.2M",
+    "smallBusinessCerts": "SDB, SDVOSB",
+    "yearFounded": 2019
+  },
+  "sponsoringAgency": {
+    "name": "Defense Logistics Agency (DLA)",
+    "poc": {
+      "name": "Robert T. Chen",
+      "firstName": "Robert",
+      "lastName": "Chen",
+      "title": "Program Manager",
+      "email": "robert.t.chen@dla.mil",
+      "phone": "(703) 555-0319"
+    },
+    "component": "DLA Information Operations"
+  },
+  "authorizedSubcontractor": {
+    "company": "MERIDIAN TECH SOLUTIONS, INC.",
+    "companyShort": "MERIDIAN",
+    "poc": {
+      "name": "Priya K. Patel",
+      "firstName": "Priya",
+      "lastName": "Patel",
+      "title": "Director of Operations",
+      "email": "ppatel@meridiantech.com",
+      "phone": "(571) 555-0456"
+    },
+    "cage": "5N2T8",
+    "uei": "K4L6M8N0P2Q4"
+  },
+  "agreement": {
+    "startDate": "02/01/2026",
+    "endDate": "01/31/2029",
+    "technologyArea": "Cybersecurity & Information Assurance",
+    "stateOfPerformance": "California",
+    "estimatedValue": "$2,850,000",
+    "whitePaperDueDate": "04/15/2026",
+    "agreementType": "Mentor-Protege Agreement",
+    "focusArea": "Cybersecurity Workforce Development",
+    "performancePeriod": "3 years",
+    "reportingFrequency": "Semi-Annual"
+  }
+}

@@ -1,0 +1,360 @@
+{
+  "id": "06-protege-company-info",
+  "title": "Protege Company Info",
+  "sheetName": "Protege Company Info",
+  "pages": [
+    "20-Protege-Company-Info.html",
+    "21-Protege-Company-Info.html",
+    "22-Protege-Company-Info.html",
+    "23-Protege-Company-Info.html"
+  ],
+  "steps": [
+    {
+      "stepId": "01",
+      "type": "sidebar-start",
+      "screenshotFile": "protege-company-info/01-sidebar-progress.png",
+      "pageFile": "20-Protege-Company-Info.html",
+      "selector": ".progress-sidebar, aside.steps-nav, [data-progress-sidebar]",
+      "padding": 10,
+      "modalText": "The progress sidebar tracks your position across four sub-steps in the Protege Company Info section. Each item highlights as you advance through the workflow.",
+      "voiceover": "On the left side of the form area you will see a progress sidebar. This sidebar lists four sub-steps: Company Details, Company Profile, Agreement Details, and Review and Confirm. Your current position is highlighted as you move through each step.",
+      "sidebarItems": [
+        "Company Details",
+        "Company Profile",
+        "Agreement Details",
+        "Review & Confirm"
+      ],
+      "notes": "Progress sidebar showing all 4 sub-steps with Company Details highlighted as active. Sidebar is visible."
+    },
+    {
+      "stepId": "02",
+      "type": "overview",
+      "screenshotFile": "protege-company-info/02-company-details-overview.png",
+      "pageFile": "20-Protege-Company-Info.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Company Details page collects essential business information for the protege organization. Fields include company name, SAM UEI, address, contact details, and business metrics such as employee count and annual revenue.",
+      "voiceover": "This is the Protege Company Details page. It contains a form with fields for the protege company's identifying information, physical address, contact details, and key business metrics. Some fields like company name and SAM UEI are pre-populated from your registration and cannot be edited directly on this form.",
+      "notes": "Full overview of page 20 showing protege company details form with approximately 16 form fields. Comments present on this page."
+    },
+    {
+      "stepId": "03",
+      "type": "element",
+      "screenshotFile": "protege-company-info/03-company-name-uei.png",
+      "pageFile": "20-Protege-Company-Info.html",
+      "selector": "input[name='company_name']",
+      "selectorGroup": [
+        "input[name='company_name']",
+        "input[name='sam_ueid']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='company_name']": "PINNACLE ENGINEERING GROUP, LLC",
+        "input[name='sam_ueid']": "R3T5V7W9X1Y3"
+      },
+      "modalText": "The company name and SAM UEI fields are pre-populated and disabled. These values are pulled from your SAM.gov registration and cannot be changed within the portal.",
+      "voiceover": "The first two fields display the company name, Pinnacle Engineering Group LLC, and the SAM Unique Entity Identifier, R3T5V7W9X1Y3. Both fields are disabled and pre-populated from the organization's SAM.gov registration. If these values are incorrect, update them in SAM.gov before proceeding.",
+      "notes": "Company name and SAM UEI fields are disabled (read-only). Values come from SAM.gov registration."
+    },
+    {
+      "stepId": "04",
+      "type": "element",
+      "screenshotFile": "protege-company-info/04-website-cage.png",
+      "pageFile": "20-Protege-Company-Info.html",
+      "selector": "input[name='website']",
+      "selectorGroup": [
+        "input[name='website']",
+        "input[name='cage_code']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='website']": "www.pinnacleenggroup.com",
+        "input[name='cage_code']": "3M8R2"
+      },
+      "modalText": "Enter the protege company's website URL and CAGE code. The CAGE code is a five-character identifier assigned by the Defense Logistics Agency.",
+      "voiceover": "Enter the company website, such as www.pinnacleenggroup.com, in the website field. Then provide the CAGE code, which is a five-character alphanumeric identifier assigned by the Defense Logistics Agency. In this example the CAGE code is 3M8R2. Verify this matches your DLA registration.",
+      "notes": "Website and CAGE code fields for protege company"
+    },
+    {
+      "stepId": "05",
+      "type": "element",
+      "screenshotFile": "protege-company-info/05-address-fields.png",
+      "pageFile": "20-Protege-Company-Info.html",
+      "selector": "input[name='address']",
+      "selectorGroup": [
+        "input[name='address']",
+        "input[name='state']",
+        "input[name='zip_code']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='address']": "3290 Pacific Coast Hwy, Ste 210",
+        "input[name='state']": "CA",
+        "input[name='zip_code']": "92009"
+      },
+      "modalText": "Enter the protege company's primary business address, state abbreviation, and zip code. The address should match the information on file in SAM.gov.",
+      "voiceover": "Complete the address fields with the protege company's primary business address. Enter 3290 Pacific Coast Hwy Suite 210 as the street address, CA as the state abbreviation, and 92009 as the zip code. Ensure these details match the address registered in SAM.gov to avoid discrepancies during review.",
+      "notes": "Address, state, and zip code fields for protege company - Carlsbad, CA location"
+    },
+    {
+      "stepId": "06",
+      "type": "element",
+      "screenshotFile": "protege-company-info/06-email-phone.png",
+      "pageFile": "20-Protege-Company-Info.html",
+      "selector": "input[name='email']",
+      "selectorGroup": [
+        "input[name='email']",
+        "input[name='phone']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='email']": "mnguyen@pinnacleeng.com",
+        "input[name='phone']": "(619) 555-0287"
+      },
+      "modalText": "Provide the protege company's primary email address and phone number. These contact details will be used for all official program correspondence.",
+      "voiceover": "Enter the primary email address for the protege company, such as mnguyen@pinnacleeng.com, and the main phone number, 619-555-0287. These contact details will be used for all official correspondence related to the mentor-protege agreement, so ensure they are current and monitored regularly.",
+      "notes": "Email and phone fields for protege company primary contact"
+    },
+    {
+      "stepId": "07",
+      "type": "element",
+      "screenshotFile": "protege-company-info/07-employees-revenue.png",
+      "pageFile": "20-Protege-Company-Info.html",
+      "selector": "input[name='number_of_employees']",
+      "selectorGroup": [
+        "input[name='number_of_employees']",
+        "input[name='annual_gross_revenue']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='number_of_employees']": "45",
+        "input[name='annual_gross_revenue']": "$4.2M"
+      },
+      "modalText": "Enter the number of employees and annual gross revenue. These business metrics help determine the protege's eligibility and size classification under SBA standards.",
+      "voiceover": "Provide the total number of employees and the annual gross revenue for the protege company. In this example, the employee count is 45 and the annual gross revenue is 4.2 million dollars. These figures are used to verify the company's small business size status under SBA size standards applicable to.",
+      "notes": "Number of employees and annual gross revenue fields - key eligibility metrics for protege status"
+    },
+    {
+      "stepId": "08",
+      "type": "element",
+      "screenshotFile": "protege-company-info/08-social-media-fields.png",
+      "pageFile": "20-Protege-Company-Info.html",
+      "selector": "input[name='facebook']",
+      "selectorGroup": [
+        "input[name='facebook']",
+        "input[name='instagram']",
+        "input[name='linkedIn']",
+        "input[name='youtube']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='facebook']": "",
+        "input[name='instagram']": "",
+        "input[name='linkedIn']": "linkedin.com/company/pinnacle-eng-group",
+        "input[name='youtube']": ""
+      },
+      "modalText": "The social media fields are optional. Enter URLs for the protege company's Facebook, Instagram, LinkedIn, and YouTube profiles if available.",
+      "voiceover": "The next group of fields collects social media profile URLs for the protege company. These fields are optional and include Facebook, Instagram, LinkedIn, and YouTube. In this example only the LinkedIn field is completed with the company's profile URL. Leave any fields blank if the company does not maintain a.",
+      "notes": "Optional social media fields - Facebook, Instagram, LinkedIn, YouTube. Most small businesses will only fill one or two."
+    },
+    {
+      "stepId": "09",
+      "type": "overview",
+      "screenshotFile": "protege-company-info/09-company-profile-overview.png",
+      "pageFile": "21-Protege-Company-Info.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Company Profile page displays a read-only summary of the protege organization's profile data. Use the sidebar navigation to move between sections.",
+      "voiceover": "This is the Company Profile page. It presents a display view of the protege company's profile information that was entered or imported from registration. The sidebar on the left, which is approximately expanded, provides navigation between the sub-steps. Review the displayed information and use the Continue button to.",
+      "notes": "Full overview of page 21 showing company profile display. Sidebar is visible."
+    },
+    {
+      "stepId": "10",
+      "type": "element",
+      "screenshotFile": "protege-company-info/10-profile-naics-certs.png",
+      "pageFile": "21-Protege-Company-Info.html",
+      "selector": ".naics-display, .certifications-display, [data-section='naics']",
+      "padding": 100,
+      "modalText": "The profile displays the protege's primary NAICS code and small business certifications. These classifications determine program eligibility and developmental focus areas.",
+      "voiceover": "The company profile section displays the primary NAICS code, 541512 for Computer Systems Design, and the small business certifications held by the protege. Pinnacle Engineering Group holds SDB and SDVOSB certifications. These classifications are important for determining eligibility and matching with appropriate mentor organizations.",
+      "notes": "NAICS code (541512) and small business certifications (SDB, SDVOSB) display for Pinnacle Engineering Group"
+    },
+    {
+      "stepId": "11",
+      "type": "element",
+      "screenshotFile": "protege-company-info/11-profile-nav-buttons.png",
+      "pageFile": "21-Protege-Company-Info.html",
+      "selector": ".btn-next, .nav-buttons, .form-actions",
+      "padding": 100,
+      "modalText": "Use the Back button to return to the Company Details form or the Continue button to proceed to the Agreement Details page.",
+      "voiceover": "At the bottom of the page you will find the navigation buttons. The Back button returns you to the Company Details form if you need to make corrections. The Continue button advances you to the Agreement Details page where you will enter agreement-specific information such as title and estimated dates.",
+      "notes": "Back and Continue navigation buttons at the bottom of the company profile page"
+    },
+    {
+      "stepId": "12",
+      "type": "overview",
+      "screenshotFile": "protege-company-info/12-agreement-details-overview.png",
+      "pageFile": "22-Protege-Company-Info.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Agreement Details page collects the agreement title, estimated start date, and estimated end date for the mentor-protege agreement. These dates define the proposed performance period.",
+      "voiceover": "This is the Agreement Details page. It contains three fields for entering the agreement title, the estimated start date, and the estimated end date. These entries define the proposed scope and timeline for the mentor-protege agreement. Ensure the dates align with your organization's project planning and any sponsor requirements.",
+      "notes": "Full overview of page 22 showing agreement details form with title and date fields"
+    },
+    {
+      "stepId": "13",
+      "type": "element",
+      "screenshotFile": "protege-company-info/13-agreement-title.png",
+      "pageFile": "22-Protege-Company-Info.html",
+      "selector": "input[name='agreement_title']",
+      "padding": 100,
+      "formFill": {
+        "input[name='agreement_title']": "Cybersecurity Workforce Development Partnership"
+      },
+      "modalText": "Enter a descriptive title for the mentor-protege agreement. The title should clearly identify the focus area and partnership nature of the agreement.",
+      "voiceover": "Enter the agreement title in this field. The title should be descriptive and clearly identify the focus of the partnership. In this example we enter Cybersecurity Workforce Development Partnership. Choose a title that accurately reflects the developmental objectives outlined in the protege needs assessment.",
+      "notes": "Agreement title field - free text entry describing the partnership focus"
+    },
+    {
+      "stepId": "14",
+      "type": "element",
+      "screenshotFile": "protege-company-info/14-agreement-dates.png",
+      "pageFile": "22-Protege-Company-Info.html",
+      "selector": "input[name='estimated_start_date']",
+      "selectorGroup": [
+        "input[name='estimated_start_date']",
+        "input[name='estimated_end_date']"
+      ],
+      "padding": 70,
+      "formFill": {
+        "input[name='estimated_start_date']": "02/01/2026",
+        "input[name='estimated_end_date']": "01/31/2029"
+      },
+      "modalText": "Enter the estimated start and end dates for the agreement. The performance period typically spans one to three years depending on the scope of the developmental plan.",
+      "voiceover": "Enter the estimated start date and estimated end date for the agreement. In this example the start date is February 1, 2026 and the end date is January 31, 2029, establishing a three-year performance period. The dates should align with the developmental plan timeline and any constraints set by the.",
+      "notes": "Estimated start date (02/01/2026) and end date (01/31/2029) fields - 3-year performance period"
+    },
+    {
+      "stepId": "15",
+      "type": "overview",
+      "screenshotFile": "protege-company-info/15-confirmation-overview.png",
+      "pageFile": "23-Protege-Company-Info.html",
+      "selector": "main, .content-area, [role='main']",
+      "padding": 20,
+      "modalText": "The Review and Confirm page displays a read-only summary of all protege company information and agreement details entered across the previous pages. Verify everything before proceeding.",
+      "voiceover": "This is the Review and Confirm page for the Protege Company Info section. It presents a consolidated summary of all information entered including company details, profile data, and agreement dates. Review each section carefully to ensure accuracy before completing this part of the application.",
+      "notes": "Full overview of page 23 showing read-only review summary of all protege company info data"
+    },
+    {
+      "stepId": "16",
+      "type": "element",
+      "screenshotFile": "protege-company-info/16-review-company-summary.png",
+      "pageFile": "23-Protege-Company-Info.html",
+      "selector": ".review-company, .summary-company, [data-section='company']",
+      "padding": 100,
+      "modalText": "The company summary shows the protege's name, CAGE code, UEI, address, contact information, employee count, and annual revenue as entered on the Company Details page.",
+      "voiceover": "The company summary section displays all previously entered details: Pinnacle Engineering Group LLC, CAGE code 3M8R2, UEI R3T5V7W9X1Y3, the Carlsbad address, contact email and phone, 45 employees, and 4.2 million dollars in annual revenue. Confirm these details match the intended entries before proceeding.",
+      "notes": "Read-only company details summary showing all Pinnacle Engineering Group data"
+    },
+    {
+      "stepId": "17",
+      "type": "element",
+      "screenshotFile": "protege-company-info/17-review-agreement-summary.png",
+      "pageFile": "23-Protege-Company-Info.html",
+      "selector": ".review-agreement, .summary-agreement, [data-section='agreement']",
+      "padding": 100,
+      "modalText": "The agreement summary displays the agreement title and the estimated start and end dates. Verify the performance period aligns with your developmental plan.",
+      "voiceover": "The agreement summary section shows the agreement title, Cybersecurity Workforce Development Partnership, with an estimated start date of February 1, 2026 and an end date of January 31, 2029. Verify that the title accurately describes the partnership focus and that the three-year performance period matches your planning documents.",
+      "notes": "Read-only agreement details summary showing title and date range"
+    },
+    {
+      "stepId": "18",
+      "type": "element",
+      "screenshotFile": "protege-company-info/18-confirmation-checkbox.png",
+      "pageFile": "23-Protege-Company-Info.html",
+      "selector": "input[type='checkbox'][name='confirmCompanyInfo'], .confirmation-checkbox",
+      "padding": 100,
+      "modalText": "Check the confirmation box to certify that all protege company information and agreement details are accurate and complete. This step is required before proceeding.",
+      "voiceover": "Before proceeding, you must check the confirmation box to certify that all protege company information and agreement details are accurate and complete. This certification step is mandatory and ensures the data submitted on behalf of the protege organization has been verified by the authorized user.",
+      "notes": "Confirmation checkbox that must be checked before proceeding to next section"
+    },
+    {
+      "stepId": "19",
+      "type": "element",
+      "screenshotFile": "protege-company-info/19-final-nav-buttons.png",
+      "pageFile": "23-Protege-Company-Info.html",
+      "selector": ".btn-next, .nav-buttons, .form-actions",
+      "padding": 100,
+      "modalText": "Use the Back button to return to previous pages for corrections or the Continue button to proceed to the next section after confirming your entries.",
+      "voiceover": "At the bottom of the page you will find the navigation buttons. The Back button returns you to the Agreement Details page if corrections are needed. The Continue button advances you to the next section of the application once the confirmation checkbox has been selected.",
+      "notes": "Back and Continue navigation buttons at the bottom of the confirmation page"
+    },
+    {
+      "stepId": "20",
+      "type": "sidebar-end",
+      "screenshotFile": "protege-company-info/20-sidebar-complete.png",
+      "pageFile": "23-Protege-Company-Info.html",
+      "selector": ".progress-sidebar, aside.steps-nav, [data-progress-sidebar]",
+      "padding": 10,
+      "modalText": "All four sub-steps in the Protege Company Info section are now complete. The progress sidebar reflects your completion status before you move to the next section.",
+      "voiceover": "The progress sidebar now shows all four sub-steps as complete: Company Details, Company Profile, Agreement Details, and Review and Confirm. You have finished the Protege Company Info section and are ready to proceed to the next part of the application.",
+      "sidebarItems": [
+        "Company Details",
+        "Company Profile",
+        "Agreement Details",
+        "Review & Confirm"
+      ],
+      "notes": "Progress sidebar showing all 4 sub-steps marked as complete"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Which fields on the Protege Company Details page are disabled and cannot be edited directly?",
+      "options": {
+        "A": "Website and CAGE code",
+        "B": "Company name and SAM UEI",
+        "C": "Email address and phone number"
+      },
+      "feedback": {
+        "A": "Incorrect. The website and CAGE code fields are editable on this form. The disabled fields are the company name and SAM UEI, which are pre-populated from the organization's SAM.gov registration.",
+        "B": "Correct. The company name and SAM UEI fields are pre-populated from SAM.gov and disabled on this form. If these values need to be corrected, the update must be made in SAM.gov before they will reflect in the portal.",
+        "C": "Incorrect. The email address and phone number fields are editable. The fields that are disabled and pre-populated from SAM.gov are the company name and the SAM Unique Entity Identifier.",
+        "correct": "Correct. The company name and SAM UEI fields are pre-populated from SAM.gov and disabled on this form. If these values need to be corrected, the update must be made in SAM.gov before they will reflect in the portal."
+      },
+      "id": "Q1",
+      "correct": "B"
+    },
+    {
+      "question": "What information is collected on the Agreement Details page?",
+      "options": {
+        "A": "The sponsoring agency name and point-of-contact details",
+        "B": "The agreement title, estimated start date, and estimated end date",
+        "C": "The mentor and protege team member roles and responsibilities"
+      },
+      "feedback": {
+        "A": "Incorrect. Sponsoring agency information is collected in the Agreement Team section, not on the Agreement Details page. This page focuses on the agreement title and timeline.",
+        "B": "Correct. The Agreement Details page collects three key pieces of information: the agreement title, the estimated start date, and the estimated end date. Together these define the proposed scope description and performance period for the mentor-protege agreement.",
+        "C": "Incorrect. Team member roles and responsibilities are defined in the Agreement Team section. The Agreement Details page captures the agreement title and the estimated start and end dates for the performance period.",
+        "correct": "Correct. The Agreement Details page collects three key pieces of information: the agreement title, the estimated start date, and the estimated end date. Together these define the proposed scope description and performance period for the mentor-protege agreement."
+      },
+      "id": "Q2",
+      "correct": "B"
+    },
+    {
+      "question": "Why are the social media fields on the Company Details page optional?",
+      "options": {
+        "A": "Because social media information is collected separately during the mentor application process",
+        "B": "Because not all protege companies maintain social media profiles, and these fields are supplementary to the required business information",
+        "C": "Because social media URLs are automatically imported from the company's SAM.gov registration"
+      },
+      "feedback": {
+        "A": "Incorrect. Social media information is not collected during the mentor application process. The fields are optional because many small businesses may not have active profiles on all platforms.",
+        "B": "Correct. The social media fields for Facebook, Instagram, LinkedIn, and YouTube are optional because not all protege companies maintain profiles on every platform. These fields supplement the required business information and can be left blank without affecting the application.",
+        "C": "Incorrect. Social media URLs are not part of SAM.gov registration data. The fields are optional because not all companies maintain social media profiles, and they are supplementary to the required business information on the form.",
+        "correct": "Correct. The social media fields for Facebook, Instagram, LinkedIn, and YouTube are optional because not all protege companies maintain profiles on every platform. These fields supplement the required business information and can be left blank without affecting the application."
+      },
+      "id": "Q3",
+      "correct": "B"
+    }
+  ]
+}

@@ -193,7 +193,7 @@ async function captureStep(page, step, outputDir) {
     const currentUrl = page.url();
     const targetUrl = `${BASE_URL}/${step.pageFile}`;
     if (!currentUrl.includes(step.pageFile)) {
-      await page.goto(targetUrl, { waitUntil: 'networkidle', timeout: 30000 });
+      await page.goto(targetUrl, { waitUntil: 'domcontentloaded', timeout: 15000 });
       await delay(1000);
       await hideNavBar(page);
       await collapseSidebar(page);
@@ -232,39 +232,37 @@ async function captureStep(page, step, outputDir) {
     }
 
     case 'overview': {
-      // Content area crop (exclude sidebar chrome) - max 800x550
-      const contentSelectors = ['.content-area', 'main > div', '.wizard-content', 'main'];
-      let mainEl = null;
+      // Content area crop — skip sidebar (72-260px wide), capture main content
+      // Try to find the main content area via bounding box first
+      let captured = false;
+      const contentSelectors = ['.content-area', 'main', '.flex-1'];
       for (const sel of contentSelectors) {
-        const count = await page.locator(sel).count();
-        if (count > 0) {
-          mainEl = await page.locator(sel).first();
-          break;
-        }
+        try {
+          const count = await page.locator(sel).count();
+          if (count === 0) continue;
+          const el = await page.locator(sel).first();
+          const box = await el.boundingBox({ timeout: 3000 });
+          if (box && box.width > 200 && box.height > 100) {
+            await page.screenshot({
+              path: filepath,
+              clip: {
+                x: Math.max(0, box.x - 10),
+                y: Math.max(0, box.y - 10),
+                width: Math.min(box.width + 20, 900),
+                height: Math.min(box.height + 20, 650)
+              }
+            });
+            captured = true;
+            break;
+          }
+        } catch (_) { /* try next selector */ }
       }
-      // Fall back to step selector if none of the content selectors matched
-      if (!mainEl && step.selector) {
-        mainEl = await page.locator(step.selector).first();
-      }
-      if (mainEl) {
-        await mainEl.scrollIntoViewIfNeeded({ timeout: 3000 }).catch(() => {});
-        await delay(300);
-        const box = await mainEl.boundingBox();
-        if (box) {
-          await page.screenshot({
-            path: filepath,
-            clip: {
-              x: Math.max(0, box.x - 10),
-              y: Math.max(0, box.y - 10),
-              width: Math.min(box.width + 20, 800),
-              height: Math.min(box.height + 20, 550)
-            }
-          });
-        } else {
-          await page.screenshot({ path: filepath, fullPage: false });
-        }
-      } else {
-        await page.screenshot({ path: filepath, fullPage: false });
+      // Fallback: crop viewport to exclude left sidebar (assume 100px sidebar)
+      if (!captured) {
+        await page.screenshot({
+          path: filepath,
+          clip: { x: 80, y: 0, width: 1840, height: 1080 }
+        });
       }
       break;
     }
@@ -366,7 +364,7 @@ async function captureSection(browser, sectionData) {
     // Navigate to first page
     const firstPage = sectionData.pages[0] || sectionData.steps[0]?.pageFile;
     if (firstPage) {
-      await page.goto(`${BASE_URL}/${firstPage}`, { waitUntil: 'networkidle', timeout: 30000 });
+      await page.goto(`${BASE_URL}/${firstPage}`, { waitUntil: 'domcontentloaded', timeout: 15000 });
       await delay(1500);
       await hideNavBar(page);
       await collapseSidebar(page);

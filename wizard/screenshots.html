@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MPP Wizard Screenshots</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+    header {
+      background: #0C1F5B;
+      color: white;
+      padding: 40px 24px;
+      text-align: center;
+    }
+    header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+    header p { font-size: 14px; opacity: 0.8; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 32px 24px; }
+    .section-header {
+      background: #0C1F5B;
+      color: white;
+      padding: 16px 24px;
+      border-radius: 8px;
+      margin: 32px 0 16px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-header h2 { font-size: 20px; font-weight: 600; }
+    .section-header .badge {
+      background: rgba(164,208,249,0.3);
+      color: #A4D0F9;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+      transition: box-shadow 0.2s;
+    }
+    .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      object-position: top left;
+      border-bottom: 1px solid #e2e8f0;
+      cursor: pointer;
+    }
+    .card .caption {
+      padding: 12px 16px;
+    }
+    .card .caption .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #0C1F5B;
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      margin-right: 8px;
+      flex-shrink: 0;
+    }
+    .card .caption .title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #334155;
+    }
+    .card .caption .type {
+      display: inline-block;
+      margin-top: 4px;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: #f1f5f9;
+      color: #64748b;
+    }
+    .toc {
+      background: white;
+      border-radius: 8px;
+      padding: 24px;
+      border: 1px solid #e2e8f0;
+      margin-bottom: 16px;
+    }
+    .toc h3 { font-size: 16px; margin-bottom: 12px; }
+    .toc a {
+      color: #0C1F5B;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .toc a:hover { text-decoration: underline; }
+    .toc ul { list-style: none; display: flex; gap: 24px; flex-wrap: wrap; }
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      z-index: 10000;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .lightbox.active { display: flex; }
+    .lightbox img {
+      max-width: 95vw;
+      max-height: 95vh;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MPP Wizard Screenshot Gallery</h1>
+    <p>51 screenshots across 2 wizard flows &mdash; captured via Playwright at 1920&times;1080</p>
+  </header>
+
+  <div class="container">
+    <div class="toc">
+      <h3>Jump to Section</h3>
+      <ul>
+        <li><a href="#protege-signup">Prot&eacute;g&eacute; Signup (23 shots)</a></li>
+        <li><a href="#agreement-team">Agreement Team (28 shots)</a></li>
+      </ul>
+    </div>
+
+    <!-- PROTEGE SIGNUP -->
+    <div class="section-header" id="protege-signup">
+      <h2>Prot&eacute;g&eacute; Signup Wizard</h2>
+      <span class="badge">5 pages &bull; 23 screenshots</span>
+    </div>
+    <div class="gallery" id="gallery-protege">
+      <div class="card"><img src="protege-signup/screenshots/01-company-info-overview.png" alt="Company Info Overview" onclick="openLightbox(this)"><div class="caption"><span class="num">1</span><span class="title">Company Info Overview</span><br><span class="type">overview</span></div></div>
+      <div class="card"><img src="protege-signup/screenshots/02-sidebar-expand-button.png" alt="Sidebar Expand Button" onclick="openLightbox(this)"><div class="caption"><span class="num">2</span><span class="title">Sidebar Expand Button</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="protege-signup/screenshots/03-company-name-field.png" alt="Company Name Field" onclick="openLightbox(this)"><div class="caption"><span class="num">3</span><span class="title">Company Name Field (disabled)</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="protege-signup/screenshots/04-sam-uei-field.png" alt="SAM UEI Field" onclick="openLightbox(this)"><div class="caption"><span class="num">4</span><span class="title">SAM UEI Field (disabled)</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="protege-signup/screenshots/05-cage-website-fields.png" alt="CAGE Code & Website" onclick="openLightbox(this)"><div class="caption"><span class="num">5</span><span class="title">CAGE Code &amp; Website Fields</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="protege-signup/screenshots/06-address-fields.png" alt="Address Fields" onclick="openLightbox(this)"><div class="caption"><span class="num">6</span><span class="title">Address, State &amp; Zip Code</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="protege-signup/screenshots/07-contact-fields.png" alt="Contact Fields" onclick="openLightbox(this)"><div class="caption"><span class="num">7</span><span class="title">Email &amp; Phone Fields</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="protege-signup/screenshots/08-financial-fields.png" alt="Financial Fields" onclick="openLightbox(this)"><div class="caption"><span class="num">8</span><span class="title">Employees &amp; Revenue</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="protege-signup/screenshots/09-save-continue-button.png" alt="Save & Continue" onclick="openLightbox(this)"><div class="caption"><span class="num">9</span><span class="title">Save &amp; Continue Button</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="protege-signup/screenshots/10-sdb-cert-overview.png" alt="SDB Certification Overview" onclick="openLightbox(this)"><div class="caption"><span class="num">10</span><span class="title">SDB Certification Overview</span><br><span class="type">overview</span></div></div>
+      <div class="card"><img src="protege-signup/screenshots/11-progress-sidebar.png" alt="Progress Sidebar" onclick="openLightbox(this)"><div class="caption"><span class="num">11</span><span class="title">Progress Sidebar (expanded)</span><br><span class="type">sidebar</span></div></div>
+      <div class="card"><img src="protege-signup/screenshots/12-sdb-start-date.png" alt="SDB Start Date" onclick="openLightbox(this)"><div class="caption"><span class="num">12</span><span class="title">SDB Cert Start Date</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="protege-signup/screenshots/13-sdb-end-date.png" alt="SDB End Date" onclick="openLightbox(this)"><div class="caption"><span class="num">13</span><span class="title">SDB Cert End Date</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="protege-signup/screenshots/14-agreement-details-overview.png" alt="Agreement Details Overview" onclick="openLightbox(this)"><div class="caption"><span class="num">14</span><span class="title">Agreement Details Overview</span><br><span class="type">overview</span></div></div>
+      <div class="card"><img src="protege-signup/screenshots/15-agreement-title.png" alt="Agreement Title" onclick="openLightbox(this)"><div class="caption"><span class="num">15</span><span class="title">Agreement Title Field</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="protege-signup/screenshots/16-agreement-dates.png" alt="Agreement Dates" onclick="openLightbox(this)"><div class="caption"><span class="num">16</span><span class="title">Start &amp; End Dates</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="protege-signup/screenshots/17-partner-agency-fields.png" alt="Partner & Agency" onclick="openLightbox(this)"><div class="caption"><span class="num">17</span><span class="title">Partner &amp; Agency Fields</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="protege-signup/screenshots/18-review-overview.png" alt="Review Overview" onclick="openLightbox(this)"><div class="caption"><span class="num">18</span><span class="title">Review Page Overview</span><br><span class="type">overview</span></div></div>
+      <div class="card"><img src="protege-signup/screenshots/19-review-company-section.png" alt="Review Company" onclick="openLightbox(this)"><div class="caption"><span class="num">19</span><span class="title">Review: Company Info</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="protege-signup/screenshots/20-review-agreement-section.png" alt="Review Agreement" onclick="openLightbox(this)"><div class="caption"><span class="num">20</span><span class="title">Review: Agreement Details</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="protege-signup/screenshots/21-congratulations-overview.png" alt="Congratulations" onclick="openLightbox(this)"><div class="caption"><span class="num">21</span><span class="title">Congratulations Page</span><br><span class="type">overview</span></div></div>
+      <div class="card"><img src="protege-signup/screenshots/22-action-buttons.png" alt="Action Buttons" onclick="openLightbox(this)"><div class="caption"><span class="num">22</span><span class="title">Action Buttons</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="protege-signup/screenshots/23-sidebar-complete.png" alt="Sidebar Complete" onclick="openLightbox(this)"><div class="caption"><span class="num">23</span><span class="title">Sidebar: All Complete</span><br><span class="type">sidebar</span></div></div>
+    </div>
+
+    <!-- AGREEMENT TEAM -->
+    <div class="section-header" id="agreement-team">
+      <h2>Agreement Team Wizard</h2>
+      <span class="badge">8 pages &bull; 28 screenshots</span>
+    </div>
+    <div class="gallery" id="gallery-agreement">
+      <div class="card"><img src="agreement-team/screenshots/01-sidebar-progress.png" alt="Sidebar Progress" onclick="openLightbox(this)"><div class="caption"><span class="num">1</span><span class="title">Sidebar: 7 Sub-steps</span><br><span class="type">sidebar</span></div></div>
+      <div class="card"><img src="agreement-team/screenshots/02-mentor-team-overview.png" alt="Mentor Team Overview" onclick="openLightbox(this)"><div class="caption"><span class="num">2</span><span class="title">Mentor Team Overview</span><br><span class="type">overview</span></div></div>
+      <div class="card"><img src="agreement-team/screenshots/03-mentor-primary-name.png" alt="Mentor Primary Name" onclick="openLightbox(this)"><div class="caption"><span class="num">3</span><span class="title">Mentor: Name Fields</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="agreement-team/screenshots/04-mentor-primary-contact.png" alt="Mentor Contact" onclick="openLightbox(this)"><div class="caption"><span class="num">4</span><span class="title">Mentor: Phone/Email/Fax</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="agreement-team/screenshots/05-mentor-primary-address.png" alt="Mentor Address" onclick="openLightbox(this)"><div class="caption"><span class="num">5</span><span class="title">Mentor: Address &amp; Title</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="agreement-team/screenshots/06-mentor-roles-overview.png" alt="Mentor Roles Overview" onclick="openLightbox(this)"><div class="caption"><span class="num">6</span><span class="title">Mentor Roles Overview</span><br><span class="type">overview</span></div></div>
+      <div class="card"><img src="agreement-team/screenshots/07-mentor-role-primary.png" alt="Mentor Role Primary" onclick="openLightbox(this)"><div class="caption"><span class="num">7</span><span class="title">Mentor: Primary Role</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="agreement-team/screenshots/08-mentor-role-secondary.png" alt="Mentor Role Secondary" onclick="openLightbox(this)"><div class="caption"><span class="num">8</span><span class="title">Mentor: Secondary Role</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="agreement-team/screenshots/09-protege-team-overview.png" alt="Protege Team Overview" onclick="openLightbox(this)"><div class="caption"><span class="num">9</span><span class="title">Prot&eacute;g&eacute; Team Overview</span><br><span class="type">overview</span></div></div>
+      <div class="card"><img src="agreement-team/screenshots/10-protege-primary-name.png" alt="Protege Primary Name" onclick="openLightbox(this)"><div class="caption"><span class="num">10</span><span class="title">Prot&eacute;g&eacute;: Name Fields</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="agreement-team/screenshots/11-protege-primary-contact.png" alt="Protege Contact" onclick="openLightbox(this)"><div class="caption"><span class="num">11</span><span class="title">Prot&eacute;g&eacute;: Phone/Email</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="agreement-team/screenshots/12-protege-primary-address.png" alt="Protege Address" onclick="openLightbox(this)"><div class="caption"><span class="num">12</span><span class="title">Prot&eacute;g&eacute;: Address &amp; Title</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="agreement-team/screenshots/13-protege-roles-overview.png" alt="Protege Roles Overview" onclick="openLightbox(this)"><div class="caption"><span class="num">13</span><span class="title">Prot&eacute;g&eacute; Roles Overview</span><br><span class="type">overview</span></div></div>
+      <div class="card"><img src="agreement-team/screenshots/14-protege-role-primary.png" alt="Protege Role Primary" onclick="openLightbox(this)"><div class="caption"><span class="num">14</span><span class="title">Prot&eacute;g&eacute;: Primary Role</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="agreement-team/screenshots/15-protege-role-secondary.png" alt="Protege Role Secondary" onclick="openLightbox(this)"><div class="caption"><span class="num">15</span><span class="title">Prot&eacute;g&eacute;: Secondary Role</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="agreement-team/screenshots/16-authorized-subs-overview.png" alt="Authorized Subs Overview" onclick="openLightbox(this)"><div class="caption"><span class="num">16</span><span class="title">Authorized Subs Overview</span><br><span class="type">overview</span></div></div>
+      <div class="card"><img src="agreement-team/screenshots/17-authorized-subs-radio.png" alt="Authorized Subs Radio" onclick="openLightbox(this)"><div class="caption"><span class="num">17</span><span class="title">Subcontractors: Yes/No</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="agreement-team/screenshots/18-sponsoring-agency-overview.png" alt="Sponsoring Agency Overview" onclick="openLightbox(this)"><div class="caption"><span class="num">18</span><span class="title">Sponsoring Agency Overview</span><br><span class="type">overview</span></div></div>
+      <div class="card"><img src="agreement-team/screenshots/19-sponsoring-agency-selection.png" alt="Agency Selection" onclick="openLightbox(this)"><div class="caption"><span class="num">19</span><span class="title">Agency Selection</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="agreement-team/screenshots/20-sponsoring-agency-poc.png" alt="Agency POC" onclick="openLightbox(this)"><div class="caption"><span class="num">20</span><span class="title">Agency POC Details</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="agreement-team/screenshots/21-review-overview.png" alt="Review Overview" onclick="openLightbox(this)"><div class="caption"><span class="num">21</span><span class="title">Review Overview</span><br><span class="type">overview</span></div></div>
+      <div class="card"><img src="agreement-team/screenshots/22-review-mentor-summary.png" alt="Review Mentor" onclick="openLightbox(this)"><div class="caption"><span class="num">22</span><span class="title">Review: Mentor Summary</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="agreement-team/screenshots/23-review-protege-summary.png" alt="Review Protege" onclick="openLightbox(this)"><div class="caption"><span class="num">23</span><span class="title">Review: Prot&eacute;g&eacute; Summary</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="agreement-team/screenshots/24-review-agency-summary.png" alt="Review Agency" onclick="openLightbox(this)"><div class="caption"><span class="num">24</span><span class="title">Review: Agency Summary</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="agreement-team/screenshots/25-final-review-overview.png" alt="Final Review" onclick="openLightbox(this)"><div class="caption"><span class="num">25</span><span class="title">Final Review Overview</span><br><span class="type">overview</span></div></div>
+      <div class="card"><img src="agreement-team/screenshots/26-final-confirmation-checkbox.png" alt="Confirmation Checkbox" onclick="openLightbox(this)"><div class="caption"><span class="num">26</span><span class="title">Confirmation Checkbox</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="agreement-team/screenshots/27-final-nav-buttons.png" alt="Navigation Buttons" onclick="openLightbox(this)"><div class="caption"><span class="num">27</span><span class="title">Back &amp; Continue Buttons</span><br><span class="type">element</span></div></div>
+      <div class="card"><img src="agreement-team/screenshots/28-sidebar-complete.png" alt="Sidebar Complete" onclick="openLightbox(this)"><div class="caption"><span class="num">28</span><span class="title">Sidebar: All Complete</span><br><span class="type">sidebar</span></div></div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    function openLightbox(img) {
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox').classList.add('active');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="icon" type="image/svg+xml" href="../assets/hero-logo.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agreement Team Practice Mode - Mentor-Protege Program</title>
+  <link rel="stylesheet" href="../assets/index-main.css">
+  <link rel="stylesheet" href="../assets/shepherd.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style id="sidebar-toggle-css">
+  .sidebar-expanded { width: 260px !important; }
+  .sidebar-expanded .sidebarNav a,
+  .sidebar-expanded .account-section a,
+  .sidebar-expanded .account-section div[title],
+  .sidebar-expanded .account-section button {
+    justify-content: flex-start !important;
+    padding-left: 20px !important;
+    gap: 12px;
+  }
+  .sidebar-label {
+    display: none;
+    color: white;
+    font-family: Inter, Roboto, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0.85;
+  }
+  .sidebar-expanded .sidebar-label { display: inline; }
+  .sidebar-expanded .expand-chevron { transform: rotate(180deg); }
+  .expand-chevron { transition: transform 0.3s ease; }
+  .sidebar-expanded img[alt="MPP Logo"] {
+    width: 100px !important;
+    height: auto !important;
+    margin-bottom: 20px !important;
+  }
+</style>
+
+<style id="practice-mode-css">
+  /* Dark backdrop for modal */
+  .swal2-container {
+    background: rgba(0, 0, 0, 0.85) !important;
+  }
+  .swal2-popup.modal-redesigned {
+    border: 3px solid #1a3a6e !important;
+    border-radius: 12px !important;
+    animation: borderPulse 3s ease-in-out infinite, modalFadeIn 0.3s ease !important;
+    font-family: 'Roboto', sans-serif !important;
+    width: 600px !important;
+    max-width: 90vw !important;
+  }
+  @keyframes borderPulse {
+    0%, 100% { border-color: #1a3a6e; box-shadow: 0 0 20px rgba(26,58,110,0.3); }
+    50% { border-color: #2a5298; box-shadow: 0 0 30px rgba(42,82,152,0.5); }
+  }
+  @keyframes modalFadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  .modal-redesigned .swal2-title {
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    color: #1a3a6e !important;
+  }
+  .modal-redesigned .swal2-html-container {
+    font-size: 20px !important;
+    line-height: 1.6 !important;
+    color: #333 !important;
+  }
+  .modal-redesigned .swal2-html-container h4 {
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    color: #1a3a6e !important;
+  }
+  .modal-redesigned .swal2-actions {
+    justify-content: center !important;
+  }
+  .modal-redesigned .swal2-confirm {
+    background-color: #1a3a6e !important;
+    font-weight: 600 !important;
+    padding: 12px 32px !important;
+    border-radius: 6px !important;
+  }
+  .modal-redesigned .swal2-confirm:hover {
+    background-color: #0f2847 !important;
+  }
+  .modal-redesigned .swal2-cancel {
+    background-color: #6c757d !important;
+    font-weight: 500 !important;
+    padding: 12px 24px !important;
+    border-radius: 6px !important;
+  }
+
+  /* Shepherd.js Tour Styling */
+  .shepherd-element {
+    z-index: 10000 !important;
+    max-width: 400px !important;
+  }
+  .shepherd-content {
+    background: white !important;
+    border: 3px solid #1a3a6e !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    font-family: 'Roboto', sans-serif !important;
+    animation: borderPulse 3s ease-in-out infinite, modalFadeIn 0.3s ease !important;
+  }
+  .shepherd-text {
+    padding: 0 !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    color: #333 !important;
+  }
+  .shepherd-text h3 {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: #1a3a6e !important;
+    margin: 0 0 12px 0 !important;
+  }
+  .shepherd-text p {
+    margin: 0 !important;
+  }
+  .shepherd-text p:first-child:last-child {
+    padding-top: 0 !important;
+  }
+  .shepherd-footer {
+    padding: 16px 0 0 0 !important;
+    border-top: none !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    gap: 10px !important;
+  }
+  .shepherd-button {
+    background-color: #1a3a6e !important;
+    color: white !important;
+    font-weight: 600 !important;
+    padding: 10px 24px !important;
+    border-radius: 6px !important;
+    border: none !important;
+    cursor: pointer !important;
+    font-size: 14px !important;
+    transition: background-color 0.2s !important;
+  }
+  .shepherd-button:hover {
+    background-color: #0f2847 !important;
+  }
+  .shepherd-button.shepherd-button-secondary {
+    background-color: #6c757d !important;
+  }
+  .shepherd-button.shepherd-button-secondary:hover {
+    background-color: #5a6268 !important;
+  }
+  .shepherd-cancel-icon {
+    color: #666 !important;
+    font-size: 24px !important;
+  }
+  .shepherd-cancel-icon:hover {
+    color: #333 !important;
+  }
+  .shepherd-header {
+    padding: 0 !important;
+    background: transparent !important;
+    border-bottom: none !important;
+  }
+  .shepherd-arrow::before {
+    background: white !important;
+    border: 3px solid #1a3a6e !important;
+  }
+  .shepherd-progress {
+    position: absolute;
+    bottom: 8px;
+    left: 20px;
+    font-size: 12px;
+    color: #666;
+  }
+  body.tour-active {
+    /* Don't lock overflow — user needs to scroll to fill fields */
+  }
+
+  /* Validation styles */
+  .field-error {
+    border-color: #D82D30 !important;
+  }
+  .field-success {
+    border-color: #009933 !important;
+    transition: border-color 0.3s ease;
+  }
+  .validation-msg {
+    color: #D82D30;
+    font-size: 12px;
+    font-family: Inter, sans-serif;
+    margin-top: 4px;
+    display: none;
+  }
+  .validation-msg.show {
+    display: block;
+  }
+
+  /* Active field highlight — pulsing blue glow */
+  @keyframes fieldPulse {
+    0%, 100% { box-shadow: 0 0 0 3px rgba(26,58,110,0.3); border-color: #1a3a6e; }
+    50% { box-shadow: 0 0 0 6px rgba(42,82,152,0.25); border-color: #2a5298; }
+  }
+  .field-active-highlight {
+    animation: fieldPulse 2s ease-in-out infinite !important;
+    border-color: #1a3a6e !important;
+    position: relative;
+    z-index: 9999;
+  }
+
+  /* "Type here" arrow indicator */
+  .type-here-indicator {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #1a3a6e;
+    pointer-events: none;
+    z-index: 10001;
+    animation: bounceArrow 1.5s ease-in-out infinite;
+  }
+  .type-here-indicator svg {
+    flex-shrink: 0;
+  }
+  @keyframes bounceArrow {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(6px); }
+  }
+
+  /* Inner sidebar custom styles */
+  #inner-sidebar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.2) transparent;
+  }
+  #inner-sidebar::-webkit-scrollbar {
+    width: 4px;
+  }
+  #inner-sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.2);
+    border-radius: 2px;
+  }
+</style>
+</head>
+
+<body style="padding-bottom: 0; margin: 0;">
+<div id="root">
+  <div class="Toastify"></div>
+  <div class="flex min-h-screen bg-[#0C1F5B]">
+    <!-- LEFT NAV SIDEBAR (72px collapsed) -->
+    <div class="sticky top-0 h-screen">
+      <div class="h-full flex flex-col relative transition-all duration-300 w-[72px]">
+        <div class="flex-1 overflow-y-auto sidebar-scrollbar">
+          <div class="h-full flex flex-col justify-between min-h-full">
+            <div class="flex flex-col">
+              <div class="h-[180px] flex-shrink-0">
+                <div class="cursor-pointer">
+                  <img src="../assets/hero-logo.svg" alt="MPP Logo" class="transition-all duration-300 w-[44px] h-[52px] mx-auto mb-[90px] mt-[53px]">
+                </div>
+              </div>
+              <div>
+                <div class="sidebarNav">
+                  <ul>
+                    <li>
+                      <a class="flex justify-center w-full items-center border-b border-b-[#2A3A6F] py-[12px] px-[16px] hover:bg-brand-500 hover:shadow[-3px_0_10px_0] hover-shadow-[#70BCFD] cursor-pointer relative" href="javascript:void(0)" title="Dashboard">
+                        <div class="flex items-center relative z-10">
+                          <div class="flex items-center justify-center w-8 h-8 relative z-10">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" opacity="0.56"><path d="M13.6875 8.625V3H21V8.625H13.6875ZM3 12V3H10.3125V12H3ZM13.6875 21V12H21V21H13.6875ZM3 21V15.375H10.3125V21H3ZM4.125 10.875H9.1875V4.125H4.125V10.875ZM14.8125 19.875H19.875V13.125H14.8125V19.875ZM14.8125 7.5H19.875V4.125H14.8125V7.5ZM4.125 19.875H9.1875V16.5H4.125V19.875Z" fill="white" fill-opacity="1"></path></svg>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="flex justify-center w-full items-center border-b border-b-[#2A3A6F] py-[12px] px-[16px] hover:bg-brand-500 hover:shadow[-3px_0_10px_0] hover-shadow-[#70BCFD] cursor-pointer relative" href="javascript:void(0)" title="Applications">
+                        <div class="flex items-center relative z-10">
+                          <div class="flex items-center justify-center w-8 h-8 relative z-10">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" opacity="0.56"><path d="M18 3.75H6C4.78125 3.75 3.98438 4.40625 3.75 5.625L2.25 12.75V18C2.25173 18.5962 2.48934 19.1675 2.91092 19.5891C3.3325 20.0107 3.9038 20.2483 4.5 20.25H19.5C20.0962 20.2483 20.6675 20.0107 21.0891 19.5891C21.5107 19.1675 21.7483 18.5962 21.75 18V12.75L20.25 5.625C20.0156 4.35938 19.1719 3.75 18 3.75Z" stroke="white" stroke-opacity="1" stroke-linejoin="round"></path><path d="M2.25 12.75H9C9 13.5456 9.31607 14.3087 9.87868 14.8713C10.4413 15.4339 11.2044 15.75 12 15.75C12.7956 15.75 13.5587 15.4339 14.1213 14.8713C14.6839 14.3087 15 13.5456 15 12.75H21.75" stroke="white" stroke-opacity="1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="active">
+                      <a class="flex justify-center w-full items-center border-b border-b-[#2A3A6F] py-[12px] px-[16px] hover:bg-brand-500 hover:shadow[-3px_0_10px_0] hover-shadow-[#70BCFD] cursor-pointer relative" href="javascript:void(0)" title="Agreements &amp; Reports">
+                        <div class="flex items-center relative z-10">
+                          <div class="flex items-center justify-center w-8 h-8 relative z-10">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" opacity="1"><path d="M14.4 20.4H13.8C13.8 20.5114 13.831 20.6207 13.8896 20.7154C13.9482 20.8102 14.032 20.8868 14.1317 20.9367C14.2313 20.9865 14.3429 21.0076 14.4539 20.9976C14.5649 20.9876 14.6709 20.9469 14.76 20.88L14.4 20.4ZM16.8 18.6L17.16 18.12C17.0561 18.0421 16.9298 18 16.8 18C16.6702 18 16.5439 18.0421 16.44 18.12L16.8 18.6ZM19.2 20.4L18.84 20.88C18.9291 20.9469 19.0351 20.9876 19.1461 20.9976C19.2571 21.0076 19.3687 20.9865 19.4683 20.9367C19.568 20.8868 19.6518 20.8102 19.7104 20.7154C19.769 20.6207 19.8 20.5114 19.8 20.4H19.2ZM16.8 16.2C16.0044 16.2 15.2413 15.8839 14.6787 15.3213C14.1161 14.7587 13.8 13.9956 13.8 13.2H12.6C12.6 14.3139 13.0425 15.3822 13.8302 16.1698C14.6178 16.9575 15.6861 17.4 16.8 17.4V16.2ZM19.8 13.2C19.8 13.9956 19.4839 14.7587 18.9213 15.3213C18.3587 15.8839 17.5956 16.2 16.8 16.2V17.4C17.9139 17.4 18.9822 16.9575 19.7698 16.1698C20.5575 15.3822 21 14.3139 21 13.2H19.8ZM16.8 10.2C17.5956 10.2 18.3587 10.5161 18.9213 11.0787C19.4839 11.6413 19.8 12.4044 19.8 13.2H21C21 12.0861 20.5575 11.0178 19.7698 10.2302C18.9822 9.4425 17.9139 9 16.8 9V10.2ZM16.8 9C15.6861 9 14.6178 9.4425 13.8302 10.2302C13.0425 11.0178 12.6 12.0861 12.6 13.2H13.8C13.8 12.4044 14.1161 11.6413 14.6787 11.0787C15.2413 10.5161 16.0044 10.2 16.8 10.2V9ZM13.8 15.6V20.4H15V15.6H13.8ZM14.76 20.88L17.16 19.08L16.44 18.12L14.04 19.92L14.76 20.88ZM16.44 19.08L18.84 20.88L19.56 19.92L17.16 18.12L16.44 19.08ZM19.8 20.4V15.6H18.6V20.4H19.8ZM21 9V4.8H19.8V9H21ZM19.2 3H4.8V4.2H19.2V3ZM3 4.8V19.2H4.2V4.8H3ZM4.8 21H12.6V19.8H4.8V21ZM3 19.2C3 19.6774 3.18964 20.1352 3.52721 20.4728C3.86477 20.8104 4.32261 21 4.8 21V19.8C4.64087 19.8 4.48826 19.7368 4.37574 19.6243C4.26321 19.5117 4.2 19.3591 4.2 19.2H3ZM4.8 3C4.32261 3 3.86477 3.18964 3.52721 3.52721C3.18964 3.86477 3 4.32261 3 4.8H4.2C4.2 4.64087 4.26321 4.48826 4.37574 4.37574C4.48826 4.26321 4.64087 4.2 4.8 4.2V3ZM21 4.8C21 4.32261 20.8104 3.86477 20.4728 3.52721C20.1352 3.18964 19.6774 3 19.2 3V4.2C19.3591 4.2 19.5117 4.26321 19.6243 4.37574C19.7368 4.48826 19.8 4.64087 19.8 4.8H21ZM6.6 9H12.6V7.8H6.6V9ZM6.6 12.6H10.2V11.4H6.6V12.6Z" fill="white" fill-opacity="1"></path></svg>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="flex justify-center w-full items-center border-b border-b-[#2A3A6F] py-[12px] px-[16px] hover:bg-brand-500 hover:shadow[-3px_0_10px_0] hover-shadow-[#70BCFD] cursor-pointer relative" href="javascript:void(0)" title="Team Information">
+                        <div class="flex items-center relative z-10">
+                          <div class="flex items-center justify-center w-8 h-8 relative z-10">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" opacity="0.56"><path d="M14.7892 9.42868C15.3007 9.42868 15.7912 9.63186 16.1529 9.99354C16.5146 10.3552 16.7178 10.8458 16.7178 11.3572V16.7135C16.7178 17.9641 16.221 19.1634 15.3368 20.0476C14.4525 20.9319 13.2532 21.4287 12.0026 21.4287C10.7521 21.4287 9.55279 20.9319 8.66853 20.0476C7.78427 19.1634 7.2875 17.9641 7.2875 16.7135V11.3572C7.2875 10.8458 7.49069 10.3552 7.85237 9.99354C8.21404 9.63186 8.70458 9.42868 9.21607 9.42868H14.7892Z" stroke="white" stroke-opacity="1" stroke-linejoin="round"></path></svg>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="group">
+                      <a class="flex justify-center w-full items-center border-b border-b-[#2A3A6F] py-[12px] px-[16px] hover:bg-brand-500 hover:shadow[-3px_0_10px_0] hover-shadow-[#70BCFD] cursor-pointer relative group" href="javascript:void(0)" title="Resources">
+                        <div class="flex items-center relative z-10">
+                          <div class="flex items-center justify-center w-8 h-8 relative z-10">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" opacity="0.56"><path d="M14.0873 7.83C13.7428 7.42574 13.2741 7.12359 12.7404 6.96187L11.3625 6.55462C11.2567 6.52039 11.1652 6.45723 11.1004 6.37382C11.0357 6.29041 11.0009 6.19083 11.0009 6.08874C11.0009 5.98666 11.0357 5.88708 11.1004 5.80367C11.1652 5.72025 11.2567 5.6571 11.3625 5.62287L12.7404 5.21562C13.1481 5.08761 13.5185 4.87685 13.8232 4.59932C14.128 4.32179 14.3592 3.98479 14.4993 3.6139L14.5103 3.583L14.9583 2.33126C14.9955 2.23446 15.0649 2.15058 15.1569 2.09123C15.2489 2.03188 15.359 2 15.4718 2C15.5846 2 15.6946 2.03188 15.7866 2.09123C15.8786 2.15058 15.948 2.23446 15.9852 2.33126L16.4322 3.583C16.5719 3.96346 16.8072 4.3091 17.1195 4.59249C17.4318 4.87589 17.8124 5.08923 18.2311 5.21562L19.608 5.62287L19.636 5.62923C19.7418 5.66346 19.8334 5.72662 19.8981 5.81003C19.9628 5.89344 19.9976 5.99303 19.9976 6.09511C19.9976 6.19719 19.9628 6.29677 19.8981 6.38018C19.8334 6.4636 19.7418 6.52675 19.636 6.56099L18.2581 6.96823C17.8395 7.09474 17.4591 7.30814 17.1471 7.59153C16.835 7.87491 16.5998 8.22049 16.4602 8.60086L16.0122 9.85259L15.9992 9.8835C15.956 9.97497 15.8835 10.0525 15.791 10.1058C15.6986 10.1592 15.5906 10.186 15.4811 10.1826C15.3717 10.1793 15.2659 10.146 15.1776 10.0871C15.0893 10.0282 15.0226 9.94649 14.9863 9.85259L14.5383 8.60086C14.4383 8.32227 14.286 8.06148 14.0883 7.83Z" fill="white" fill-opacity="1"></path></svg>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="group">
+                      <a class="flex justify-center w-full items-center border-b border-b-[#2A3A6F] py-[12px] px-[16px] hover:bg-brand-500 hover:shadow[-3px_0_10px_0] hover-shadow-[#70BCFD] cursor-pointer relative group" href="javascript:void(0)" title="About MPP">
+                        <div class="flex items-center relative z-10">
+                          <div class="flex items-center justify-center w-8 h-8 relative z-10">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" opacity="0.56"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.3848 15.4461C13.037 16.523 11.328 17.0429 9.60873 16.8991C7.8895 16.7553 6.29059 15.9587 5.14039 14.6728C3.99019 13.3869 3.37601 11.7094 3.424 9.98486C3.47199 8.2603 4.17849 6.61956 5.39842 5.39964C6.61834 4.17971 8.25908 3.47321 9.98364 3.42522C11.7082 3.37724 13.3857 3.99141 14.6716 5.14161C15.9574 6.29181 16.7541 7.89072 16.8979 9.60995C17.0417 11.3292 16.5218 13.0382 15.4448 14.3861L20.6008 19.5411C20.6745 19.6097 20.7336 19.6925 20.7746 19.7845C20.8156 19.8765 20.8377 19.9758 20.8394 20.0765C20.8412 20.1772 20.8227 20.2773 20.785 20.3707C20.7472 20.464 20.6911 20.5489 20.6199 20.6201C20.5487 20.6913 20.4638 20.7475 20.3704 20.7852C20.2771 20.8229 20.177 20.8414 20.0763 20.8397C19.9756 20.8379 19.8763 20.8158 19.7843 20.7748C19.6923 20.7339 19.6095 20.6747 19.5408 20.6011L14.3848 15.4461Z" fill="white" fill-opacity="1"></path></svg>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="mt-auto pt-4">
+              <div class="account-section">
+                <div class="mt-auto mb-[70px]">
+                  <ul>
+                    <li>
+                      <a href="javascript:void(0)" class="flex justify-center py-[12px] px-[16px] hover:bg-brand-500 hover:shadow[-3px_0_10px_0] hover-shadow-[#70BCFD]" title="Edit Company Profile">
+                        <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.49058 3.02759H2.66457C2.2231 3.02759 1.79971 3.21461 1.48754 3.5475C1.17537 3.88039 1 4.33189 1 4.80267V17.2283C1 17.699 1.17537 18.1505 1.48754 18.4834C1.79971 18.8163 2.2231 19.0034 2.66457 19.0034H14.3166C14.7581 19.0034 15.1815 18.8163 15.4936 18.4834C15.8058 18.1505 15.9812 17.699 15.9812 17.2283V11.0155" stroke="white" stroke-opacity="0.56" stroke-width="1.2317" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14.7348 1.57112C15.0777 1.20544 15.5428 1 16.0278 1C16.5127 1 16.9778 1.20544 17.3207 1.57112C17.6636 1.9368 17.8563 2.43277 17.8563 2.94992C17.8563 3.46707 17.6636 3.96304 17.3207 4.32872L9.13197 13.0611L5.68408 13.9803L6.54605 10.3035L14.7348 1.57112Z" stroke="white" stroke-opacity="0.56" stroke-width="1.2317" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="flex justify-center py-[12px] px-[16px] hover:bg-brand-500 hover:shadow[-3px_0_10px_0] hover-shadow-[#70BCFD]" title="Feedback">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-[0_0_25px] relative z-10" fill-opacity="0.56" stroke-opacity="0.56"><path d="M12 14.423C12.1807 14.423 12.3283 14.3657 12.443 14.251C12.5583 14.1363 12.616 13.9887 12.616 13.808C12.616 13.6267 12.5583 13.4787 12.443 13.364C12.3283 13.2493 12.1807 13.192 12 13.192C11.8193 13.192 11.6717 13.2493 11.557 13.364C11.4423 13.4787 11.3847 13.6267 11.384 13.808C11.3833 13.9893 11.441 14.137 11.557 14.251C11.673 14.365 11.8207 14.4223 12 14.423ZM11.5 11.462H12.5V5.385H11.5V11.462ZM3 20.077V4.616C3 4.15533 3.15433 3.771 3.463 3.463C3.77167 3.155 4.15567 3.00067 4.615 3H19.385C19.845 3 20.229 3.15433 20.537 3.463C20.845 3.77167 20.9993 4.156 21 4.616V15.385C21 15.845 20.8457 16.2293 20.537 16.538C20.2283 16.8467 19.8443 17.0007 19.385 17H6.077L3 20.077Z" fill="white" fill-opacity="0.56"></path></svg>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="flex justify-center py-[12px] px-[16px] hover:bg-brand-500 hover:shadow[-3px_0_10px_0] hover-shadow-[#70BCFD]" title="Help &amp; FAQs">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 1.5C9.9233 1.5 7.89323 2.11581 6.16652 3.26957C4.4398 4.42332 3.09399 6.0632 2.29927 7.98182C1.50455 9.90045 1.29661 12.0116 1.70176 14.0484C2.1069 16.0852 3.10693 17.8931 4.57538 19.4246C6.04383 20.8931 7.91476 21.8931 9.95156 22.2982C11.9884 22.7034 14.0996 22.4955 16.0182 21.7007C17.9368 20.906 19.5767 19.5602 20.7304 17.8335C21.8842 16.1068 22.5 14.0767 22.5 12C22.5 9.21523 21.3938 6.54451 19.4246 4.57538C17.4555 2.60625 14.7848 1.5 12 1.5Z" fill="white" fill-opacity="0.56"></path><path d="M12 18.75C12.6213 18.75 13.125 18.2463 13.125 17.625C13.125 17.0037 12.6213 16.5 12 16.5C11.3787 16.5 10.875 17.0037 10.875 17.625C10.875 18.2463 11.3787 18.75 12 18.75Z" fill="white" fill-opacity="0.56"></path></svg>
+                      </div>
+                    </li>
+                    <li class="mt-[6px]">
+                      <button type="button" class="flex justify-center w-full border-t border-t-[#52618B] py-[12px] px-[16px] hover:bg-brand-500 hover:shadow[-3px_0_10px_0] hover-shadow-[#70BCFD]" title="Log Out">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.5212 17.4H16.6264V19.2H5.25802V4.8H16.6264V6.6H18.5212V3.9C18.5212 3.66131 18.4214 3.43239 18.2437 3.2636C18.066 3.09482 17.8251 3 17.5738 3H4.31065C4.05939 3 3.81842 3.09482 3.64076 3.2636C3.46309 3.43239 3.36328 3.66131 3.36328 3.9V20.1C3.36328 20.3387 3.46309 20.5676 3.64076 20.7364C3.81842 20.9052 4.05939 21 4.31065 21H17.5738C17.8251 21 18.066 20.9052 18.2437 20.7364C18.4214 20.5676 18.5212 20.3387 18.5212 20.1V17.4ZM16.6264 11.1H9.99486V12.9H16.6264V15.6L21.3633 12L16.6264 8.4V11.1Z" fill="white" fill-opacity="0.56"></path></svg>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INNER PROGRESS SIDEBAR (220px, dark blue) -->
+    <div id="inner-sidebar" class="w-[220px] bg-[#0C1F5B] flex flex-col items-center pt-[24px] sticky top-0 h-screen overflow-y-auto border-l border-white/10">
+      <!-- Progress Circle -->
+      <div id="progress-area" class="border-t border-b border-white/80 h-[156px] flex items-center justify-center gap-[8px] self-stretch">
+        <div class="relative flex flex-col items-center justify-center text-white" id="progress-circle">
+          <svg width="100" height="100" class="transform -rotate-90">
+            <g id="outer-ring">
+              <path d="M 97.5 50 A 47.5 47.5 0 0 1 78.55972287915701 87.95513442297045" stroke="#4A5568" stroke-width="3" fill="none" stroke-linecap="round"></path>
+              <path d="M 72.99944786433633 91.56050285951405 A 47.5 47.5 0 0 1 33.00848524167946 94.35694338226853" stroke="#4A5568" stroke-width="3" fill="none" stroke-linecap="round"></path>
+              <path d="M 27.000552135663664 91.56050285951403 A 47.5 47.5 0 0 1 2.9622667347754117 56.610722295603125" stroke="#4A5568" stroke-width="3" fill="none" stroke-linecap="round"></path>
+              <path d="M 2.5 50.00000000000001 A 47.5 47.5 0 0 1 21.44027712084299 12.044865577029562" stroke="#4A5568" stroke-width="3" fill="none" stroke-linecap="round"></path>
+              <path d="M 27.00055213566367 8.439497140485955 A 47.5 47.5 0 0 1 66.9915147583205 5.64305661773146" stroke="#4A5568" stroke-width="3" fill="none" stroke-linecap="round"></path>
+              <path d="M 72.9994478643363 8.439497140485948 A 47.5 47.5 0 0 1 97.03773326522459 43.38927770439687" stroke="#4A5568" stroke-width="3" fill="none" stroke-linecap="round"></path>
+            </g>
+            <circle cx="50" cy="50" r="36.5" stroke="#374151" stroke-width="5" fill="none" class="opacity-30"></circle>
+            <g id="inner-ring"></g>
+          </svg>
+          <div class="absolute inset-0 flex flex-col items-center justify-center">
+            <div class="text-lg font-semibold" id="progress-pct">0%</div>
+            <div class="text-xs opacity-80">complete</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section List -->
+      <div class="w-full">
+        <div class="flex h-[48px] items-center gap-[12px] w-[212px]">
+          <div></div>
+          <div class="flex items-center text-xs text-neutral-50 font-inter leading-full">Agreement Team</div>
+        </div>
+        <div class="flex flex-col items-start" id="sidebar-sections">
+          <!-- 1. Mentor Team (active) -->
+          <div class="py-[1px] bg-brand-500 w-full" data-section="mentor-team" id="sidebar-mentor-team">
+            <div class="h-[36px] flex items-center w-[212px] px-[36px] cursor-pointer hover:bg-white/10">
+              <div id="check-mentor-team"></div>
+              <div class="flex flex-col gap-[4px] items-start">
+                <div class="flex items-center py-[4px] h-[12px] text-neutral-50 text-[11px] font-inter">
+                  <span class="whitespace-nowrap truncate">Mentor Team</span>
+                </div>
+                <div class="w-[160px] h-[2px] bg-neutral-300/50 flex items-center">
+                  <div class="h-full bg-[#4A5568]" style="width: 0%;" id="bar-mentor-team"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 2. Mentor Agreement Roles -->
+          <div class="py-[1px] w-full" data-section="mentor-roles" id="sidebar-mentor-roles">
+            <div class="h-[36px] flex items-center w-[212px] px-[36px] cursor-pointer hover:bg-white/10">
+              <div id="check-mentor-roles"></div>
+              <div class="flex flex-col gap-[4px] items-start">
+                <div class="flex items-center py-[4px] h-[12px] text-neutral-300 text-[11px] font-inter">
+                  <span class="whitespace-nowrap truncate">Mentor Agreement Roles</span>
+                </div>
+                <div class="w-[160px] h-[2px] bg-neutral-300/50 flex items-center">
+                  <div class="h-full bg-[#4A5568]" style="width: 0%;" id="bar-mentor-roles"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 3. Protege Team -->
+          <div class="py-[1px] w-full" data-section="protege-team" id="sidebar-protege-team">
+            <div class="h-[36px] flex items-center w-[212px] px-[36px] cursor-pointer hover:bg-white/10">
+              <div id="check-protege-team"></div>
+              <div class="flex flex-col gap-[4px] items-start">
+                <div class="flex items-center py-[4px] h-[12px] text-neutral-300 text-[11px] font-inter">
+                  <span class="whitespace-nowrap truncate">Protege Team</span>
+                </div>
+                <div class="w-[160px] h-[2px] bg-neutral-300/50 flex items-center">
+                  <div class="h-full bg-[#4A5568]" style="width: 0%;" id="bar-protege-team"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 4. Protege Agreement Roles -->
+          <div class="py-[1px] w-full" data-section="protege-roles" id="sidebar-protege-roles">
+            <div class="h-[36px] flex items-center w-[212px] px-[36px] cursor-pointer hover:bg-white/10">
+              <div id="check-protege-roles"></div>
+              <div class="flex flex-col gap-[4px] items-start">
+                <div class="flex items-center py-[4px] h-[12px] text-neutral-300 text-[11px] font-inter">
+                  <span class="whitespace-nowrap truncate">Protege Agreement Roles</span>
+                </div>
+                <div class="w-[160px] h-[2px] bg-neutral-300/50 flex items-center">
+                  <div class="h-full bg-[#4A5568]" style="width: 0%;" id="bar-protege-roles"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 5. Authorized Subcontractors -->
+          <div class="py-[1px] w-full" data-section="subcontractors" id="sidebar-subcontractors">
+            <div class="h-[36px] flex items-center w-[212px] px-[36px] cursor-pointer hover:bg-white/10">
+              <div id="check-subcontractors"></div>
+              <div class="flex flex-col gap-[4px] items-start">
+                <div class="flex items-center py-[4px] h-[12px] text-neutral-300 text-[11px] font-inter">
+                  <span class="whitespace-nowrap truncate">Authorized Subcontractors</span>
+                </div>
+                <div class="w-[160px] h-[2px] bg-neutral-300/50 flex items-center">
+                  <div class="h-full bg-[#4A5568]" style="width: 0%;" id="bar-subcontractors"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 6. Sponsoring Agency -->
+          <div class="py-[1px] w-full" data-section="sponsoring-agency" id="sidebar-sponsoring-agency">
+            <div class="h-[36px] flex items-center w-[212px] px-[36px] cursor-pointer hover:bg-white/10">
+              <div id="check-sponsoring-agency"></div>
+              <div class="flex flex-col gap-[4px] items-start">
+                <div class="flex items-center py-[4px] h-[12px] text-neutral-300 text-[11px] font-inter">
+                  <span class="whitespace-nowrap truncate">Sponsoring Agency</span>
+                </div>
+                <div class="w-[160px] h-[2px] bg-neutral-300/50 flex items-center">
+                  <div class="h-full bg-[#4A5568]" style="width: 0%;" id="bar-sponsoring-agency"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 7. Review Agreement Team -->
+          <div class="py-[1px] w-full" data-section="review" id="sidebar-review">
+            <div class="h-[36px] flex items-center w-[212px] px-[36px] cursor-pointer hover:bg-white/10">
+              <div id="check-review"></div>
+              <div class="flex flex-col gap-[4px] items-start">
+                <div class="flex items-center py-[4px] h-[12px] text-neutral-300 text-[11px] font-inter">
+                  <span class="whitespace-nowrap truncate">Review Agreement Team</span>
+                </div>
+                <div class="w-[160px] h-[2px] bg-neutral-300/50 flex items-center">
+                  <div class="h-full bg-[#4A5568]" style="width: 0%;" id="bar-review"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN FORM AREA -->
+    <div class="flex-1 transition-all duration-300 bg-blue-10 p-0 min-w-0">
+      <main>
+        <div class="p-[20px]">
+          <!-- Back Link -->
+          <a id="back-link" class="font-inter text-xs text-brand-500 inline-flex items-center gap-2 mb-[16px] cursor-pointer leading-[12px] tracking-[0.12px]">
+            <svg width="13" height="13" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 8.62988H1" stroke="#243D80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 15.6299L1 8.62988L8 1.62988" stroke="#243D80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            Back to Agreement: ACME DEFENSE SYSTEMS, INC. and HORIZON SOLUTIONS, LLC
+          </a>
+
+          <!-- Form Header -->
+          <div id="form-header" class="flex items-center justify-between pb-[12px] border-b border-neutral-100 mb-[16px]">
+            <div class="font-inter font-bold text-2xl text-brand-500 flex items-center gap-[8px]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none" class="w-[30px] h-[30px]"><path d="M14.6797 1.29102C11.3366 3.93693 9.95277 3.50645 8.80217 1.30391C9.77471 4.90842 9.41201 5.19541 6.18186 8.13559C10.1266 6.04578 11.8189 6.12945 13.8559 8.5567C11.8106 5.44467 12.0422 4.1416 14.6797 1.29102ZM15.7582 1.2984L16.4431 8.03305L10.591 11.437L16.3186 12.6729C15.7572 13.1623 15.1342 13.7878 14.4858 14.4363L14.4839 14.438L1.08789 27.6821V28.8211H2.97203L16.0164 15.967C16.6176 15.3656 17.1239 14.8222 17.527 14.341L18.6366 19.4826L22.0405 13.6306L28.7752 14.3154L24.2617 9.27084L26.9954 3.07807L20.8026 5.81187L15.7582 1.2984H15.7582ZM1.57492 3.27781C3.55334 4.89852 3.63801 5.78369 3.37668 8.42117C4.4885 5.27293 5.0152 4.47799 7.15598 3.61648C4.86186 4.16586 3.87971 4.27754 1.57492 3.27793V3.27781ZM4.78293 9.27816C6.24514 10.8609 6.3632 11.8378 6.20383 13.5005C7.06955 11.482 7.49711 10.8252 9.46311 9.73227C7.43811 10.3875 6.79709 10.3311 4.78293 9.27816ZM23.8607 14.8446C24.4039 17.8735 23.5906 19.1634 21.9362 21.0958C24.4733 18.9253 25.326 18.501 27.6106 18.8253C25.3491 18.1539 24.8318 17.6168 23.8606 14.8446L23.8607 14.8446ZM20.5995 19.1109C19.5035 23.1416 17.945 24.0295 14.2933 23.2198C17.4648 24.3975 17.5945 24.4544 17.43 28.2149C18.8806 24.9676 20.154 25.1553 22.9999 26.0342C20.5522 24.1687 20.3216 23.1649 20.5995 19.111V19.1109ZM27.0064 22.3904C26.1087 23.4447 25.6627 23.4152 24.4393 22.9378C25.7768 24.0185 25.4703 24.9314 25.0746 26.4186C26.0151 25.2983 26.4525 24.9399 28.0226 25.6752C26.6832 24.4246 26.433 23.9257 27.0064 22.3903V22.3904Z" fill="#416ADA"></path></svg>
+              <div>Agreement Wizard: <span class="text-neutral-800 font-medium leading-[32px] tracking-[-0.5px]" id="wizard-section-title">Agreement Team</span></div>
+            </div>
+            <div class="px-[16px] py-[4px] h-[24px] flex items-center justify-center gap-[8px] rounded-[20px] text-center font-inter text-neutral-900 text-2xs font-semibold leading-[12px] tracking-[0.4] uppercase" style="background-color: rgb(164, 208, 249);">In Process</div>
+          </div>
+
+          <!-- PAGE 1: Mentor Team Form -->
+          <div id="page-1" class="bg-white rounded-[4px] p-[36px]">
+            <h2 class="font-inter font-bold text-lg text-brand-500 mb-[8px]">Mentor Team: ACME DEFENSE SYSTEMS, INC.</h2>
+            <p class="font-inter text-sm text-neutral-600 italic mb-[24px]">The information from all fields is required to complete this section. Please ensure all team members have accurate contact details.</p>
+
+            <div class="bg-brand-25 rounded-[4px] py-[48px] px-[24px]" id="mentor-form-area">
+              <p class="font-inter text-sm text-neutral-700 mb-[16px]">Select the key personnel from your organization who will participate in this Mentor-Protege Agreement.</p>
+
+              <!-- Team Member Dropdown -->
+              <div class="flex items-center gap-[12px] mb-[24px]">
+                <div class="w-full">
+                  <div class="relative h-[48px] bg-transparent rounded-[4px] w-full">
+                    <div class="relative w-full h-full flex items-center border rounded-[4px] px-3 py-[16px] border-neutral-100 bg-white">
+                      <div class="relative flex-grow h-full">
+                        <label class="absolute left-0 text-light-gray font-inter pointer-events-none transition-all duration-200 ease-out flex items-center gap-[8px] text-xs -top-3.5">Team Member</label>
+                        <select class="w-full border-none outline-none text-base text-neutral-900 py-0.5 bg-transparent focus:outline-none font-inter" style="appearance: none;">
+                          <option>Primary Contact</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="px-[16px] py-[8px] rounded-[4px] border border-red-400 text-red-500 text-sm font-inter hover:bg-red-50 whitespace-nowrap">Remove</button>
+              </div>
+
+              <!-- CONTACT INFORMATION Header -->
+              <div class="font-inter text-xs font-bold text-neutral-600 uppercase tracking-[1px] mb-[16px]">CONTACT INFORMATION</div>
+
+              <!-- First Name + Last Name -->
+              <div class="flex items-start gap-[16px] mb-[16px]" id="name-fields">
+                <div class="w-full">
+                  <div class="relative h-[48px] bg-transparent rounded-[4px] w-full">
+                    <div class="relative w-full h-full flex items-center border rounded-[4px] px-3 py-[16px] border-neutral-100 bg-white" id="firstName-wrapper">
+                      <div class="relative flex-grow h-full">
+                        <label class="absolute left-0 text-light-gray font-inter pointer-events-none transition-all duration-200 ease-out flex items-center gap-[8px] text-xs -top-3.5">First name</label>
+                        <input type="text" name="firstName" id="firstName" class="w-full border-none outline-none text-base text-neutral-900 py-0.5 bg-transparent focus:outline-none" value="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full">
+                  <div class="relative h-[48px] bg-transparent rounded-[4px] w-full">
+                    <div class="relative w-full h-full flex items-center border rounded-[4px] px-3 py-[16px] border-neutral-100 bg-white" id="lastName-wrapper">
+                      <div class="relative flex-grow h-full">
+                        <label class="absolute left-0 text-light-gray font-inter pointer-events-none transition-all duration-200 ease-out flex items-center gap-[8px] text-xs -top-3.5">Last name</label>
+                        <input type="text" name="lastName" id="lastName" class="w-full border-none outline-none text-base text-neutral-900 py-0.5 bg-transparent focus:outline-none" value="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="validation-msg" id="name-validation">Please fill in both name fields before continuing.</div>
+
+              <!-- Phone + Email -->
+              <div class="flex items-start gap-[16px] mb-[16px]" id="contact-fields">
+                <div class="w-full">
+                  <div class="phone-input-container border rounded-[4px] relative" id="phone-wrapper">
+                    <div class="relative">
+                      <input type="tel" name="phone" id="phone" class="w-full border border-neutral-100 rounded px-[16px] pb-2 pt-7 bg-white font-roboto text-sm leading-[100%] h-12 outline-none focus:outline-none" placeholder="" value="">
+                      <label class="absolute left-4 transition-all duration-200 pointer-events-none transform text-xs text-neutral-600" style="top: 6px;">Phone</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full">
+                  <div class="relative h-[48px] bg-transparent rounded-[4px] w-full">
+                    <div class="relative w-full h-full flex items-center border rounded-[4px] px-3 py-[16px] border-neutral-100 bg-white" id="email-wrapper">
+                      <div class="relative flex-grow h-full">
+                        <label class="absolute left-0 text-light-gray font-inter pointer-events-none transition-all duration-200 ease-out flex items-center gap-[8px] text-xs -top-3.5">Email</label>
+                        <input type="email" name="email" id="email" class="w-full border-none outline-none text-base text-neutral-900 py-0.5 bg-transparent focus:outline-none" value="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="validation-msg" id="contact-validation">Please fill in both phone and email. Email must contain @.</div>
+
+              <!-- Fax (optional) -->
+              <div class="mb-[16px]" id="fax-field">
+                <div class="w-full">
+                  <div class="relative h-[48px] bg-transparent rounded-[4px] w-full">
+                    <div class="relative w-full h-full flex items-center border rounded-[4px] px-3 py-[16px] border-neutral-100 bg-white">
+                      <div class="relative flex-grow h-full">
+                        <label class="absolute left-0 text-light-gray font-inter pointer-events-none transition-all duration-200 ease-out flex items-center gap-[8px] text-xs -top-3.5">Fax (optional)</label>
+                        <input type="text" name="fax" id="fax" class="w-full border-none outline-none text-base text-neutral-900 py-0.5 bg-transparent focus:outline-none" value="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Street Address -->
+              <div class="mb-[16px]" id="address-fields">
+                <div class="w-full mb-[16px]">
+                  <div class="relative h-[48px] bg-transparent rounded-[4px] w-full">
+                    <div class="relative w-full h-full flex items-center border rounded-[4px] px-3 py-[16px] border-neutral-100 bg-white" id="street-wrapper">
+                      <div class="relative flex-grow h-full">
+                        <label class="absolute left-0 text-light-gray font-inter pointer-events-none transition-all duration-200 ease-out flex items-center gap-[8px] text-xs -top-3.5">Street address</label>
+                        <input type="text" name="street" id="street" class="w-full border-none outline-none text-base text-neutral-900 py-0.5 bg-transparent focus:outline-none" value="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- City + State + ZIP -->
+                <div class="flex items-start gap-[16px]">
+                  <div class="w-full">
+                    <div class="relative h-[48px] bg-transparent rounded-[4px] w-full">
+                      <div class="relative w-full h-full flex items-center border rounded-[4px] px-3 py-[16px] border-neutral-100 bg-white" id="city-wrapper">
+                        <div class="relative flex-grow h-full">
+                          <label class="absolute left-0 text-light-gray font-inter pointer-events-none transition-all duration-200 ease-out flex items-center gap-[8px] text-xs -top-3.5">City</label>
+                          <input type="text" name="city" id="city" class="w-full border-none outline-none text-base text-neutral-900 py-0.5 bg-transparent focus:outline-none" value="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-full">
+                    <div class="relative h-[48px] bg-transparent rounded-[4px] w-full">
+                      <div class="relative w-full h-full flex items-center border rounded-[4px] px-3 py-[16px] border-neutral-100 bg-white" id="state-wrapper">
+                        <div class="relative flex-grow h-full">
+                          <label class="absolute left-0 text-light-gray font-inter pointer-events-none transition-all duration-200 ease-out flex items-center gap-[8px] text-xs -top-3.5">State</label>
+                          <input type="text" name="state" id="state" class="w-full border-none outline-none text-base text-neutral-900 py-0.5 bg-transparent focus:outline-none" value="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-full">
+                    <div class="relative h-[48px] bg-transparent rounded-[4px] w-full">
+                      <div class="relative w-full h-full flex items-center border rounded-[4px] px-3 py-[16px] border-neutral-100 bg-white" id="zip-wrapper">
+                        <div class="relative flex-grow h-full">
+                          <label class="absolute left-0 text-light-gray font-inter pointer-events-none transition-all duration-200 ease-out flex items-center gap-[8px] text-xs -top-3.5">ZIP code</label>
+                          <input type="text" name="zip" id="zip" class="w-full border-none outline-none text-base text-neutral-900 py-0.5 bg-transparent focus:outline-none" value="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="validation-msg" id="address-validation">Please fill in street, city, state, and ZIP code.</div>
+
+              <!-- Title -->
+              <div class="mb-[16px]" id="title-exp-fields">
+                <div class="w-full mb-[16px]">
+                  <div class="relative h-[48px] bg-transparent rounded-[4px] w-full">
+                    <div class="relative w-full h-full flex items-center border rounded-[4px] px-3 py-[16px] border-neutral-100 bg-white" id="title-wrapper">
+                      <div class="relative flex-grow h-full">
+                        <label class="absolute left-0 text-light-gray font-inter pointer-events-none transition-all duration-200 ease-out flex items-center gap-[8px] text-xs -top-3.5">Title</label>
+                        <input type="text" name="title" id="title" class="w-full border-none outline-none text-base text-neutral-900 py-0.5 bg-transparent focus:outline-none" value="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Years of Experience -->
+                <div class="w-full mb-[16px]">
+                  <div class="relative h-[48px] bg-transparent rounded-[4px] w-full">
+                    <div class="relative w-full h-full flex items-center border rounded-[4px] px-3 py-[16px] border-neutral-100 bg-white" id="experience-wrapper">
+                      <div class="relative flex-grow h-full">
+                        <label class="absolute left-0 text-light-gray font-inter pointer-events-none transition-all duration-200 ease-out flex items-center gap-[8px] text-xs -top-3.5">Years of Experience</label>
+                        <input type="text" name="experience" id="experience" class="w-full border-none outline-none text-base text-neutral-900 py-0.5 bg-transparent focus:outline-none" value="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Professional Experience (textarea) -->
+                <div class="w-full">
+                  <div class="relative bg-transparent rounded-[4px] w-full">
+                    <div class="relative w-full flex border rounded-[4px] px-3 py-[16px] border-neutral-100 bg-white" id="profexp-wrapper">
+                      <div class="relative flex-grow">
+                        <label class="absolute left-0 text-light-gray font-inter pointer-events-none transition-all duration-200 ease-out flex items-center gap-[8px] text-xs -top-3.5">Professional Experience</label>
+                        <textarea name="profExperience" id="profExperience" rows="4" class="w-full border-none outline-none text-base text-neutral-900 py-0.5 bg-transparent focus:outline-none resize-none mt-1"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="validation-msg" id="title-validation">Please fill in the title and years of experience fields.</div>
+            </div>
+          </div>
+
+          <!-- PAGE 2: Mentor Roles Form -->
+          <div id="page-2" class="bg-white rounded-[4px] p-[36px]" style="display: none;">
+            <h2 class="font-inter font-bold text-lg text-brand-500 mb-[8px]">Mentor Agreement Roles</h2>
+            <p class="font-inter text-sm text-neutral-600 italic mb-[24px]">Assign the primary agreement role for each mentor team member. Each team member must have at least one role assigned.</p>
+
+            <div class="bg-brand-25 rounded-[4px] py-[48px] px-[24px]" id="roles-form-area">
+              <p class="font-inter text-sm text-neutral-700 mb-[24px]">Assign the agreement role for: <strong id="role-member-name">-</strong></p>
+
+              <!-- Primary Role -->
+              <div class="mb-[16px]" id="role-fields">
+                <div class="w-full mb-[16px]">
+                  <div class="relative h-[48px] bg-transparent rounded-[4px] w-full">
+                    <div class="relative w-full h-full flex items-center border rounded-[4px] px-3 py-[16px] border-neutral-100 bg-white" id="primaryRole-wrapper">
+                      <div class="relative flex-grow h-full">
+                        <label class="absolute left-0 text-light-gray font-inter pointer-events-none transition-all duration-200 ease-out flex items-center gap-[8px] text-xs -top-3.5">Primary Role</label>
+                        <select name="primaryRole" id="primaryRole" class="w-full border-none outline-none text-base text-neutral-900 py-0.5 bg-transparent focus:outline-none font-inter">
+                          <option value="">-- Select a role --</option>
+                          <option value="agreement-manager">Agreement Manager</option>
+                          <option value="technical-lead">Technical Lead</option>
+                          <option value="executive-sponsor">Executive Sponsor</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Secondary Role (optional) -->
+                <div class="w-full">
+                  <div class="relative h-[48px] bg-transparent rounded-[4px] w-full">
+                    <div class="relative w-full h-full flex items-center border rounded-[4px] px-3 py-[16px] border-neutral-100 bg-white">
+                      <div class="relative flex-grow h-full">
+                        <label class="absolute left-0 text-light-gray font-inter pointer-events-none transition-all duration-200 ease-out flex items-center gap-[8px] text-xs -top-3.5">Secondary Role (optional)</label>
+                        <select name="secondaryRole" id="secondaryRole" class="w-full border-none outline-none text-base text-neutral-900 py-0.5 bg-transparent focus:outline-none font-inter">
+                          <option value="">-- None --</option>
+                          <option value="agreement-manager">Agreement Manager</option>
+                          <option value="technical-lead">Technical Lead</option>
+                          <option value="executive-sponsor">Executive Sponsor</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="validation-msg" id="role-validation">Please select a primary role before continuing.</div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/shepherd.min.js"></script>
+<script src="../assets/sweetalert2.min.js"></script>
+<script>
+(function() {
+  'use strict';
+
+  // ===== GREEN CHECKMARK SVG =====
+  const greenCheckSVG = '<svg width="97" height="97" viewBox="0 0 97 97" fill="#009933" xmlns="http://www.w3.org/2000/svg" class="w-[12.75px]"><path d="M45.1406 66.0007L24 43.7875L27.4019 40.213L45.1406 58.8516L72.5991 30L76.0011 33.5745L45.1406 66.0007Z" fill="white"></path><ellipse cx="48.4963" cy="48.5009" rx="48.001" ry="48.001" transform="rotate(90.5938 48.4963 48.5009)" fill="#009933"></ellipse><path d="M45.4329 68.5038C45.0444 68.5026 44.6604 68.4214 44.3046 68.2655C43.9488 68.1095 43.6289 67.8821 43.3647 67.5972L29.5961 52.9503C29.0814 52.4018 28.8057 51.6713 28.8296 50.9195C28.8535 50.1677 29.175 49.4562 29.7235 48.9415C30.2721 48.4268 31.0026 48.1511 31.7543 48.175C32.5061 48.1989 33.2176 48.5205 33.7323 49.069L45.4046 61.5061L69.2306 35.442C69.4724 35.1409 69.7732 34.8924 70.1145 34.7118C70.4558 34.5312 70.8305 34.4222 71.2154 34.3917C71.6004 34.3611 71.9875 34.4096 72.353 34.5341C72.7186 34.6586 73.0548 34.8565 73.341 35.1157C73.6273 35.3749 73.8576 35.6899 74.0177 36.0413C74.1778 36.3927 74.2643 36.7731 74.2721 37.1592C74.2798 37.5453 74.2085 37.9289 74.0626 38.2864C73.9167 38.6439 73.6992 38.9678 73.4235 39.2383L47.5293 67.5689C47.2677 67.8589 46.9489 68.0916 46.593 68.2525C46.2371 68.4134 45.8518 68.499 45.4612 68.5038H45.4329Z" fill="white"></path></svg>';
+
+  // ===== SPOTLIGHT OVERLAY =====
+  let spotlightOverlay = null;
+
+  function createSpotlightOverlay() {
+    if (spotlightOverlay) return;
+    spotlightOverlay = document.createElement('div');
+    spotlightOverlay.id = 'tour-spotlight-overlay';
+    spotlightOverlay.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);z-index:9998;pointer-events:none;transition:clip-path 0.3s ease-in-out, opacity 0.3s ease-in-out;';
+    document.body.appendChild(spotlightOverlay);
+  }
+
+  function updateSpotlight(element, padding) {
+    padding = padding || 10;
+    if (!spotlightOverlay || !element) return;
+    var rect = element.getBoundingClientRect();
+    var x1 = Math.max(0, rect.left - padding);
+    var y1 = Math.max(0, rect.top - padding);
+    var x2 = Math.min(window.innerWidth, rect.right + padding);
+    var y2 = Math.min(window.innerHeight, rect.bottom + padding);
+    var clipPath = 'polygon(0% 0%, 0% 100%, ' + x1 + 'px 100%, ' + x1 + 'px ' + y1 + 'px, ' + x2 + 'px ' + y1 + 'px, ' + x2 + 'px ' + y2 + 'px, ' + x1 + 'px ' + y2 + 'px, ' + x1 + 'px 100%, 100% 100%, 100% 0%)';
+    spotlightOverlay.style.clipPath = clipPath;
+  }
+
+  function removeSpotlightOverlay() {
+    if (spotlightOverlay) {
+      spotlightOverlay.remove();
+      spotlightOverlay = null;
+    }
+  }
+
+  function showFullColorPause(duration) {
+    duration = duration || 1000;
+    return new Promise(function(resolve) {
+      if (!spotlightOverlay) { resolve(); return; }
+      spotlightOverlay.style.opacity = '0';
+      setTimeout(function() {
+        spotlightOverlay.style.opacity = '1';
+        resolve();
+      }, duration);
+    });
+  }
+
+  // ===== TRANSITION HELPERS =====
+  function transitionToNext() {
+    tour.next();
+  }
+
+  function transitionToBack() {
+    tour.back();
+  }
+
+  // ===== PROGRESS MANAGEMENT =====
+  var outerRingPaths = document.querySelectorAll('#outer-ring path');
+  var progressPct = document.getElementById('progress-pct');
+
+  function updateProgress(percent) {
+    progressPct.textContent = percent + '%';
+    var segmentsToFill = Math.round((percent / 100) * 6);
+    outerRingPaths.forEach(function(path, i) {
+      path.setAttribute('stroke', i < segmentsToFill ? '#009933' : '#4A5568');
+    });
+  }
+
+  function markSidebarComplete(sectionId) {
+    var sidebar = document.getElementById('sidebar-' + sectionId);
+    var bar = document.getElementById('bar-' + sectionId);
+    var check = document.getElementById('check-' + sectionId);
+    if (bar) {
+      bar.style.width = '100%';
+      bar.style.backgroundColor = '#009933';
+    }
+    if (check) {
+      check.innerHTML = greenCheckSVG;
+      check.style.marginRight = '4px';
+    }
+    var textEl = sidebar.querySelector('.text-neutral-300');
+    if (textEl) {
+      textEl.classList.remove('text-neutral-300');
+      textEl.classList.add('text-neutral-50');
+    }
+  }
+
+  function setActiveSidebar(sectionId) {
+    document.querySelectorAll('#sidebar-sections > div').forEach(function(el) {
+      el.classList.remove('bg-brand-500');
+    });
+    var sidebar = document.getElementById('sidebar-' + sectionId);
+    if (sidebar) {
+      sidebar.classList.add('bg-brand-500');
+    }
+  }
+
+  function updateSidebarProgress(sectionId, percent) {
+    var bar = document.getElementById('bar-' + sectionId);
+    if (bar) {
+      bar.style.width = percent + '%';
+      if (percent > 0 && percent < 100) {
+        bar.style.backgroundColor = '#EDBF36';
+      }
+    }
+  }
+
+  // ===== VALIDATION HELPERS =====
+  function highlightFieldsGreen(wrapperIds) {
+    wrapperIds.forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) {
+        el.classList.add('field-success');
+        setTimeout(function() { el.classList.remove('field-success'); }, 1500);
+      }
+    });
+  }
+
+  function highlightFieldsError(wrapperIds) {
+    wrapperIds.forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) el.classList.add('field-error');
+    });
+  }
+
+  function clearFieldErrors(wrapperIds) {
+    wrapperIds.forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) el.classList.remove('field-error');
+    });
+  }
+
+  function showValidation(msgId) {
+    document.getElementById(msgId).classList.add('show');
+  }
+
+  function hideValidation(msgId) {
+    document.getElementById(msgId).classList.remove('show');
+  }
+
+  function scrollToElement(el) {
+    if (!el) return;
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  // ===== FIELD HIGHLIGHT + "TYPE HERE" INDICATOR =====
+  var activeHighlights = [];
+  var typeHereIndicators = [];
+
+  function highlightActiveFields(wrapperIds) {
+    clearActiveHighlights();
+    wrapperIds.forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) {
+        el.classList.add('field-active-highlight');
+        activeHighlights.push(el);
+      }
+    });
+  }
+
+  function clearActiveHighlights() {
+    activeHighlights.forEach(function(el) {
+      el.classList.remove('field-active-highlight');
+    });
+    activeHighlights = [];
+    typeHereIndicators.forEach(function(ind) {
+      if (ind.parentNode) ind.parentNode.removeChild(ind);
+    });
+    typeHereIndicators = [];
+  }
+
+  function showTypeHereArrow(inputId, label) {
+    var input = document.getElementById(inputId);
+    if (!input) return;
+    var wrapper = input.closest('.relative');
+    if (!wrapper) return;
+
+    var indicator = document.createElement('div');
+    indicator.className = 'type-here-indicator';
+    indicator.innerHTML = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1 8h12M9 4l4 4-4 4" stroke="#1a3a6e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' + (label || 'Type here');
+
+    // Position above the input
+    indicator.style.top = '-20px';
+    indicator.style.left = '0';
+    wrapper.style.position = 'relative';
+    wrapper.appendChild(indicator);
+    typeHereIndicators.push(indicator);
+  }
+
+  function showSelectHereArrow(selectId, label) {
+    var select = document.getElementById(selectId);
+    if (!select) return;
+    var wrapper = select.closest('.relative');
+    if (!wrapper) return;
+
+    var indicator = document.createElement('div');
+    indicator.className = 'type-here-indicator';
+    indicator.innerHTML = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1 8h12M9 4l4 4-4 4" stroke="#1a3a6e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' + (label || 'Select here');
+    indicator.style.top = '-20px';
+    indicator.style.left = '0';
+    wrapper.style.position = 'relative';
+    wrapper.appendChild(indicator);
+    typeHereIndicators.push(indicator);
+  }
+
+  function focusField(inputId) {
+    var input = document.getElementById(inputId);
+    if (input) {
+      setTimeout(function() { input.focus(); }, 400);
+    }
+  }
+
+  // ===== SHEPHERD TOUR =====
+  var tour = new Shepherd.Tour({
+    useModalOverlay: false,
+    defaultStepOptions: {
+      cancelIcon: { enabled: true },
+      classes: 'tour-redesigned pos-center',
+      scrollTo: false,
+      popperOptions: {
+        modifiers: [
+          { name: 'offset', options: { offset: [0, 16] } },
+          { name: 'preventOverflow', options: { padding: 20 } }
+        ]
+      },
+      when: {
+        show: function() {
+          var modal = this.el;
+          var attachedElement = this.target;
+          if (attachedElement) {
+            setTimeout(function() { updateSpotlight(attachedElement, 15); }, 50);
+          }
+          // Ensure modal is fully visible
+          modal.style.transition = 'none';
+          modal.style.opacity = '1';
+        },
+        hide: function() {
+          clearActiveHighlights();
+        }
+      }
+    }
+  });
+
+  // Step 1: Progress Sidebar Overview
+  tour.addStep({
+    id: 'step-progress',
+    text: '<h3>Progress Tracker</h3><p>This is your progress tracker. It starts at 0% and updates as you complete each section.</p><p>You\'ll enter contact details for the mentor organization\'s primary point of contact. Let\'s begin with the name fields.</p>',
+    attachTo: { element: '#progress-area', on: 'right' },
+    buttons: [
+      { text: 'Next', action: function() { transitionToNext(); }, classes: 'shepherd-button-primary' }
+    ],
+    beforeShowPromise: function() {
+      return new Promise(function(resolve) {
+        scrollToElement(document.getElementById('progress-area'));
+        setTimeout(resolve, 300);
+      });
+    }
+  });
+
+  // Step 2: First Name + Last Name
+  tour.addStep({
+    id: 'step-names',
+    text: '<h3>Name Fields</h3><p>Enter the first and last name of the mentor\'s primary contact. This person will serve as the main representative on the agreement.</p>',
+    attachTo: { element: '#name-fields', on: 'bottom' },
+    buttons: [
+      { text: 'Back', action: function() { transitionToBack(); }, classes: 'shepherd-button-secondary' },
+      {
+        text: 'Next',
+        action: function() {
+          var fn = document.getElementById('firstName').value.trim();
+          var ln = document.getElementById('lastName').value.trim();
+          clearFieldErrors(['firstName-wrapper', 'lastName-wrapper']);
+          hideValidation('name-validation');
+          if (!fn || !ln) {
+            highlightFieldsError(['firstName-wrapper', 'lastName-wrapper']);
+            showValidation('name-validation');
+            return;
+          }
+          highlightFieldsGreen(['firstName-wrapper', 'lastName-wrapper']);
+          updateSidebarProgress('mentor-team', 20);
+          transitionToNext();
+        },
+        classes: 'shepherd-button-primary'
+      }
+    ],
+    beforeShowPromise: function() {
+      return new Promise(function(resolve) {
+        scrollToElement(document.getElementById('name-fields'));
+        updateSidebarProgress('mentor-team', 5);
+        highlightActiveFields(['firstName-wrapper', 'lastName-wrapper']);
+        showTypeHereArrow('firstName', 'First name');
+        showTypeHereArrow('lastName', 'Last name');
+        focusField('firstName');
+        setTimeout(resolve, 300);
+      });
+    }
+  });
+
+  // Step 4: Phone + Email
+  tour.addStep({
+    id: 'step-contact',
+    text: '<h3>Phone & Email</h3><p>Enter the phone number and email address. The phone should include area code (e.g., 555-123-4567).</p>',
+    attachTo: { element: '#contact-fields', on: 'bottom' },
+    buttons: [
+      { text: 'Back', action: function() { transitionToBack(); }, classes: 'shepherd-button-secondary' },
+      {
+        text: 'Next',
+        action: function() {
+          var ph = document.getElementById('phone').value.trim();
+          var em = document.getElementById('email').value.trim();
+          clearFieldErrors(['phone-wrapper', 'email-wrapper']);
+          hideValidation('contact-validation');
+          if (!ph || !em || em.indexOf('@') === -1) {
+            highlightFieldsError(['phone-wrapper', 'email-wrapper']);
+            showValidation('contact-validation');
+            return;
+          }
+          highlightFieldsGreen(['phone-wrapper', 'email-wrapper']);
+          updateSidebarProgress('mentor-team', 40);
+          transitionToNext();
+        },
+        classes: 'shepherd-button-primary'
+      }
+    ],
+    beforeShowPromise: function() {
+      return new Promise(function(resolve) {
+        scrollToElement(document.getElementById('contact-fields'));
+        highlightActiveFields(['phone-wrapper', 'email-wrapper']);
+        showTypeHereArrow('phone', 'Phone number');
+        showTypeHereArrow('email', 'Email address');
+        focusField('phone');
+        setTimeout(resolve, 300);
+      });
+    }
+  });
+
+  // Step 5: Fax (optional)
+  tour.addStep({
+    id: 'step-fax',
+    text: '<h3>Fax (Optional)</h3><p>The fax field is optional. You may leave it blank if not applicable. Many organizations no longer use fax, so this is not a required field.</p>',
+    attachTo: { element: '#fax-field', on: 'bottom' },
+    buttons: [
+      { text: 'Back', action: function() { transitionToBack(); }, classes: 'shepherd-button-secondary' },
+      {
+        text: 'Next',
+        action: function() {
+          updateSidebarProgress('mentor-team', 55);
+          transitionToNext();
+        },
+        classes: 'shepherd-button-primary'
+      }
+    ],
+    beforeShowPromise: function() {
+      return new Promise(function(resolve) {
+        scrollToElement(document.getElementById('fax-field'));
+        highlightActiveFields([]);
+        showTypeHereArrow('fax', 'Optional');
+        focusField('fax');
+        setTimeout(resolve, 300);
+      });
+    }
+  });
+
+  // Step 6: Address
+  tour.addStep({
+    id: 'step-address',
+    text: '<h3>Mailing Address</h3><p>Enter the mailing address including street, city, state, and ZIP code. This should be the official business address for the mentor organization.</p>',
+    attachTo: { element: '#address-fields', on: 'bottom' },
+    buttons: [
+      { text: 'Back', action: function() { transitionToBack(); }, classes: 'shepherd-button-secondary' },
+      {
+        text: 'Next',
+        action: function() {
+          var st = document.getElementById('street').value.trim();
+          var ci = document.getElementById('city').value.trim();
+          var sa = document.getElementById('state').value.trim();
+          var zp = document.getElementById('zip').value.trim();
+          clearFieldErrors(['street-wrapper', 'city-wrapper', 'state-wrapper', 'zip-wrapper']);
+          hideValidation('address-validation');
+          if (!st || !ci || !sa || !zp) {
+            highlightFieldsError(['street-wrapper', 'city-wrapper', 'state-wrapper', 'zip-wrapper']);
+            showValidation('address-validation');
+            return;
+          }
+          highlightFieldsGreen(['street-wrapper', 'city-wrapper', 'state-wrapper', 'zip-wrapper']);
+          updateSidebarProgress('mentor-team', 75);
+          transitionToNext();
+        },
+        classes: 'shepherd-button-primary'
+      }
+    ],
+    beforeShowPromise: function() {
+      return new Promise(function(resolve) {
+        scrollToElement(document.getElementById('address-fields'));
+        highlightActiveFields(['street-wrapper', 'city-wrapper', 'state-wrapper', 'zip-wrapper']);
+        showTypeHereArrow('street', 'Street address');
+        showTypeHereArrow('city', 'City');
+        showTypeHereArrow('state', 'State');
+        showTypeHereArrow('zip', 'ZIP');
+        focusField('street');
+        setTimeout(resolve, 300);
+      });
+    }
+  });
+
+  // Step 7: Title + Experience
+  tour.addStep({
+    id: 'step-title-exp',
+    text: '<h3>Title & Experience</h3><p>Enter the job title and years of relevant experience for this contact. The professional experience narrative is optional but encouraged.</p>',
+    attachTo: { element: '#title-exp-fields', on: 'top' },
+    buttons: [
+      { text: 'Back', action: function() { transitionToBack(); }, classes: 'shepherd-button-secondary' },
+      {
+        text: 'Next',
+        action: function() {
+          var ti = document.getElementById('title').value.trim();
+          var ex = document.getElementById('experience').value.trim();
+          clearFieldErrors(['title-wrapper', 'experience-wrapper']);
+          hideValidation('title-validation');
+          if (!ti || !ex) {
+            highlightFieldsError(['title-wrapper', 'experience-wrapper']);
+            showValidation('title-validation');
+            return;
+          }
+          highlightFieldsGreen(['title-wrapper', 'experience-wrapper']);
+          updateSidebarProgress('mentor-team', 100);
+          // Complete step - hide shepherd and show celebration modal
+          tour.currentStep.el.style.display = 'none';
+          showSectionCompleteModal();
+        },
+        classes: 'shepherd-button-primary'
+      }
+    ],
+    beforeShowPromise: function() {
+      return new Promise(function(resolve) {
+        scrollToElement(document.getElementById('title-exp-fields'));
+        highlightActiveFields(['title-wrapper', 'experience-wrapper']);
+        showTypeHereArrow('title', 'Job title');
+        showTypeHereArrow('experience', 'Years');
+        focusField('title');
+        setTimeout(resolve, 300);
+      });
+    }
+  });
+
+  // Step 9: Mentor Roles Introduction
+  tour.addStep({
+    id: 'step-roles-intro',
+    text: '<h3>Mentor Agreement Roles</h3><p>Now assign the primary agreement role for the mentor representative. Each team member must have at least one role to define their responsibilities within the agreement.</p>',
+    attachTo: { element: '#roles-form-area', on: 'top' },
+    buttons: [
+      {
+        text: 'Next',
+        action: function() { transitionToNext(); },
+        classes: 'shepherd-button-primary'
+      }
+    ],
+    beforeShowPromise: function() {
+      return new Promise(function(resolve) {
+        scrollToElement(document.getElementById('roles-form-area'));
+        setTimeout(resolve, 300);
+      });
+    }
+  });
+
+  // Step 10: Role Selection
+  tour.addStep({
+    id: 'step-role-select',
+    text: '<h3>Select a Role</h3><p>Select a role from the dropdown. Common roles include Agreement Manager, Technical Lead, and Executive Sponsor. The secondary role is optional.</p>',
+    attachTo: { element: '#role-fields', on: 'bottom' },
+    buttons: [
+      { text: 'Back', action: function() { transitionToBack(); }, classes: 'shepherd-button-secondary' },
+      {
+        text: 'Complete',
+        action: function() {
+          var role = document.getElementById('primaryRole').value;
+          clearFieldErrors(['primaryRole-wrapper']);
+          hideValidation('role-validation');
+          if (!role) {
+            highlightFieldsError(['primaryRole-wrapper']);
+            showValidation('role-validation');
+            return;
+          }
+          highlightFieldsGreen(['primaryRole-wrapper']);
+          updateSidebarProgress('mentor-roles', 100);
+          tour.currentStep.el.style.display = 'none';
+          showFinalCompleteModal();
+        },
+        classes: 'shepherd-button-primary'
+      }
+    ],
+    beforeShowPromise: function() {
+      return new Promise(function(resolve) {
+        scrollToElement(document.getElementById('role-fields'));
+        highlightActiveFields(['primaryRole-wrapper']);
+        showSelectHereArrow('primaryRole', 'Select a role');
+        updateSidebarProgress('mentor-roles', 30);
+        focusField('primaryRole');
+        setTimeout(resolve, 300);
+      });
+    }
+  });
+
+  // ===== CUSTOM MODAL (replaces SweetAlert2 for mid-tour modals) =====
+  function showCustomModal(options) {
+    var overlay = document.createElement('div');
+    overlay.id = 'custom-modal-overlay';
+    overlay.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.6);z-index:20000;display:flex;align-items:center;justify-content:center;';
+
+    var popup = document.createElement('div');
+    popup.className = 'modal-redesigned';
+    popup.style.cssText = 'background:white;border-radius:12px;padding:32px 28px 24px;max-width:480px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3);border:2px solid #1a3a6e;';
+
+    var iconHtml = options.icon === 'success'
+      ? '<div style="margin:0 auto 16px;width:56px;height:56px;border-radius:50%;background:#e8f5e9;display:flex;align-items:center;justify-content:center;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#009933" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>'
+      : '';
+
+    popup.innerHTML = iconHtml +
+      '<h3 style="font-family:Inter,sans-serif;font-size:20px;font-weight:700;color:#1a3a6e;margin:0 0 16px;">' + options.title + '</h3>' +
+      '<div style="font-family:Inter,sans-serif;font-size:15px;color:#333;margin-bottom:24px;">' + options.html + '</div>' +
+      '<button id="custom-modal-confirm" style="background:#0C1F5B;color:white;border:none;padding:12px 28px;border-radius:8px;font-family:Inter,sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:background 0.2s;">' + options.confirmButtonText + '</button>';
+
+    overlay.appendChild(popup);
+    document.body.appendChild(overlay);
+
+    document.getElementById('custom-modal-confirm').addEventListener('click', function() {
+      overlay.remove();
+      if (options.onConfirm) options.onConfirm();
+    });
+  }
+
+  // ===== SECTION COMPLETE MODAL (between Page 1 and Page 2) =====
+  function showSectionCompleteModal() {
+    removeSpotlightOverlay();
+    // Delay to prevent click event propagation from Shepherd button to modal confirm button
+    setTimeout(function() {
+      showCustomModal({
+        title: 'Mentor Team - Contact Info Complete!',
+        html: '<p style="margin-bottom:12px;">Great work! You\'ve successfully entered all required contact information for the mentor\'s primary point of contact.</p><p style="color:#666;">Next, you\'ll assign an agreement role to this team member.</p>',
+        icon: 'success',
+        confirmButtonText: 'Continue to Roles',
+        onConfirm: function() {
+          updateProgress(15);
+          markSidebarComplete('mentor-team');
+          setActiveSidebar('mentor-roles');
+          document.getElementById('page-1').style.display = 'none';
+          document.getElementById('page-2').style.display = 'block';
+          var fn = document.getElementById('firstName').value.trim();
+          var ln = document.getElementById('lastName').value.trim();
+          document.getElementById('role-member-name').textContent = fn + ' ' + ln;
+          createSpotlightOverlay();
+          document.body.classList.add('tour-active');
+          tour.show('step-roles-intro');
+        }
+      });
+    }, 100);
+  }
+
+  // ===== FINAL COMPLETE MODAL =====
+  function showFinalCompleteModal() {
+    removeSpotlightOverlay();
+    document.body.classList.remove('tour-active');
+    updateProgress(30);
+    markSidebarComplete('mentor-roles');
+
+    setTimeout(function() {
+      showCustomModal({
+        title: 'Practice Complete!',
+        html: '<p style="margin-bottom:12px;">You\'ve successfully filled out the Mentor Team contact information and assigned agreement roles.</p><p style="color:#666;margin-bottom:12px;">In the real portal, you would continue with the Protege Team section, then Protege Roles, Authorized Subcontractors, Sponsoring Agency, and finally Review.</p><p style="color:#009933;font-weight:600;">Two sections complete - 30% overall progress!</p>',
+        icon: 'success',
+        confirmButtonText: 'Finish Practice',
+        onConfirm: function() {
+          var btn = document.getElementById('practice-tour-btn');
+          if (btn) btn.style.display = 'block';
+        }
+      });
+    }, 100);
+  }
+
+  // ===== WELCOME MODAL =====
+  function showWelcomeModal() {
+    Swal.fire({
+      title: 'Agreement Team Practice',
+      html: '<div style="text-align:left;"><p style="font-size:16px;color:#333;margin-bottom:16px;">Welcome to the Agreement Team practice simulation! You\'ll learn how to fill out the Mentor-Protege Agreement Team form.</p><p style="font-size:15px;color:#666;margin-bottom:12px;">In this practice, you will:</p><ul style="text-align:left;font-size:15px;color:#666;padding-left:20px;"><li>Enter contact information for the Mentor Team</li><li>Assign agreement roles to team members</li><li>Receive feedback as you complete each section</li></ul></div>',
+      confirmButtonText: "Let's Begin",
+      customClass: { popup: 'modal-redesigned' },
+      allowOutsideClick: false
+    }).then(function(result) {
+      if (result.isConfirmed) {
+        // Remove the Swal container after close animation completes
+        setTimeout(function() {
+          document.querySelectorAll('.swal2-container').forEach(function(el) { el.remove(); });
+        }, 500);
+        startPracticeTour();
+      }
+    });
+  }
+
+  // ===== START TOUR =====
+  function startPracticeTour() {
+    resetForm();
+    createSpotlightOverlay();
+    var btn = document.getElementById('practice-tour-btn');
+    if (btn) btn.style.display = 'none';
+    tour.start();
+  }
+
+  function resetForm() {
+    // Reset page visibility
+    document.getElementById('page-1').style.display = 'block';
+    document.getElementById('page-2').style.display = 'none';
+
+    // Clear all inputs
+    document.querySelectorAll('input[type="text"], input[type="tel"], input[type="email"], textarea').forEach(function(el) {
+      el.value = '';
+    });
+    document.querySelectorAll('select').forEach(function(el) {
+      el.selectedIndex = 0;
+    });
+
+    // Reset progress
+    updateProgress(0);
+
+    // Reset sidebar bars
+    ['mentor-team', 'mentor-roles', 'protege-team', 'protege-roles', 'subcontractors', 'sponsoring-agency', 'review'].forEach(function(id) {
+      var bar = document.getElementById('bar-' + id);
+      if (bar) {
+        bar.style.width = '0%';
+        bar.style.backgroundColor = '#4A5568';
+      }
+      var check = document.getElementById('check-' + id);
+      if (check) check.innerHTML = '';
+    });
+
+    // Reset active sidebar
+    setActiveSidebar('mentor-team');
+
+    // Clear validation states
+    document.querySelectorAll('.field-error').forEach(function(el) {
+      el.classList.remove('field-error');
+    });
+    document.querySelectorAll('.validation-msg').forEach(function(el) {
+      el.classList.remove('show');
+    });
+  }
+
+  // ===== TOUR CLEANUP ON CANCEL =====
+  tour.on('cancel', function() {
+    removeSpotlightOverlay();
+    document.body.classList.remove('tour-active');
+    var btn = document.getElementById('practice-tour-btn');
+    if (btn) btn.style.display = 'block';
+  });
+
+  tour.on('complete', function() {
+    removeSpotlightOverlay();
+    document.body.classList.remove('tour-active');
+  });
+
+  // ===== CREATE START BUTTON =====
+  function createTourButton() {
+    var btn = document.createElement('button');
+    btn.id = 'practice-tour-btn';
+    btn.innerHTML = '&#x1f393; Start Practice';
+    btn.style.cssText = 'position:fixed;bottom:20px;right:20px;padding:12px 20px;background:#0C1F5B;color:white;border:none;border-radius:8px;cursor:pointer;font-family:Roboto,sans-serif;font-size:14px;font-weight:500;box-shadow:0 4px 12px rgba(0,0,0,0.3);z-index:9999;transition:transform 0.2s, box-shadow 0.2s;';
+    btn.onmouseenter = function() {
+      btn.style.transform = 'scale(1.05)';
+      btn.style.boxShadow = '0 6px 16px rgba(0,0,0,0.4)';
+    };
+    btn.onmouseleave = function() {
+      btn.style.transform = 'scale(1)';
+      btn.style.boxShadow = '0 4px 12px rgba(0,0,0,0.3)';
+    };
+    btn.onclick = function() { showWelcomeModal(); };
+    document.body.appendChild(btn);
+  }
+
+  // ===== INIT =====
+  createTourButton();
+
+  // Auto-start the welcome modal on page load
+  setTimeout(function() {
+    showWelcomeModal();
+  }, 800);
+})();
+</script>
+</body>
+</html>

@@ -85,7 +85,8 @@
     {
       id: 'agreement-dashboard',
       text: '<h3>Agreement Dashboard</h3><p>This is the main Pathway to an Agreement page.</p>',
-      attachTo: { element: 'main', on: 'right' },
+      attachTo: { element: 'body', on: 'right' },
+      scrollTo: false,
       audio: './audio/step-01-welcome.mp3',
       buttons: [
         { text: 'Next', action: function() { transitionToNext(); } }
@@ -130,7 +131,7 @@
       useModalOverlay: false,
       defaultStepOptions: {
         cancelIcon: { enabled: false },
-        scrollTo: { behavior: 'smooth', block: 'center' },
+        scrollTo: false,
         modalOverlayOpeningPadding: 0,
         canClickTarget: false
       }
@@ -179,9 +180,7 @@
                 spotlightOverlay.style.clipPath = 'polygon(0% 0%, 0% 100%, ' + x1 + 'px 100%, ' + x1 + 'px ' + y1 + 'px, ' + x2 + 'px ' + y1 + 'px, ' + x2 + 'px ' + y2 + 'px, ' + x1 + 'px ' + y2 + 'px, ' + x1 + 'px 100%, 100% 100%, 100% 0%)';
               }
               // Scroll to saved position
-              if (pos.scrollY !== undefined) {
-                window.scrollTo(0, pos.scrollY);
-              }
+              window.scrollTo(0, pos.scrollY || 0);
             } else if (target) {
               updateSpotlight(target, 20);
             }

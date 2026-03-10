@@ -108,7 +108,7 @@
       allowEscapeKey: false
     }).then((result) => {
       if (result.isConfirmed) {
-        startTour();
+        // Tour steps will be added here as we build them together
       }
     });
   }

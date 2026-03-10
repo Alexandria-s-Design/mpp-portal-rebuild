@@ -91,7 +91,7 @@
     welcomeModalShown = true;
 
     Swal.fire({
-      title: 'Welcome to the Agreement Dashboard Tour',
+      title: 'Mentor-Prot\u00e9g\u00e9 Agreement Wizard',
       html: `
         <p>This guided tour will walk you through the <strong>Pathway to an Agreement</strong> \u2014 each step required to complete and submit an MPP agreement.</p>
         <br>
@@ -99,12 +99,10 @@
         <ul style="text-align: left; margin: 10px 20px;">
           <li>How to navigate the Agreement Dashboard</li>
           <li>The six pathway sections for building an agreement</li>
-          <li>How to use the Comments area for team collaboration</li>
         </ul>
       `,
-      confirmButtonText: 'Begin Tour',
-      showCancelButton: true,
-      cancelButtonText: 'Maybe Later',
+      confirmButtonText: 'Start',
+      showCancelButton: false,
       customClass: { popup: 'modal-redesigned' },
       allowOutsideClick: false
     }).then((result) => {

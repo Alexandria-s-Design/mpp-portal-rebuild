@@ -25,7 +25,7 @@
     spotlightOverlay.style.cssText = `
       position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
       background: rgba(0, 0, 0, 0.85); z-index: 9998;
-      pointer-events: none;
+      pointer-events: auto;
       transition: clip-path 0.3s ease-in-out, opacity 0.3s ease-in-out;
     `;
     document.body.appendChild(spotlightOverlay);
@@ -104,7 +104,8 @@
       confirmButtonText: 'Start',
       showCancelButton: false,
       customClass: { popup: 'modal-redesigned' },
-      allowOutsideClick: false
+      allowOutsideClick: false,
+      allowEscapeKey: false
     }).then((result) => {
       if (result.isConfirmed) {
         startTour();
@@ -121,8 +122,10 @@
     tour = new Shepherd.Tour({
       useModalOverlay: false,
       defaultStepOptions: {
-        cancelIcon: { enabled: true },
-        scrollTo: { behavior: 'smooth', block: 'center' }
+        cancelIcon: { enabled: false },
+        scrollTo: { behavior: 'smooth', block: 'center' },
+        modalOverlayOpeningPadding: 0,
+        canClickTarget: false
       }
     });
 

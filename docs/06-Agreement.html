@@ -6,6 +6,54 @@
     <title>Mentor-Protégé Program</title>
     
     <link rel="stylesheet" href="./assets/index-main.css">
+    <link rel="stylesheet" href="./shepherd.css">
+    <script src="./shepherd.min.js"></script>
+    <script src="./sweetalert2.min.js"></script>
+    <style>
+      /* Dark backdrop for modal */
+      .swal2-container { background: rgba(0, 0, 0, 0.85) !important; }
+      .swal2-popup.modal-redesigned {
+        border: 3px solid #1a3a6e !important; border-radius: 12px !important;
+        animation: borderPulse 3s ease-in-out infinite, modalFadeIn 0.3s ease !important;
+        font-family: 'Roboto', sans-serif !important; width: 600px !important; max-width: 90vw !important;
+      }
+      @keyframes borderPulse {
+        0%, 100% { border-color: #1a3a6e; box-shadow: 0 0 20px rgba(26,58,110,0.3); }
+        50% { border-color: #2a5298; box-shadow: 0 0 30px rgba(42,82,152,0.5); }
+      }
+      @keyframes modalFadeIn {
+        from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); }
+      }
+      .modal-redesigned .swal2-title { font-size: 30px !important; font-weight: 700 !important; color: #1a3a6e !important; }
+      .modal-redesigned .swal2-html-container { font-size: 20px !important; line-height: 1.6 !important; color: #333 !important; }
+      .modal-redesigned .swal2-html-container h4 { font-size: 20px !important; font-weight: 600 !important; color: #1a3a6e !important; }
+      .modal-redesigned .swal2-actions { justify-content: center !important; }
+      .modal-redesigned .swal2-confirm { background-color: #1a3a6e !important; font-weight: 600 !important; padding: 12px 32px !important; border-radius: 6px !important; }
+      .modal-redesigned .swal2-confirm:hover { background-color: #0f2847 !important; }
+      .modal-redesigned .swal2-cancel { background-color: #6c757d !important; font-weight: 500 !important; padding: 12px 24px !important; border-radius: 6px !important; }
+      /* Shepherd.js Tour Styling */
+      .shepherd-element { z-index: 10000 !important; max-width: 400px !important; }
+      .shepherd-content {
+        background: white !important; border: 3px solid #1a3a6e !important; border-radius: 12px !important;
+        padding: 20px !important; font-family: 'Roboto', sans-serif !important;
+        animation: borderPulse 3s ease-in-out infinite, modalFadeIn 0.3s ease !important;
+      }
+      .shepherd-text { padding: 0 !important; font-size: 15px !important; line-height: 1.6 !important; color: #333 !important; }
+      .shepherd-text h3 { font-size: 20px !important; font-weight: 700 !important; color: #1a3a6e !important; margin: 0 0 12px 0 !important; }
+      .shepherd-text p { margin: 0 !important; }
+      .shepherd-text p:first-child:last-child { padding-top: 0 !important; }
+      .shepherd-footer { padding: 16px 0 0 0 !important; border-top: none !important; display: flex !important; justify-content: flex-end !important; gap: 10px !important; }
+      .shepherd-button { background-color: #1a3a6e !important; color: white !important; font-weight: 600 !important; padding: 10px 24px !important; border-radius: 6px !important; border: none !important; cursor: pointer !important; font-size: 14px !important; transition: background-color 0.2s !important; }
+      .shepherd-button:hover { background-color: #0f2847 !important; }
+      .shepherd-button.shepherd-button-secondary { background-color: #6c757d !important; }
+      .shepherd-button.shepherd-button-secondary:hover { background-color: #5a6268 !important; }
+      .shepherd-cancel-icon { color: #666 !important; font-size: 24px !important; }
+      .shepherd-cancel-icon:hover { color: #333 !important; }
+      .shepherd-header { padding: 0 !important; background: transparent !important; border-bottom: none !important; }
+      .shepherd-arrow::before { background: white !important; border: 3px solid #1a3a6e !important; }
+      .shepherd-progress { position: absolute; bottom: 8px; left: 20px; font-size: 12px; color: #666; }
+      body.tour-active { overflow: hidden; }
+    </style>
   
 <style id="sidebar-toggle-css">
   .sidebar-expanded { width: 260px !important; }
@@ -124,4 +172,7 @@
   });
 })();
 </script>
+<script src="./tour-audio-manager.js"></script>
+<script src="./modal-config-mode.js"></script>
+<script src="./agreement-tour.js"></script>
 </body></html>

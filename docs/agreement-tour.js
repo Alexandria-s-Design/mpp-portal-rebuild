@@ -71,16 +71,24 @@
     showFullColorPause(800).then(() => { if (tour) tour.back(); });
   }
 
+  // Saved positions from Config Mode (captured at 1676x1022)
+  const savedPositions = {
+    "agreement-dashboard": {
+      "scrollY": 0,
+      "highlight": { "top": "-0.51%", "left": "0.01%", "width": "1670.99px", "height": "368.99px" },
+      "modal": { "top": "14.20%", "left": "62.05%" }
+    }
+  };
+
   // Tour step definitions
   const tourSteps = [
     {
-      id: 'welcome',
-      text: '<h3>Agreement Dashboard</h3><p>This is the main Pathway to an Agreement page. The left navigation panel provides access to all portal sections. The main content area displays each step required to complete an MPP agreement.</p>',
-      attachTo: { element: '.flex.min-h-screen', on: 'bottom' },
+      id: 'agreement-dashboard',
+      text: '<h3>Agreement Dashboard</h3><p>This is the main Pathway to an Agreement page.</p>',
+      attachTo: { element: 'main', on: 'right' },
       audio: './audio/step-01-welcome.mp3',
       buttons: [
-        { text: 'Skip Tour', action: function() { tour.cancel(); }, secondary: true },
-        { text: 'Start Tour', action: function() { transitionToNext(); } }
+        { text: 'Next', action: function() { transitionToNext(); } }
       ]
     }
     // Additional steps will be added here as we build them together
@@ -90,26 +98,25 @@
     if (welcomeModalShown) return;
     welcomeModalShown = true;
 
-    Swal.fire({
-      title: 'Mentor-Prot\u00e9g\u00e9 Agreement Wizard',
-      html: `
-        <p>This guided tour will walk you through the <strong>Pathway to an Agreement</strong> \u2014 each step required to complete and submit an MPP agreement.</p>
-        <br>
-        <h4>\ud83c\udfaf What you\u2019ll learn:</h4>
-        <ul style="text-align: left; margin: 10px 20px;">
-          <li>How to navigate the Agreement Dashboard</li>
-          <li>The six pathway sections for building an agreement</li>
-        </ul>
-      `,
-      confirmButtonText: 'Start',
-      showCancelButton: false,
-      customClass: { popup: 'modal-redesigned' },
-      allowOutsideClick: false,
-      allowEscapeKey: false
-    }).then((result) => {
-      if (result.isConfirmed) {
-        // Tour steps will be added here as we build them together
-      }
+    var modalEl = document.createElement('div');
+    modalEl.id = 'welcome-overlay';
+    modalEl.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);z-index:99999;display:flex;align-items:center;justify-content:center;';
+    modalEl.innerHTML = '<div style="background:white;border:3px solid #1a3a6e;border-radius:12px;padding:40px;max-width:600px;width:90vw;text-align:center;font-family:Roboto,sans-serif;animation:borderPulse 3s ease-in-out infinite,modalFadeIn 0.3s ease;">' +
+      '<h2 style="font-size:30px;font-weight:700;color:#1a3a6e;margin:0 0 20px 0;">Mentor-Prot\u00e9g\u00e9 Agreement Wizard</h2>' +
+      '<p style="font-size:20px;line-height:1.6;color:#333;">This guided tour will walk you through the <strong>Pathway to an Agreement</strong> \u2014 each step required to complete and submit an MPP agreement.</p>' +
+      '<br>' +
+      '<h4 style="font-size:20px;font-weight:600;color:#1a3a6e;">\ud83c\udfaf What you\u2019ll learn:</h4>' +
+      '<ul style="text-align:left;margin:10px 20px;font-size:18px;line-height:1.8;color:#333;">' +
+      '<li>How to navigate the Agreement Dashboard</li>' +
+      '<li>The six pathway sections for building an agreement</li>' +
+      '</ul>' +
+      '<button id="welcome-start-btn" style="background-color:#1a3a6e;color:white;font-weight:600;padding:12px 32px;border-radius:6px;border:none;cursor:pointer;font-size:16px;margin-top:20px;">Start</button>' +
+      '</div>';
+    document.body.appendChild(modalEl);
+
+    document.getElementById('welcome-start-btn').addEventListener('click', function() {
+      document.getElementById('welcome-overlay').remove();
+      startTour();
     });
   }
 
@@ -144,8 +151,38 @@
             const currentStep = tour.getCurrentStep();
             const el = currentStep && currentStep.getElement();
             const target = currentStep && currentStep.getTarget();
+            const pos = savedPositions[stepDef.id];
 
-            if (target) {
+            if (pos) {
+              // Apply saved modal position
+              if (pos.modal && el) {
+                el.style.position = 'fixed';
+                el.style.top = pos.modal.top;
+                el.style.left = pos.modal.left;
+                el.style.transform = 'none';
+              }
+              // Apply saved highlight
+              if (pos.highlight && spotlightOverlay) {
+                var vw = window.innerWidth;
+                var vh = window.innerHeight;
+                var x1 = parseFloat(pos.highlight.left) / 100 * vw;
+                var y1 = parseFloat(pos.highlight.top) / 100 * vh;
+                var w = parseFloat(pos.highlight.width);
+                var h = parseFloat(pos.highlight.height);
+                // Scale from captured viewport
+                var scaleX = vw / 1676;
+                var scaleY = vh / 1022;
+                w = w * scaleX;
+                h = h * scaleY;
+                var x2 = x1 + w;
+                var y2 = y1 + h;
+                spotlightOverlay.style.clipPath = 'polygon(0% 0%, 0% 100%, ' + x1 + 'px 100%, ' + x1 + 'px ' + y1 + 'px, ' + x2 + 'px ' + y1 + 'px, ' + x2 + 'px ' + y2 + 'px, ' + x1 + 'px ' + y2 + 'px, ' + x1 + 'px 100%, 100% 100%, 100% 0%)';
+              }
+              // Scroll to saved position
+              if (pos.scrollY !== undefined) {
+                window.scrollTo(0, pos.scrollY);
+              }
+            } else if (target) {
               updateSpotlight(target, 20);
             }
 
